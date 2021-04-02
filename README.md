@@ -5,17 +5,9 @@ Future website for SMASH.
 ## Tools
 
 Nuxt
-
 TailwindCSS
-
 Netifly CMS
-
-Nuxt Content
-
-THREE.js
-
-Globe.gl
+Nuxt Contenmt (perhaps?)
 
 Prettier
-
 ESLint
