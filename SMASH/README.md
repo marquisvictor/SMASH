@@ -1,4 +1,4 @@
-# SMASH
+# SMASH.
 
 ## Build Setup
 
