@@ -82,7 +82,7 @@ export default {
 
 <style>
 .background {
-  /* background-image: url('//unpkg.com/three-globe/example/img/night-sky.png'); */
+  /* background-image: url('//unpkg.com/three-globe/example/img/night-sky.png'); ***/
   background-color: #051622;
 }
 </style>
