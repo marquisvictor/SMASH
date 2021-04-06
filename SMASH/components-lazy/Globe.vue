@@ -107,16 +107,16 @@ export default {
         .onGlobeRightClick(this.onGlobeRightClick)
         .pointOfView(this.pointOfView)
         .customLayerData(gData)
-        .customThreeObject(
-          (d) =>
-            new THREE.Mesh(
-              new THREE.SphereBufferGeometry(d.radius),
-              new THREE.MeshLambertMaterial({ color: d.color })
-            )
-        )
-        .customThreeObjectUpdate((obj, d) => {
-          Object.assign(obj.position, world.getCoords(d.lat, d.lng, d.alt))
-        })
+      // .customThreeObject(
+      //   (d) =>
+      //     new THREE.Mesh(
+      //       new THREE.SphereBufferGeometry(d.radius),
+      //       new THREE.MeshLambertMaterial({ color: d.color })
+      //     )
+      // )
+      // .customThreeObjectUpdate((obj, d) => {
+      //   Object.assign(obj.position, world.getCoords(d.lat, d.lng, d.alt))
+      // })
 
       const globeMaterial = world.globeMaterial()
       globeMaterial.bumpScale = 10
@@ -135,11 +135,11 @@ export default {
           .children.find((obj3d) => obj3d.type === 'DirectionalLight')
         directionalLight && directionalLight.position.set(1, 1, 1)
       })
-      ;(function moveSpheres() {
-        gData.forEach((d) => (d.lat += 0.2))
-        world.customLayerData(world.customLayerData())
-        requestAnimationFrame(moveSpheres)
-      })()
+      // ;(function moveSpheres() {
+      //   gData.forEach((d) => (d.lat += 0.2))
+      //   world.customLayerData(world.customLayerData())
+      //   requestAnimationFrame(moveSpheres)
+      // })()
     }
   },
 }

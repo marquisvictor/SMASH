@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="NuxtLogo"
+    class="SMASHLogo"
     width="245"
     height="180"
     viewBox="0 0 452 342"
@@ -22,7 +22,7 @@
 </template>
 
 <style>
-.NuxtLogo {
+.SMASHLogo {
   animation: 1s appear;
   margin: auto;
 }
