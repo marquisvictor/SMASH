@@ -26,13 +26,21 @@
         </div>
       </div>
     </div>
+    <div class="flex flex-col items-center justify-center mb-36 my-28">
+      <p
+        class="max-w-sm text-xl font-bold leading-loose tracking-tight text-center md:tracking-wide md:max-w-3xl md:text-3xl"
+      >
+        Here at SMASH, we believe in this and that and this is our objective
+        statement
+      </p>
+    </div>
     <div class="flex flex-col items-center justify-start min-h-screen">
       <div class="px-20 space-y-12">
         <h2 class="w-full py-2 font-bold tracking-wide text-left text-7xl">
           News
         </h2>
         <vue-horizontal responsive>
-          <template v-slot:btn-next>
+          <!-- <template v-slot:btn-next>
             <div
               class="flex items-center h-full pl-12 replaced-btn"
               style="background: linear-gradient(to right, #ffffff00, white)"
@@ -40,10 +48,10 @@
               <div
                 class="px-1 py-2 text-sm font-bold text-black bg-white border-2 border-black rounded-md"
               >
-                >>>
+                more
               </div>
             </div>
-          </template>
+          </template> -->
           <article-card
             v-for="(title, index) in titles"
             :key="index"

@@ -1,15 +1,15 @@
 <template>
   <div
-    class="relative flex flex-col items-center justify-start flex-none w-64 overflow-hidden"
+    class="relative flex flex-col items-center justify-start flex-none w-64 overflow-visible"
     :style="{ 'min-height': cardHeight }"
   >
-    <div class="w-full h-48 overflow-hidden shadow-xl rounded-2xl" ref="image">
+    <div ref="image" class="w-full h-48 overflow-hidden shadow-xl rounded-2xl">
       <img src="~/assets/img/cardSample.jpg" class="w-full h-full" />
     </div>
     <div
+      ref="text"
       class="absolute flex flex-col items-center justify-between w-10/12 overflow-hidden bg-white shadow-xl flow-hidden rounded-2xl top-36"
       style="min-height: 10rem"
-      ref="text"
     >
       <div
         class="flex flex-col items-center justify-center flex-1 h-full text-center"
