@@ -14,9 +14,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Chillax-Regular']
-      },
+      // fontFamily: {
+      //   sans: ['Chillax-Regular']
+      // },
     },
   },
   variants: {

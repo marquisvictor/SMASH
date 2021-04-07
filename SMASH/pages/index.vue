@@ -1,74 +1,78 @@
 <template>
-  <div class="font-sans bg-black background">
-    <div
-      class="container flex flex-col w-screen h-screen mx-auto overflow-hidden text-white"
-    >
-      <div class="flex items-center justify-end flex-none h-16">
-        <div class="w-10 h-10 p-2 m-2 bg-green-600"></div>
-        <div class="w-10 h-10 p-2 m-2 bg-green-600"></div>
-      </div>
-      <div class="flex flex-col flex-1 px-10">
-        <div class="flex justify-between p-5 flex-0">
-          <div class="flex-initial w-1/2 space-y-9">
-            <h1
-              class="font-medium tracking-wider text-7xl"
-              style="color: #deb992"
-            >
-              SMASH
-            </h1>
-            <p
-              class="text-2xl italic font-light tracking-wide text-yellow-400"
-              style="color: #8b7966"
-            >
-              an initiative of the CGIS
-            </p>
-          </div>
-          <div class="flex-initial w-1/2">
-            <nav
-              class="flex flex-col items-center py-5 font-medium flex-inital h-1/3"
-              style="color: #1ba098"
-            >
-              <ul
-                class="flex items-center space-x-6 text-3xl justify-evenly"
-                style="line-height: 1rem"
-              >
-                <li>about</li>
-                <li>news</li>
-                <li>research</li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="flex justify-between flex-1">
-          <div class="flex-initial w-1/3"></div>
-          <div
-            class="relative flex flex-col items-center justify-center sphere"
+  <div
+    class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white max-w-7xl"
+  >
+    <div class="flex flex-col w-full h-auto min-h-screen">
+      <Header class="flex-none" />
+      <div
+        class="flex flex-col-reverse items-center justify-center flex-1 h-full h-max-screen"
+      >
+        <div class="mb-10 space-y-3 text-center">
+          <h1 class="block text-6xl font-bold tracking-widest md:text-8xl">
+            SMASH
+          </h1>
+          <p
+            class="max-w-xs text-lg font-light tracking-wide md:max-w-md md:text-3xl"
           >
-            <client-only>
-              <Globe
-                class="absolute"
-                style="bottom: -50%"
-                bump-Image-Url="//unpkg.com/three-globe/example/img/earth-topology.png"
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
-                :width="950"
-                :height="950"
-                :atmosphereAltitude="0.2"
-                :pointOfView="{ altitude: 3.5 }"
-                backgroundColor="rgba(255,0,255,0)"
-              />
-            </client-only>
-          </div>
-          <div class="flex-initial w-1/3"></div>
+            spatial multiscale analytical science hub
+          </p>
         </div>
+        <div class="flex items-center justify-center w-screen max-h-60">
+          <img
+            class="h-full w-52 md:w-72"
+            src="~/assets/SMASHLogo.svg"
+            alt="SMASH Logo"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center mb-36 my-28">
+      <p
+        class="max-w-sm text-xl font-bold leading-loose tracking-tight text-center md:tracking-wide md:max-w-3xl md:text-3xl"
+      >
+        Here at SMASH, we believe in this and that and this is our objective
+        statement
+      </p>
+    </div>
+    <div class="flex flex-col items-center justify-start min-h-screen">
+      <div class="px-20 space-y-12">
+        <h2 class="w-full py-2 font-bold tracking-wide text-left text-7xl">
+          News
+        </h2>
+        <vue-horizontal responsive>
+          <!-- <template v-slot:btn-next>
+            <div
+              class="flex items-center h-full pl-12 replaced-btn"
+              style="background: linear-gradient(to right, #ffffff00, white)"
+            >
+              <div
+                class="px-1 py-2 text-sm font-bold text-black bg-white border-2 border-black rounded-md"
+              >
+                more
+              </div>
+            </div>
+          </template> -->
+          <article-card
+            v-for="(title, index) in titles"
+            :key="index"
+            :title="title"
+          />
+        </vue-horizontal>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
+import ArticleCard from '@/components/ArticleCard'
+import VueHorizontal from 'vue-horizontal'
 export default {
   components: {
-    Globe: () => (process.browser ? import('@/components-lazy/Globe') : null),
+    // Globe: () => (process.browser ? import('@/components-lazy/Globe') : null),
+    Header,
+    ArticleCard,
+    VueHorizontal,
   },
   head() {
     return {
@@ -77,12 +81,15 @@ export default {
       ],
     }
   },
+  data: () => ({
+    titles: [
+      'De Floriani Completes Term as President of the IEEE Computer Society',
+      'Dr. Dong (Tony) Chen publishes in Remote Sensing of Environment',
+      'Dr. Dong (Tony) Chen publishes in Remote Sensing of Environment',
+      'Dr. Dong (Tony) Chen publishes in Remote Sensing of Environment',
+      'GEOG Researchers Lead International Protocol on Forest Biomass',
+      'testtty thehehtlSEHlwiUEH',
+    ],
+  }),
 }
 </script>
-
-<style>
-.background {
-  /* background-image: url('//unpkg.com/three-globe/example/img/night-sky.png'); */
-  background-color: #051622;
-}
-</style>

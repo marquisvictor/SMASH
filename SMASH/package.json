@@ -15,7 +15,8 @@
     "core-js": "^3.9.1",
     "globe.gl": "^2.21.1",
     "nuxt": "^2.15.3",
-    "three": "^0.127.0"
+    "three": "^0.127.0",
+    "vue-horizontal": "^0.8.8"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
@@ -28,6 +29,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.7.0",
     "postcss": "^8.2.8",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "vue-click-outside": "^1.1.0"
   }
 }
