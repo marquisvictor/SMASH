@@ -3,18 +3,17 @@
     class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white max-w-7xl"
   >
     <div class="flex flex-col w-full h-auto min-h-screen">
-      <Header class="flex-none" />
       <div
         class="flex flex-col-reverse items-center justify-center flex-1 h-full h-max-screen"
       >
         <div class="mb-10 space-y-3 text-center">
           <h1 class="block text-6xl font-bold tracking-widest md:text-8xl">
-            SMASH
+            {{ title }}
           </h1>
           <p
             class="max-w-xs text-lg font-light tracking-wide md:max-w-md md:text-3xl"
           >
-            spatial multiscale analytical science hub
+            {{ subtitle }}
           </p>
         </div>
         <div class="flex items-center justify-center w-screen max-h-60">
@@ -30,12 +29,11 @@
       <p
         class="max-w-sm text-xl font-bold leading-loose tracking-tight text-center md:tracking-wide md:max-w-3xl md:text-3xl"
       >
-        Here at SMASH, we believe in this and that and this is our objective
-        statement
+        {{ shortSentence }}
       </p>
     </div>
     <div class="flex flex-col items-center justify-start min-h-screen">
-      <div class="px-20 space-y-12">
+      <div class="w-full px-20 space-y-12">
         <h2 class="w-full py-2 font-bold tracking-wide text-left text-7xl">
           News
         </h2>
@@ -53,43 +51,55 @@
             </div>
           </template> -->
           <article-card
-            v-for="(title, index) in titles"
+            v-for="(news, index) in newsPosts"
             :key="index"
-            :title="title"
+            :title="news.title"
           />
         </vue-horizontal>
+      </div>
+
+      <div class="w-full px-20 space-y-12">
+        <h2 class="w-full py-2 font-bold tracking-wide text-left text-7xl">
+          Projects
+        </h2>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
 import ArticleCard from '@/components/ArticleCard'
 import VueHorizontal from 'vue-horizontal'
 export default {
   components: {
-    // Globe: () => (process.browser ? import('@/components-lazy/Globe') : null),
-    Header,
     ArticleCard,
     VueHorizontal,
   },
+  async asyncData({ $content }) {
+    const newsPosts = await $content('news')
+      .only(['date', 'description', 'title'])
+      .fetch()
+
+    const { title, subtitle, shortSentence } = await $content('core', 'index')
+      .only(['title', 'subtitle', 'shortSentence'])
+      .fetch()
+
+    return {
+      newsPosts,
+      title,
+      subtitle,
+      shortSentence,
+    }
+  },
+  data: () => ({}),
   head() {
     return {
       script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+        {
+          src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
+        },
       ],
     }
   },
-  data: () => ({
-    titles: [
-      'De Floriani Completes Term as President of the IEEE Computer Society',
-      'Dr. Dong (Tony) Chen publishes in Remote Sensing of Environment',
-      'Dr. Dong (Tony) Chen publishes in Remote Sensing of Environment',
-      'Dr. Dong (Tony) Chen publishes in Remote Sensing of Environment',
-      'GEOG Researchers Lead International Protocol on Forest Biomass',
-      'testtty thehehtlSEHlwiUEH',
-    ],
-  }),
 }
 </script>

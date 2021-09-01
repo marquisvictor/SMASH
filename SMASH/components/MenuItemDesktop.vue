@@ -3,11 +3,11 @@
     <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
 
     <a
-      :href="rootLink"
+      v-if="!rowItems && !bottomItems"
+      :href="link"
       class="text-xl font-medium text-gray-500 cursor-pointer hover:text-gray-900"
-      v-if="!menuItems && !bottomItems"
     >
-      {{ rootTitle }}
+      {{ title }}
     </a>
     <button
       v-else
@@ -17,7 +17,7 @@
       :aria-expanded="isOpen"
       @click="toggle"
     >
-      <span>{{ rootTitle }}</span>
+      <span>{{ title }}</span>
       <svg
         class="w-5 h-5 ml-2 text-gray-400 group-hover:text-gray-500"
         :class="active ? 'text-gray-600' : 'text-gray-400'"
@@ -34,35 +34,45 @@
       </svg>
     </button>
     <transition
+      v-if="rowItems"
       enter-active-class="transition duration-200 ease-out"
       enter-class="translate-y-1 opacity-0"
       enter-to-class="translate-y-0 opacity-100"
       leave-active-class="transition duration-150 ease-in"
       leave-class="translate-y-0 opacity-100"
       leave-to-class="translate-y-1 opacity-0"
-      v-if="menuItems"
     >
       <div
         v-show="isOpen"
         v-click-outside="hide"
-        class="absolute z-10 w-screen max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+        class="absolute z-10 w-screen max-w-sm px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
       >
         <div
           class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
         >
-          <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
+          <div
+            class="relative grid gap-6 px-5 py-6 font-medium bg-white sm:gap-8 sm:p-8"
+          >
             <a
-              v-for="item in menuItems"
+              v-for="item in rowItems"
               :key="item.link"
               :href="item.link || defaultLink"
               class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
             >
-              <img
+              <!-- <img
                 v-if="item.image"
                 class="flex-shrink-0 w-6 h-6 text-indigo-600"
                 aria-hidden="true"
                 :src="require(`~/assets/img/${item.image}`) || defaultImage"
+              /> -->
+
+              <component
+                :is="item.icon"
+                v-if="item.icon"
+                :name="item.icon"
+                aria-hidden="true"
               />
+              <!-- class="flex-shrink-0 w-6 h-6 text-indigo-600" -->
 
               <div class="ml-4">
                 <p class="text-base font-medium text-gray-900">
@@ -128,16 +138,16 @@ export default {
     defaultTitle: 'Placeholder',
   }),
   computed: {
-    menuItems() {
-      return this.menu?.submenu || null
+    rowItems() {
+      return this.menu?.rowItems || null
     },
-    rootTitle() {
+    title() {
       return this.menu?.title || this.defaultTitle
     },
     bottomItems() {
-      return this.menu?.bottomMenu || null
+      return this.menu?.bottomItems || null
     },
-    rootLink() {
+    link() {
       return this.menu?.link || null
     },
   },

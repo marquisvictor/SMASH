@@ -2,25 +2,26 @@
   <div class="relative w-full bg-white">
     <div class="px-4 mx-auto max-w-7xl sm:px-6">
       <div
-        class="flex items-center justify-between py-6 border-b-2 border-gray-100 md:justify-start md:space-x-10"
+        class="flex items-center justify-between py-6 border-b-2 border-gray-100  md:justify-start md:space-x-10"
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="/" class="flex items-center" v-if="!onHome">
+          <a v-if="!onHome" href="/" class="flex items-center">
             <span class="sr-only">SMASH</span>
+
             <img
               class="w-auto h-8 sm:h-10"
               src="~/assets/SMASHLogo.svg"
               alt="SMASH Logo"
             />
-            <p class="pl-2 text-4xl font-bold tracking-wider" v-if="!onHome">
+            <p v-if="!onHome" class="pl-2 text-4xl font-bold tracking-wider">
               SMASH
             </p>
           </a>
         </div>
-        <div class="-my-2 -mr-2 md:hidden" id="first">
+        <div id="first" class="-my-2 -mr-2 md:hidden">
           <button
             type="button"
-            class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             aria-expanded="false"
           >
             <span class="sr-only">Open menu</span>
@@ -42,25 +43,26 @@
             </svg>
           </button>
         </div>
+
         <nav class="hidden space-x-10 md:flex">
           <MenuItemDesktop
-            v-for="(item, index) in menuItems"
+            v-for="(item, index) in navMenuItems"
             :key="index"
             :menu="item"
           />
         </nav>
         <div class="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
           <a
-            href="#"
-            class="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900"
+            :href="buttons[0].link"
+            class="text-base font-medium text-gray-500  whitespace-nowrap hover:text-gray-900"
           >
-            Placeholder
+            {{ buttons[0].title }}
           </a>
           <a
-            href="#"
-            class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-black border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700"
+            :href="buttons[1].link"
+            class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-black border border-transparent rounded-md shadow-sm  whitespace-nowrap hover:bg-indigo-700"
           >
-            Work with Us
+            {{ buttons[1].title }}
           </a>
         </div>
       </div>
@@ -77,11 +79,11 @@
       To: "opacity-0 scale-95"
   -->
     <div
-      class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
+      class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform  md:hidden"
       style="display: none"
     >
       <div
-        class="bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50"
+        class="bg-white divide-y-2 rounded-lg shadow-lg  ring-1 ring-black ring-opacity-5 divide-gray-50"
       >
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
@@ -95,7 +97,7 @@
             <div class="-mr-2">
               <button
                 type="button"
-                class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
               >
                 <span class="sr-only">Close menu</span>
                 <!-- Heroicon name: outline/x -->
@@ -293,7 +295,7 @@
           <div>
             <a
               href="#"
-              class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
+              class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm  hover:bg-indigo-700"
             >
               Sign up
             </a>
@@ -314,14 +316,28 @@
 import MenuItemDesktop from '@/components/MenuItemDesktop'
 export default {
   name: 'Header',
+  components: {
+    MenuItemDesktop,
+  },
   props: {
     height: {
       type: Number,
       default: 400,
     },
   },
-  components: {
-    MenuItemDesktop,
+  data() {
+    return {
+      navMenuItems: [],
+      buttons: [],
+    }
+  },
+  async fetch() {
+    const content = await this.$content('core', 'header')
+      .only(['navMenuItems', 'buttons'])
+      .fetch()
+
+    this.navMenuItems = content.navMenuItems
+    this.buttons = content.buttons
   },
   computed: {
     onHome() {
@@ -331,31 +347,5 @@ export default {
       return false
     },
   },
-  data: () => ({
-    menuItems: [
-      {
-        title: 'about',
-        submenu: [
-          {
-            link: 'hi',
-            title: 'people',
-            subtitle: 'subtitleNamew1',
-            image: 'test.png',
-          },
-        ],
-        bottomMenu: [
-          { link: 'hi', title: 'bottom1' },
-          { link: 'hi', title: 'bottom1' },
-          { link: 'hi', title: 'bottom1' },
-        ],
-      },
-      { title: 'news' },
-      {
-        title: 'research',
-        submenu: [{ title: 'hi' }, { title: 'test' }, { title: 'ptest' }],
-        bottomMenu: [{ title: 'testty' }],
-      },
-    ],
-  }),
 }
 </script>

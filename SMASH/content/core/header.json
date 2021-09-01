@@ -1,0 +1,70 @@
+{
+  "navMenuItems": [
+    {
+      "title": "About",
+      "rowItems": [
+        {
+          "title": "About",
+          "link": "about",
+          "icon": "i-mdi-account-box"
+        },
+        {
+          "title": "People",
+          "link": "link",
+          "icon": "i-mdi-account-box"
+        },
+        {
+          "title": "Resources",
+          "link": "link",
+          "icon": "i-mdi-account-box"
+        }
+      ],
+      "bottomItems": [
+        {
+          "title": "Join our team",
+          "link": "/",
+          "icon": "icon"
+        }
+      ]
+    },
+    {
+      "title": "Test 2",
+      "rowItems": [
+        {
+          "title": "Row 1",
+          "link": "link",
+          "subtitle": "subtitile here",
+          "icon": "i-mdi-account-box"
+        },
+        {
+          "title": "Row 1",
+          "link": "link",
+          "subtitle": "subtitile here",
+          "icon": "i-mdi-account-box"
+        }
+      ],
+      "bottomItems": [
+        {
+          "title": "bottom item",
+          "link": "/",
+          "icon": "icon"
+        },
+        {
+          "title": "bottom item",
+          "link": "/",
+          "icon": "icon"
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "title": "Projects",
+      "link": "/"
+    },
+    {
+      "title": "Contact",
+      "link": "/"
+    }
+  ]
+}
