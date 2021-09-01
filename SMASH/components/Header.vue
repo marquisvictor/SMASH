@@ -53,16 +53,10 @@
         </nav>
         <div class="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
           <a
-            :href="buttons[0].link"
-            class="text-base font-medium text-gray-500  whitespace-nowrap hover:text-gray-900"
-          >
-            {{ buttons[0].title }}
-          </a>
-          <a
-            :href="buttons[1].link"
+            :href="button.link"
             class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-black border border-transparent rounded-md shadow-sm  whitespace-nowrap hover:bg-indigo-700"
           >
-            {{ buttons[1].title }}
+            {{ button.title }}
           </a>
         </div>
       </div>
@@ -328,16 +322,16 @@ export default {
   data() {
     return {
       navMenuItems: [],
-      buttons: [],
+      button: {},
     }
   },
   async fetch() {
     const content = await this.$content('core', 'header')
-      .only(['navMenuItems', 'buttons'])
+      .only(['navMenuItems', 'button'])
       .fetch()
 
     this.navMenuItems = content.navMenuItems
-    this.buttons = content.buttons
+    this.button = content.button
   },
   computed: {
     onHome() {

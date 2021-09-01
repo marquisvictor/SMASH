@@ -26,7 +26,7 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -34,22 +34,21 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    [
-      'unplugin-icons/nuxt',
-      {
-        /* options */
-      },
-    ],
+    'nuxt-purge-icons-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxt/content'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+  },
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     jit: true,
   },
+  purgeIcons: {
+    /* PurgeIcons Options */
+  }
 }

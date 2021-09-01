@@ -1,17 +1,17 @@
 <template>
   <div
-    class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white max-w-7xl"
+    class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white  max-w-7xl"
   >
     <div class="flex flex-col w-full h-auto min-h-screen">
       <div
-        class="flex flex-col-reverse items-center justify-center flex-1 h-full h-max-screen"
+        class="flex flex-col-reverse items-center justify-center flex-1 h-full  h-max-screen"
       >
         <div class="mb-10 space-y-3 text-center">
           <h1 class="block text-6xl font-bold tracking-widest md:text-8xl">
             {{ title }}
           </h1>
           <p
-            class="max-w-xs text-lg font-light tracking-wide md:max-w-md md:text-3xl"
+            class="max-w-xs text-lg font-light tracking-wide  md:max-w-md md:text-3xl"
           >
             {{ subtitle }}
           </p>
@@ -27,7 +27,7 @@
     </div>
     <div class="flex flex-col items-center justify-center mb-36 my-28">
       <p
-        class="max-w-sm text-xl font-bold leading-loose tracking-tight text-center md:tracking-wide md:max-w-3xl md:text-3xl"
+        class="max-w-sm text-xl font-bold leading-loose tracking-tight text-center  md:tracking-wide md:max-w-3xl md:text-3xl"
       >
         {{ shortSentence }}
       </p>
@@ -82,6 +82,7 @@ export default {
 
     const { title, subtitle, shortSentence } = await $content('core', 'index')
       .only(['title', 'subtitle', 'shortSentence'])
+      .limit(5)
       .fetch()
 
     return {

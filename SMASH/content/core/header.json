@@ -4,67 +4,62 @@
       "title": "About",
       "rowItems": [
         {
-          "title": "About",
+          "title": "Objective",
           "link": "about",
-          "icon": "i-mdi-account-box"
+          "icon": "ic:round-info"
         },
         {
           "title": "People",
-          "link": "link",
-          "icon": "i-mdi-account-box"
+          "link": "link2",
+          "icon": "ic:round-people"
         },
         {
           "title": "Resources",
-          "link": "link",
-          "icon": "i-mdi-account-box"
+          "link": "link3",
+          "icon": "ic:round-source"
         }
       ],
       "bottomItems": [
         {
-          "title": "Join our team",
+          "title": "News",
           "link": "/",
-          "icon": "icon"
+          "icon": "ic:round-file-copy"
         }
       ]
     },
     {
-      "title": "Test 2",
+      "title": "Our Work",
       "rowItems": [
         {
-          "title": "Row 1",
-          "link": "link",
-          "subtitle": "subtitile here",
-          "icon": "i-mdi-account-box"
+          "title": "Projects",
+          "link": "link5",
+          "subtitle": null,
+          "icon": "ic:round-construction"
         },
         {
-          "title": "Row 1",
-          "link": "link",
-          "subtitle": "subtitile here",
-          "icon": "i-mdi-account-box"
+          "title": "SMAART",
+          "link": "link6",
+          "subtitle": "Spatial Multiscale Analytics, Applied Research, and Technology Seminar",
+          "icon": "ic:round-video-library"
+        },
+        {
+          "title": "Publications",
+          "link": "link67",
+          "subtitle": null,
+          "icon": "ic:round-file-copy"
         }
       ],
       "bottomItems": [
         {
-          "title": "bottom item",
-          "link": "/",
-          "icon": "icon"
-        },
-        {
-          "title": "bottom item",
-          "link": "/",
-          "icon": "icon"
+          "title": "Github",
+          "link": "https://github.com/GEOSMASH",
+          "icon": "mdi:github"
         }
       ]
     }
   ],
-  "buttons": [
-    {
-      "title": "Projects",
-      "link": "/"
-    },
-    {
-      "title": "Contact",
-      "link": "/"
-    }
-  ]
+  "button": {
+    "title": "Join our Team",
+    "link": "/22"
+  }
 }
