@@ -55,6 +55,8 @@
             :key="index"
             :title="news.title"
           />
+          <!-- Change to custom -->
+          <article-card v-if="newsPosts.length === 5" title="See More" />
         </vue-horizontal>
       </div>
 
