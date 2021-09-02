@@ -30,6 +30,7 @@
 
       <a
         class="flex self-end flex-none h-10 p-2 text-xs font-light text-center"
+        :href="link"
       >
         Read More
       </a>
@@ -54,6 +55,11 @@ export default {
   data: () => ({
     cardHeight: '25rem',
   }),
+  computed: {
+    link() {
+      return `/${this.title}`
+    },
+  },
   //   mounted() {
   //     const imageHeight = this.$refs.image.clientHeight
   //     const textHeight = this.$refs.text.clientHeight

@@ -5,19 +5,20 @@
         class="flex items-center justify-between py-6 border-b-2 border-gray-100 md:justify-start md:space-x-10"
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="/" class="flex items-center" v-if="!onHome">
+          <a v-if="!onHome" href="/" class="flex items-center">
             <span class="sr-only">SMASH</span>
+
             <img
               class="w-auto h-8 sm:h-10"
               src="~/assets/SMASHLogo.svg"
               alt="SMASH Logo"
             />
-            <p class="pl-2 text-4xl font-bold tracking-wider" v-if="!onHome">
+            <p v-if="!onHome" class="pl-2 text-4xl font-bold tracking-wider">
               SMASH
             </p>
           </a>
         </div>
-        <div class="-my-2 -mr-2 md:hidden" id="first">
+        <div id="first" class="-my-2 -mr-2 md:hidden">
           <button
             type="button"
             class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
@@ -42,25 +43,20 @@
             </svg>
           </button>
         </div>
+
         <nav class="hidden space-x-10 md:flex">
           <MenuItemDesktop
-            v-for="(item, index) in menuItems"
+            v-for="(item, index) in navMenuItems"
             :key="index"
             :menu="item"
           />
         </nav>
         <div class="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
           <a
-            href="#"
-            class="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900"
-          >
-            Placeholder
-          </a>
-          <a
-            href="#"
+            :href="button.link"
             class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-black border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700"
           >
-            Work with Us
+            {{ button.title }}
           </a>
         </div>
       </div>
@@ -314,14 +310,28 @@
 import MenuItemDesktop from '@/components/MenuItemDesktop'
 export default {
   name: 'Header',
+  components: {
+    MenuItemDesktop,
+  },
   props: {
     height: {
       type: Number,
       default: 400,
     },
   },
-  components: {
-    MenuItemDesktop,
+  data() {
+    return {
+      navMenuItems: [],
+      button: {},
+    }
+  },
+  async fetch() {
+    const content = await this.$content('core', 'header')
+      .only(['navMenuItems', 'button'])
+      .fetch()
+
+    this.navMenuItems = content.navMenuItems
+    this.button = content.button
   },
   computed: {
     onHome() {
@@ -331,31 +341,5 @@ export default {
       return false
     },
   },
-  data: () => ({
-    menuItems: [
-      {
-        title: 'about',
-        submenu: [
-          {
-            link: 'hi',
-            title: 'people',
-            subtitle: 'subtitleNamew1',
-            image: 'test.png',
-          },
-        ],
-        bottomMenu: [
-          { link: 'hi', title: 'bottom1' },
-          { link: 'hi', title: 'bottom1' },
-          { link: 'hi', title: 'bottom1' },
-        ],
-      },
-      { title: 'news' },
-      {
-        title: 'research',
-        submenu: [{ title: 'hi' }, { title: 'test' }, { title: 'ptest' }],
-        bottomMenu: [{ title: 'testty' }],
-      },
-    ],
-  }),
 }
 </script>

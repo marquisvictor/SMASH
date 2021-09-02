@@ -8,8 +8,8 @@ module.exports = {
       'nuxt.config.js',
       // TypeScript
       'plugins/**/*.ts',
-      'nuxt.config.ts'
-    ]
+      'nuxt.config.ts',
+    ],
   },
   darkMode: false,
   theme: {
@@ -22,5 +22,5 @@ module.exports = {
   variants: {
     transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
   },
-  plugins: []
+  plugins: [],
 }
