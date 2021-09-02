@@ -30,8 +30,16 @@ collections:
   - name: 'core'
     label: "core"
     folder: 'SMASH/content/core'
-    format: 'json'
+    format: 'yaml'
     create: false
     slug: '{{slug}}'
     editor: 
       preview: false
+  - name: 'smaart'
+  label: "smaart"
+  folder: 'SMASH/content/smaart'
+  format: 'yaml'
+  create: true
+  slug: '{{year}}-{{month}}-{{day}}'
+  editor: 
+    preview: false

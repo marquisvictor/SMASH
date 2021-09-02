@@ -55,6 +55,8 @@
             :key="index"
             :title="news.title"
           />
+          <!-- Change to custom -->
+          <article-card v-if="newsPosts.length === 5" title="See More" />
         </vue-horizontal>
       </div>
 
@@ -78,11 +80,11 @@ export default {
   async asyncData({ $content }) {
     const newsPosts = await $content('news')
       .only(['date', 'description', 'title'])
+      .limit(5)
       .fetch()
 
     const { title, subtitle, shortSentence } = await $content('core', 'index')
       .only(['title', 'subtitle', 'shortSentence'])
-      .limit(5)
       .fetch()
 
     return {
