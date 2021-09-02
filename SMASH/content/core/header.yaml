@@ -3,17 +3,17 @@ navMenuItems:
 - title: About
   rowItems:
   - title: Objective
-    link: about
+    link: /about/objective
     icon: ic:round-info
   - title: People
-    link: link2
+    link: /about/people
     icon: ic:round-people
   - title: Resources
-    link: link3
+    link: /about/resources
     icon: ic:round-source
   bottomItems:
   - title: News
-    link: "/"
+    link: "/news"
     icon: ic:round-file-copy
 - title: Our Work
   rowItems:
