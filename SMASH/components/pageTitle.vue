@@ -1,8 +1,13 @@
 <template>
-  <div class="w-full px-20 mt-16 space-y-12">
-    <h2 class="w-full py-2 font-bold tracking-wide text-center text-7xl">
-      {{ title }}
-    </h2>
+  <div
+    class="container w-full mx-auto mt-16 space-y-12 overflow-hidden max-w-7xl"
+  >
+    <div class="w-full py-2 space-y-2 text-center">
+      <h2 class="font-bold tracking-wide text-7xl">
+        {{ title }}
+      </h2>
+      <p v-if="subtitle" class="text-2xl font-medium">{{ subtitle }}</p>
+    </div>
     <slot></slot>
   </div>
 </template>
@@ -13,6 +18,10 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    subtitle: {
+      type: String,
+      required: false,
     },
   },
 }

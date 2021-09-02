@@ -1,0 +1,38 @@
+---
+navMenuItems:
+- title: About
+  rowItems:
+  - title: Objective
+    link: about
+    icon: ic:round-info
+  - title: People
+    link: link2
+    icon: ic:round-people
+  - title: Resources
+    link: link3
+    icon: ic:round-source
+  bottomItems:
+  - title: News
+    link: "/"
+    icon: ic:round-file-copy
+- title: Our Work
+  rowItems:
+  - title: Projects
+    link: /projects
+    subtitle:
+    icon: ic:round-construction
+  - title: SMAART
+    link: /smaart
+    subtitle: Spatial Multiscale Analytics, Applied Research, and Technology Seminar
+    icon: ic:round-video-library
+  - title: Publications
+    link: /publications
+    subtitle:
+    icon: ic:round-file-copy
+  bottomItems:
+  - title: Github
+    link: https://github.com/GEOSMASH
+    icon: mdi:github
+button:
+  title: Join our Team!
+  link: "/join"
