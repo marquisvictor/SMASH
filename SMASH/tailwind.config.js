@@ -1,5 +1,9 @@
 module.exports = {
   purge: {
+    options: {
+      purge: {
+      }
+    },
     content: [
       'components/**/*.vue',
       'layouts/**/*.vue',
