@@ -23,24 +23,14 @@
             type="button"
             class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             aria-expanded="false"
+            @click="toggleMobileMenu"
           >
             <span class="sr-only">Open menu</span>
-            <!-- Heroicon name: outline/menu -->
-            <svg
+            <Icon
+              icon="heroicons-outline:menu"
               class="w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
               aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            />
           </button>
         </div>
 
@@ -73,232 +63,84 @@
       To: "opacity-0 scale-95"
   -->
     <div
+      v-if="mobileMenuOpen"
       class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
-      style="display: none"
+      style="z-index: 80"
     >
       <div
         class="bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50"
       >
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
-            <div>
+            <div class="flex items-center space-x-2">
               <img
                 class="w-auto h-8"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt="Workflow"
+                src="~/assets/SMASHLogo.svg"
+                alt="SMASH Logo"
               />
+              <p class="text-lg font-bold tracking-wider">SMASH</p>
             </div>
             <div class="-mr-2">
               <button
                 type="button"
                 class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                @click="closeMobileMenu"
               >
                 <span class="sr-only">Close menu</span>
-                <!-- Heroicon name: outline/x -->
-                <svg
+                <Icon
+                  icon="heroicons-outline:x"
                   class="w-6 h-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
                   aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                />
               </button>
             </div>
           </div>
-          <div class="mt-6">
+          <div class="mt-6 ml-1">
             <nav class="grid gap-y-8">
               <a
-                href="#"
+                v-for="navMenuRowItem in mobileNavMenuItems.rowItems"
+                :key="navMenuRowItem.title"
+                :href="navMenuRowItem.link"
                 class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
               >
-                <!-- Heroicon name: outline/chart-bar -->
-                <svg
+                <Icon
+                  :icon="navMenuRowItem.icon"
                   class="flex-shrink-0 w-6 h-6 text-indigo-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
                   aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  />
-                </svg>
-                <span class="ml-3 text-base font-medium text-gray-900">
-                  Analytics
-                </span>
-              </a>
+                />
 
-              <a
-                href="#"
-                class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
-              >
-                <!-- Heroicon name: outline/cursor-click -->
-                <svg
-                  class="flex-shrink-0 w-6 h-6 text-indigo-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                  />
-                </svg>
                 <span class="ml-3 text-base font-medium text-gray-900">
-                  Engagement
-                </span>
-              </a>
-
-              <a
-                href="#"
-                class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
-              >
-                <!-- Heroicon name: outline/shield-check -->
-                <svg
-                  class="flex-shrink-0 w-6 h-6 text-indigo-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
-                <span class="ml-3 text-base font-medium text-gray-900">
-                  Security
-                </span>
-              </a>
-
-              <a
-                href="#"
-                class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
-              >
-                <!-- Heroicon name: outline/view-grid -->
-                <svg
-                  class="flex-shrink-0 w-6 h-6 text-indigo-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                  />
-                </svg>
-                <span class="ml-3 text-base font-medium text-gray-900">
-                  Integrations
-                </span>
-              </a>
-
-              <a
-                href="#"
-                class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
-              >
-                <!-- Heroicon name: outline/refresh -->
-                <svg
-                  class="flex-shrink-0 w-6 h-6 text-indigo-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                  />
-                </svg>
-                <span class="ml-3 text-base font-medium text-gray-900">
-                  Automations
+                  {{ navMenuRowItem.title }}
                 </span>
               </a>
             </nav>
           </div>
         </div>
         <div class="px-5 py-6 space-y-6">
-          <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+          <div class="flex items-center justify-evenly">
             <a
-              href="#"
+              v-for="navMenuBottomItem in mobileNavMenuItems.bottomItems"
+              :key="navMenuBottomItem.title"
+              :href="navMenuBottomItem.link"
               class="text-base font-medium text-gray-900 hover:text-gray-700"
             >
-              Pricing
-            </a>
-
-            <a
-              href="#"
-              class="text-base font-medium text-gray-900 hover:text-gray-700"
-            >
-              Docs
-            </a>
-
-            <a
-              href="#"
-              class="text-base font-medium text-gray-900 hover:text-gray-700"
-            >
-              Help Center
-            </a>
-
-            <a
-              href="#"
-              class="text-base font-medium text-gray-900 hover:text-gray-700"
-            >
-              Guides
-            </a>
-
-            <a
-              href="#"
-              class="text-base font-medium text-gray-900 hover:text-gray-700"
-            >
-              Events
-            </a>
-
-            <a
-              href="#"
-              class="text-base font-medium text-gray-900 hover:text-gray-700"
-            >
-              Security
+              <div class="flex items-center justify-center flex-shrink-0">
+                <Icon
+                  :icon="navMenuBottomItem.icon"
+                  class="w-6 h-6 text-black"
+                  aria-hidden="true"
+                />
+              </div>
+              {{ navMenuBottomItem.title }}
             </a>
           </div>
           <div>
             <a
-              href="#"
+              :href="button.link"
               class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
             >
-              Sign up
+              {{ button.title }}
             </a>
-            <p class="mt-6 text-base font-medium text-center text-gray-500">
-              Existing customer?
-              <a href="#" class="text-indigo-600 hover:text-indigo-500">
-                Sign in
-              </a>
-            </p>
           </div>
         </div>
       </div>
@@ -308,10 +150,12 @@
 
 <script>
 import MenuItemDesktop from '@/components/MenuItemDesktop'
+import Icon from '@/components/Icon.vue'
 export default {
   name: 'Header',
   components: {
     MenuItemDesktop,
+    Icon,
   },
   props: {
     height: {
@@ -323,13 +167,14 @@ export default {
     return {
       navMenuItems: [],
       button: {},
+      mobileMenuOpen: false,
+      branding: {},
     }
   },
   async fetch() {
     const content = await this.$content('core', 'header')
       .only(['navMenuItems', 'button'])
       .fetch()
-
     this.navMenuItems = content.navMenuItems
     this.button = content.button
   },
@@ -339,6 +184,30 @@ export default {
         return true
       }
       return false
+    },
+    mobileNavMenuItems() {
+      const mobileNavMenuItems = { rowItems: [], bottomItems: [] }
+      this.navMenuItems.forEach((el) => {
+        if (!el.rowItems) {
+          // TODO
+          return
+        }
+
+        mobileNavMenuItems.rowItems.push(el.rowItems)
+        mobileNavMenuItems.bottomItems.push(el.bottomItems)
+      })
+
+      mobileNavMenuItems.rowItems = mobileNavMenuItems.rowItems.flat(2)
+      mobileNavMenuItems.bottomItems = mobileNavMenuItems.bottomItems.flat(2)
+      return mobileNavMenuItems
+    },
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen
+    },
+    closeMobileMenu() {
+      this.mobileMenuOpen = false
     },
   },
 }
