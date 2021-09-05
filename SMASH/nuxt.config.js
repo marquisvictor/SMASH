@@ -23,7 +23,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/fullpage', mode: 'client' }],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -40,7 +40,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   // 'nuxt-fullpage.js'
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', 'nuxt-fullpage.js'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
