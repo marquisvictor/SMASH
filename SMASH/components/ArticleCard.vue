@@ -1,40 +1,30 @@
 <template>
-  <div
-    class="relative flex flex-col items-center justify-start flex-none w-64 overflow-visible"
-    :style="{ 'min-height': cardHeight }"
-  >
-    <div ref="image" class="w-full h-48 overflow-hidden shadow-xl rounded-2xl">
-      <img src="~/assets/img/cardSample.jpg" class="w-full h-full" />
-    </div>
-    <div
-      ref="text"
-      class="absolute flex flex-col items-center justify-between w-10/12 overflow-hidden bg-white shadow-xl flow-hidden rounded-2xl top-36"
-      style="min-height: 10rem"
-    >
+  <div class="max-w-xs mb-2 overflow-visible md:mb-4 card__container">
+    <article class="relative w-full">
       <div
-        class="flex flex-col items-center justify-center flex-1 h-full text-center"
+        class="z-20 h-auto min-w-full bg-center bg-contain"
+        style="background-image: url('~/assets/img/cardSample.jpg')"
+      >
+        <img src="~/assets/img/cardSample.jpg" class="w-full h-full" />
+      </div>
+
+      <div
+        class="relative z-50 w-full p-3 mx-auto -mt-16 break-normal bg-white rounded-lg shadow-lg  card-text__container"
+        style=""
       >
         <p
-          class="w-full p-2 text-lg font-semibold leading-snug tracking-tight text-black"
+          class="flex px-2 text-xs font-semibold tracking-wide text-gray-500 uppercase bg-teal-200 rounded-full "
+        >
+          {{ new Date(date).toDateString() }}
+        </p>
+
+        <p
+          class="mt-1 text-sm font-semibold leading-tight  md:text-base lg:text-lg"
         >
           {{ title }}
         </p>
-
-        <p
-          v-if="subtitle"
-          class="w-full p-2 text-sm font-medium text-justify text-gray-600"
-        >
-          {{ subtitle }}
-        </p>
       </div>
-
-      <a
-        class="flex self-end flex-none h-10 p-2 text-xs font-light text-center"
-        :href="link"
-      >
-        Read More
-      </a>
-    </div>
+    </article>
   </div>
 </template>
 
@@ -51,21 +41,54 @@ export default {
       default: '',
       required: false,
     },
+    date: {
+      type: String,
+      default: '',
+      required: true,
+    },
   },
-  data: () => ({
-    cardHeight: '25rem',
-  }),
   computed: {
     link() {
       return `/${this.title}`
     },
   },
-  //   mounted() {
-  //     const imageHeight = this.$refs.image.clientHeight
-  //     const textHeight = this.$refs.text.clientHeight
-  //     this.cardHeight = imageHeight + textHeight
-
-  //     console.log(this.textHeight)
-  //   },
 }
 </script>
+
+<style scoped>
+.card__container {
+  --padding: 3rem;
+
+  width: calc(100% - (2 * var(--padding)));
+  min-width: 12rem;
+  height: calc(100% - 4rem);
+}
+
+.card-text__container {
+  width: calc((100% - (1.15rem)));
+  min-height: 7rem;
+}
+
+/* Taillwind `md` */
+@media (min-width: 768px) {
+  .card__container {
+    width: calc((100% - (4 * var(--padding))) / 2);
+  }
+
+  .card-text__container {
+    width: calc((100% - (1.25rem)));
+    min-height: 12rem;
+  }
+}
+
+/* Taillwind `lg` */
+@media (min-width: 1024px) {
+  .card__container {
+    width: calc((100% - (2 * var(--padding))) / 3);
+  }
+
+  .card-text__container {
+    width: calc((100% - (3rem)));
+  }
+}
+</style>

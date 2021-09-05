@@ -20,12 +20,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [{ src: '~/plugins/fullpage', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -36,21 +34,20 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    'nuxt-purge-icons-module'
+    'nuxt-purge-icons-module',
+    '@nuxtjs/device',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
+  // 'nuxt-fullpage.js'
   modules: ['@nuxt/content'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
+  build: {},
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     jit: true,
   },
-  purgeIcons: {
-    /* PurgeIcons Options */
-  }
+  purgeIcons: {},
 }

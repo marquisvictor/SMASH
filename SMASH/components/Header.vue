@@ -72,14 +72,15 @@
       >
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-2">
+            <a href="/" class="flex items-center space-x-2">
               <img
                 class="w-auto h-8"
                 src="~/assets/SMASHLogo.svg"
                 alt="SMASH Logo"
               />
               <p class="text-lg font-bold tracking-wider">SMASH</p>
-            </div>
+            </a>
+
             <div class="-mr-2">
               <button
                 type="button"
