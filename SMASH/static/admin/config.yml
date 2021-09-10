@@ -89,7 +89,7 @@ collections:
     folder: 'SMASH/content/people'
     format: 'yaml'
     create: true
-    slug: {{fields.name}}
+    slug: '{{fields.name}}'
     fields:
       - {label: 'Name', name: 'name', widget: 'string'}
       - {label: 'Role', name: 'role', widget: 'string'}
