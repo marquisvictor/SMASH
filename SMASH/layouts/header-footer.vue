@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="antialiased">
     <Header />
     <Nuxt class="min-h-screen" />
     <Footer />

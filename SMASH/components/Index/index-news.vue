@@ -38,11 +38,14 @@
             :button="$device.isMobile"
             class="w-full h-full news-scroll__container"
           >
-            <article-card
+            <Card
               v-for="(news, index) in newsPosts"
               :key="index"
               :title="news.title"
               :date="news.createdAt"
+              image="news.image"
+              offset
+              class="max-w-xs mb-2 overflow-visible md:mb-4"
             />
             <div class="flex items-start justify-center">
               <a
@@ -88,13 +91,13 @@
 </template>
 
 <script>
-import ArticleCard from '@/components/ArticleCard'
+import Card from '@/components/Card'
 import VueHorizontal from 'vue-horizontal'
 import Icon from '@/components/Icon'
 export default {
   name: 'IndexNews',
   components: {
-    ArticleCard,
+    Card,
     VueHorizontal,
     Icon,
   },

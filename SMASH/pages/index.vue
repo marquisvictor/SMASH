@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white  max-w-7xl"
+    class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white max-w-7xl"
   >
     <div class="flex flex-col min-h-screen">
       <Header class="flex-shrink-0" />
@@ -8,7 +8,6 @@
     </div>
     <index-text class="section" />
     <index-news class="section" />
-
     <Footer class="mt-32" />
   </div>
 </template>
