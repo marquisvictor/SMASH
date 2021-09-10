@@ -12,7 +12,7 @@ socialMediaIcons:
 - name: Twitter
   icon: "mdi:twitter-box"
   link: "http://www.twitter.com"
-leftText : 
+footerText : 
   - "SMASH 2021."
   - "University of Maryland College Park"
   - "Center for Geospatial Information Science"

@@ -45,7 +45,7 @@ export default {
   async fetch() {
     const footerContent = await this.$content('footer').fetch()
     const socialMedia = await this.$content('contact').fetch()
-    this.footerText = footerContent.leftText
+    this.footerText = footerContent.footerText
     this.mediaIcons = socialMedia
   },
   computed: {},
