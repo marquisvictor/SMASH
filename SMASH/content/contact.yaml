@@ -2,3 +2,6 @@ socialNetworks:
   - name: Facebook
     icon: ic:round-file-copy
     link: facebook.com
+  - name: Github
+    icon: mdi:github
+    link: github.com
