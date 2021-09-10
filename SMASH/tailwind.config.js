@@ -26,5 +26,5 @@ module.exports = {
   variants: {
     transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

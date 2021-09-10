@@ -2,12 +2,10 @@
   <footer id="footer" class="mx-auto max-w-7xl">
     <hr />
     <div
-      class="flex flex-row items-center justify-around w-full h-48 overflow-hidden  flex-nowrap"
+      class="flex flex-row items-center justify-around w-full h-48 overflow-hidden flex-nowrap"
     >
       <div id="footer-text flex-shrink">
-        <p class="text-xs font-medium md:text-lg">
-          {{ footerText }}
-        </p>
+        <vue-markdown>{{ footerText }}</vue-markdown>
       </div>
 
       <div class="flex flex-shrink space-x-2 overflow-hidden">
@@ -30,10 +28,12 @@
 
 <script>
 import Icon from '@/components/Icon.vue'
+import VueMarkdown from 'vue-markdown'
 export default {
   name: 'Footer',
   components: {
     Icon,
+    VueMarkdown,
   },
   props: {},
   data() {
@@ -44,9 +44,11 @@ export default {
   },
   async fetch() {
     const footerContent = await this.$content('footer').fetch()
-    const socialMedia = await this.$content('contact').fetch()
+    const socialMedia = await this.$content('contact')
+      .only('socialMedia')
+      .fetch()
     this.footerText = footerContent.footerText
-    this.mediaIcons = socialMedia
+    this.mediaIcons = socialMedia.socialMedia
   },
   computed: {},
   methods: {},

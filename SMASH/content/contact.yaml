@@ -1,5 +1,5 @@
 socialMedia:
-  - socialPlatform:
-      name: Facebook
-      icon: facebookicon
-      link: facebook.com
+  - name: Facebook
+    icon: ic:round-file-copy
+    link: facebook.com
+     

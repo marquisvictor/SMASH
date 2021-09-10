@@ -24,7 +24,9 @@
           </div>
 
           <p class="text-base text-gray-700" style="min-height: 9rem">
-            {{ person.bio }}
+            <VueMarkdown>
+              {{ person.bio }}
+            </VueMarkdown>
           </p>
           <div
             class="flex flex-row items-center justify-start w-full space-x-2"
@@ -47,11 +49,13 @@
 <script>
 import pageTitle from '@/components/pageTitle'
 import Icon from '@/components/Icon.vue'
+import VueMarkdown from 'vue-markdown'
 export default {
   name: 'PageTitle',
   components: {
     pageTitle,
     Icon,
+    VueMarkdown,
   },
   layout: 'header-footer',
   data() {

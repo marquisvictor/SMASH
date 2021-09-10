@@ -15,10 +15,12 @@
     "@iconify/iconify": "^2.0.4",
     "@nuxt/components": "^2.2.1",
     "@nuxt/content": "^1.14.0",
+    "@tailwindcss/typography": "^0.4.1",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "nuxt-fullpage.js": "0.0.3",
     "vue-horizontal": "^0.8.8",
+    "vue-markdown": "^2.2.4",
     "vuetube": "^1.0.1"
   },
   "devDependencies": {
