@@ -1,17 +1,16 @@
----
 socialMedia:
-- github:
+- name: github
   link: https://github.com/GEOSMASH
   icon: mdi:github
-- twitter:
+- name: twitter
   link: 
   icon: 
-- facebook:
+- name: facebook
   link:
   icon:
-- youtube:
+- name: youtube
   link: 
   icon:
-- gitter:
+- name: gitter
   link: 
   icon: 
