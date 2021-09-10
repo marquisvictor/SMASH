@@ -51,16 +51,16 @@ collections:
                       - {label: 'Row Item Name', name: 'title', widget: 'string'}
                       - {label: 'Row Item Link', name: 'link', widget: 'string'}
                       - {label: 'Row Item Icon', name: 'icon', widget: 'string'}
-                - label: "Bottom Items"
-                  name: 'bottomItems'
-                  widget: "list"
-                  fields:
-                    - widget: object
-                      name: "bottomItem"
-                      fields:
-                      - {label: 'Bottom Item Name', name: 'title', widget: 'string'}
-                      - {label: 'Bottom Item Link', name: 'link', widget: 'string'}
-                      - {label: 'Bottom Item Icon', name: 'icon', widget: 'string'}
+              - label: "Bottom Items"
+                name: 'bottomItems'
+                widget: "list"
+                fields:
+                  - widget: object
+                    name: "bottomItem"
+                    fields:
+                    - {label: 'Bottom Item Name', name: 'title', widget: 'string'}
+                    - {label: 'Bottom Item Link', name: 'link', widget: 'string'}
+                    - {label: 'Bottom Item Icon', name: 'icon', widget: 'string'}
           - label: "End Button"
             name: "button"
             widget: "object"
