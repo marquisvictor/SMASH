@@ -1,5 +1,4 @@
-socialMedia:
+socialNetworks:
   - name: Facebook
     icon: ic:round-file-copy
     link: facebook.com
-     
