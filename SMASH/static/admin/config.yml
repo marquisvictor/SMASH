@@ -31,32 +31,32 @@ collections:
         file: 'SMASH/content/footer.yaml'
         fields:
           - label: 'Left Text'
-          - name: 'leftText'
-          - widget: 'markdown'
+            name: 'leftText'
+            widget: 'markdown'
       - label : "SMASH Header"
         name: 'header'
         file: 'SMASH/content/header.yaml'
         fields:
           - label: 'Navigation Menu Items'
-          - name: 'navMenuItems'
-          - widget: 'object'
-          - fields: 
-            - {label: 'Item Name', name: 'title', widget: 'string'}
-            - label: "Navigation Row Items"
-              name: 'rowItems'
-              widget: "list"
-              fields:
-              - label: "Row Item"
-                name: rowItem
-                widget: object
+            name: 'navMenuItems'
+            widget: 'object'
+            fields: 
+              - {label: 'Item Name', name: 'title', widget: 'string'}
+              - label: "Navigation Row Items"
+                name: 'rowItems'
+                widget: "list"
                 fields:
-                  - {label: 'Item Name', name: 'title', widget: 'string'}
-                  - {label: 'Item Link', name: 'link', widget: 'string'}
-                  - {label: 'Item Icon', name: 'icon', widget: 'string'}
-            - label: "Navigation Bottom Items"
-              name: 'bottomItems'
-              widget: "list"
-              fields:
+                - label: "Row Item"
+                  name: rowItem
+                  widget: object
+                  fields:
+                    - {label: 'Item Name', name: 'title', widget: 'string'}
+                    - {label: 'Item Link', name: 'link', widget: 'string'}
+                    - {label: 'Item Icon', name: 'icon', widget: 'string'}
+              - label: "Navigation Bottom Items"
+                name: 'bottomItems'
+                widget: "list"
+                fields:
                   - label: "Bottom Item"
                     name: bottomItem
                     widget: object
@@ -64,12 +64,12 @@ collections:
                     - {label: 'Item Name', name: 'title', widget: 'string'}
                     - {label: 'Item Link', name: 'link', widget: 'string'}
                     - {label: 'Item Icon', name: 'icon', widget: 'string'}
-            - label: "End Button"
-              name: "button"
-              widget: "object"
-              fields:
-                - {label: 'Button Title', name: 'title', widget: 'string'}
-                - {label: 'Button Link', name: 'link', widget: 'string'}
+              - label: "End Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - {label: 'Button Title', name: 'title', widget: 'string'}
+                  - {label: 'Button Link', name: 'link', widget: 'string'}
       - label : "Index Page"
         name: 'index'
         file: 'SMASH/content/index.yaml'
@@ -86,7 +86,7 @@ collections:
     label: 'News'
     folder: 'SMASH/content/news'
     format: 'frontmatter'
-    create: true,
+    create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - {label: 'Title', name: 'title', widget: 'string' }
