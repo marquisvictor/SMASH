@@ -1,8 +1,0 @@
-name: Test Person
-role: Designer
-bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut
-socialLinks:
-  - socialLink:
-      name: Facebook
-      icon: mdi:facebook-box
-      link: www.facebook.com
