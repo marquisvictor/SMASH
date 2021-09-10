@@ -19,8 +19,6 @@ collections:
             widget: 'list'
             alllow_add: true
             field: 
-              label: 'Social Network'
-              name: 'socialLink'
               widget: 'object'
               fields:
                 - {label: 'Network Name', name: 'name', widget: 'string'}
@@ -31,7 +29,7 @@ collections:
         file: 'SMASH/content/footer.yaml'
         fields:
           - label: 'Left Text'
-            name: 'leftText'
+            name: 'footerText'
             widget: 'markdown'
       - label : "SMASH Header"
         name: 'header'
@@ -89,7 +87,9 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
+      - {label: 'Image', name: 'image', widget: 'image', allow_multiple: false }
       - {label: 'Title', name: 'title', widget: 'string' }
+      - {label: 'Author', name: 'author', widget: 'string' }
       - {label: 'Date', name: 'date', widget: 'datetime'}
       - {label: 'News content', name: 'body', widget: 'markdown'}
   - name: 'people'
@@ -103,7 +103,7 @@ collections:
       - label: 'Bio'
         name: 'bio'
         widget: 'markdown'
-        buttons:
+        editor_components:
           - 'bold'
           - 'italic'
           - 'link'
@@ -115,7 +115,6 @@ collections:
         widget: 'list'
         alllow_add: true
         field: 
-          label: 'Social Network'
           widget: 'object'
           fields:
             - {label: 'Network Name', name: 'name', widget: 'string'}

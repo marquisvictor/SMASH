@@ -5,18 +5,14 @@
       class="flex flex-row items-center justify-around w-full h-48 overflow-hidden  flex-nowrap"
     >
       <div id="footer-text flex-shrink">
-        <p
-          v-for="text in leftText"
-          :key="text"
-          class="text-xs font-medium md:text-lg"
-        >
-          {{ text }}
+        <p class="text-xs font-medium md:text-lg">
+          {{ footerText }}
         </p>
       </div>
 
       <div class="flex flex-shrink space-x-2 overflow-hidden">
         <a
-          v-for="icon in socialMediaIcons"
+          v-for="icon in mediaIcons"
           :key="icon.name"
           :href="icon.link"
           class="p-1 overflow-hidden rounded-md hover:bg-gray-400"
@@ -42,16 +38,15 @@ export default {
   props: {},
   data() {
     return {
-      socialMediaIcons: [],
-      leftText: '',
+      mediaIcons: [],
+      footerText: '',
     }
   },
   async fetch() {
-    const content = await this.$content('footer')
-      .only(['socialMediaIcons', 'leftText'])
-      .fetch()
-    this.socialMediaIcons = content.socialMediaIcons
-    this.leftText = content.leftText
+    const footerContent = await this.$content('footer').fetch()
+    const socialMedia = await this.$content('contact').fetch()
+    this.footerText = footerContent.leftText
+    this.mediaIcons = socialMedia
   },
   computed: {},
   methods: {},
