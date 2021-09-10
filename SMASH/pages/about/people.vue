@@ -29,6 +29,7 @@
             v-html="$md.render(person.bio)"
           ></p>
           <div
+            v-if="person.socialLinks.length >= 1"
             class="flex flex-row items-center justify-start w-full space-x-2"
           >
             <a
