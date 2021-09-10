@@ -54,9 +54,9 @@ collections:
                   - {label: 'Item Link', name: 'link', widget: 'string'}
                   - {label: 'Item Icon', name: 'icon', widget: 'string'}
             - label: "Navigation Bottom Items"
-                name: 'bottomItems'
-                widget: "list"
-                fields:
+              name: 'bottomItems'
+              widget: "list"
+              fields:
                   - label: "Bottom Item"
                     name: bottomItem
                     widget: object
