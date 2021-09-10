@@ -1,33 +1,70 @@
 <template>
   <div>
-    <pageTitle title="About Us"> </pageTitle>
-    <p
-      class="max-w-3xl mx-auto mt-4 text-2xl font-medium tracking-wide text-justify"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Erat imperdiet sed
-      euismod nisi porta lorem mollis aliquam ut. Et magnis dis parturient
-      montes. Sed vulputate odio ut enim blandit volutpat maecenas volutpat
-      blandit. At auctor urna nunc id cursus metus aliquam eleifend mi. Feugiat
-      in ante metus dictum at tempor. Aliquet eget sit amet tellus cras
-      adipiscing enim. Odio morbi quis commodo odio aenean sed. Varius morbi
-      enim nunc faucibus a pellentesque sit. Tortor consequat id porta nibh
-      venenatis. Id eu nisl nunc mi. Dignissim enim sit amet venenatis urna
-      cursus eget. Cras fermentum odio eu feugiat. Cursus turpis massa tincidunt
-      dui ut ornare lectus sit. Nunc sed id semper risus in hendrerit gravida
-      rutrum. Egestas integer eget aliquet nibh praesent tristique. At volutpat
-      diam ut venenatis tellus in metus vulputate eu. Erat pellentesque
-      adipiscing commodo elit.
-    </p>
+    <pageTitle title="Our People">
+      <div
+        class="grid grid-cols-1 gap-6 p-10 mx-auto  md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
+      >
+        <article
+          v-for="person in people"
+          :key="person.name"
+          class="flex flex-col items-center justify-start max-w-sm p-2 m-4 space-y-5 bg-white "
+        >
+          <div
+            class="w-full overflow-hidden bg-red-400 rounded-md shadow-md h-60"
+          >
+            <img />
+          </div>
+          <div class="w-full space-y-2">
+            <p class="text-lg font-bold leading-4 tracking-wide">
+              {{ person.name }}
+            </p>
+            <p class="text-base font-semibold tracking-tighter text-blue-600">
+              {{ person.role }}
+            </p>
+          </div>
+
+          <p class="text-base text-gray-700" style="min-height: 9rem">
+            {{ person.bio }}
+          </p>
+          <div
+            class="flex flex-row items-center justify-start w-full space-x-2"
+          >
+            <a
+              v-for="icon in person.socialLinks"
+              :key="icon.name"
+              :href="icon.link"
+              class="p-1 overflow-hidden rounded-md hover:bg-gray-400"
+            >
+              <Icon :icon="icon.icon" class="w-7 h-7" aria-hidden="true" />
+            </a>
+          </div>
+        </article>
+      </div>
+    </pageTitle>
   </div>
 </template>
 
 <script>
 import pageTitle from '@/components/pageTitle'
+import Icon from '@/components/Icon.vue'
 export default {
   name: 'PageTitle',
   components: {
     pageTitle,
+    Icon,
+  },
+  layout: 'header-footer',
+  data() {
+    return {
+      people: [],
+    }
+  },
+  async fetch() {
+    const people = await this.$content('people')
+      .only(['name', 'role', 'bio', 'socialLinks'])
+      .fetch()
+
+    this.people = people
   },
 }
 </script>

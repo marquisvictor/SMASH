@@ -2,7 +2,7 @@
   <div class="relative w-full bg-white">
     <div class="px-4 mx-auto max-w-7xl sm:px-6">
       <div
-        class="flex items-center justify-between py-6 border-b-2 border-gray-100 md:justify-start md:space-x-10"
+        class="flex items-center justify-between py-6 border-b-2 border-gray-100  md:justify-start md:space-x-10"
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a v-if="!onHome" href="/" class="flex items-center">
@@ -21,7 +21,7 @@
         <div id="first" class="-my-2 -mr-2 md:hidden">
           <button
             type="button"
-            class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             aria-expanded="false"
             @click="toggleMobileMenu"
           >
@@ -44,7 +44,7 @@
         <div class="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
           <a
             :href="button.link"
-            class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-black border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700"
+            class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-black border border-transparent rounded-md shadow-sm  whitespace-nowrap hover:bg-indigo-700"
           >
             {{ button.title }}
           </a>
@@ -64,11 +64,11 @@
   -->
     <div
       v-if="mobileMenuOpen"
-      class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
+      class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform  md:hidden"
       style="z-index: 80"
     >
       <div
-        class="bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50"
+        class="bg-white divide-y-2 rounded-lg shadow-lg  ring-1 ring-black ring-opacity-5 divide-gray-50"
       >
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
@@ -84,7 +84,7 @@
             <div class="-mr-2">
               <button
                 type="button"
-                class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 @click="closeMobileMenu"
               >
                 <span class="sr-only">Close menu</span>
@@ -138,7 +138,7 @@
           <div>
             <a
               :href="button.link"
-              class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
+              class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm  hover:bg-indigo-700"
             >
               {{ button.title }}
             </a>
@@ -150,7 +150,7 @@
 </template>
 
 <script>
-import MenuItemDesktop from '@/components/MenuItemDesktop'
+import MenuItemDesktop from '@/components/Header/MenuItemDesktop'
 import Icon from '@/components/Icon.vue'
 export default {
   name: 'Header',
@@ -173,7 +173,7 @@ export default {
     }
   },
   async fetch() {
-    const content = await this.$content('core', 'header')
+    const content = await this.$content('header')
       .only(['navMenuItems', 'button'])
       .fetch()
     this.navMenuItems = content.navMenuItems

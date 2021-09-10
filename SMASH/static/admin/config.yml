@@ -1,45 +1,176 @@
+site_url: https://staging.geosmash.net
+
 backend:
   name: git-gateway
   branch: staging
-
 media_folder: SMASH/static/img
 public_folder: SMASH/img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'SMASH/content/blog'
-    format: 'frontmatter'
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'core'
+    label: 'SMASH Core Info'
+    files:
+      - label: 'SMASH Contact Info'
+        name: 'contact'
+        file: 'SMASH/content/contact.yaml'
+        fields:
+          - label: "Social Links"
+            name: 'socialMedia'
+            widget: 'list'
+            alllow_add: true
+            field: 
+              label: 'Social Network'
+              name: 'socialLink'
+              widget: 'object'
+              fields:
+                - {label: 'Network Name', name: 'name', widget: 'string'}
+                - {label: 'Network Icon', name: 'icon', widget: 'string'}
+                - {label: 'Network Link', name: 'link', widget: 'string'}
+      - label: 'SMASH Footer'
+        name: 'footer'
+        file: 'SMASH/content/footer.yaml'
+        fields:
+          - label: 'Left Text'
+          - name: 'leftText'
+          - widget: 'markdown'
+      - label : "SMASH Header"
+        name: 'header'
+        file: 'SMASH/content/header.yaml'
+        fields:
+          - label: 'Navigation Menu Items'
+          - name: 'navMenuItems'
+          - widget: 'object'
+          - fields: 
+            - {label: 'Item Name', name: 'title', widget: 'string'}
+            - label: "Navigation Row Items"
+              name: 'rowItems'
+              widget: "list"
+              fields:
+              - label: "Row Item"
+                name: rowItem
+                widget: object
+                fields:
+                  - {label: 'Item Name', name: 'title', widget: 'string'}
+                  - {label: 'Item Link', name: 'link', widget: 'string'}
+                  - {label: 'Item Icon', name: 'icon', widget: 'string'}
+            - label: "Navigation Bottom Items"
+              name: 'bottomItems'
+              widget: "list"
+              fields:
+                  - label: "Bottom Item"
+                    name: bottomItem
+                    widget: object
+                    fields:
+                    - {label: 'Item Name', name: 'title', widget: 'string'}
+                    - {label: 'Item Link', name: 'link', widget: 'string'}
+                    - {label: 'Item Icon', name: 'icon', widget: 'string'}
+            - label: "End Button"
+              name: "button"
+              widget: "object"
+              fields:
+                - {label: 'Button Title', name: 'title', widget: 'string'}
+                - {label: 'Button Link', name: 'link', widget: 'string'}
+      - label : "Index Page"
+        name: 'index'
+        file: 'SMASH/content/index.yaml'
+        fields:
+          - {label: 'Index title', name: 'title', widget: 'string'}
+          - {label: 'Index Subtitle', name: 'subtitle', widget: 'string'}
+          - {label: 'Index Short Sentence', name: 'shortSentence', widget: 'text'}
+      - label : "Objective Page"
+        name: 'index'
+        file: 'SMASH/content/objective.yaml'
+        fields:
+          - {label: 'Objective', name: 'objective', widget: 'markdown'}    
   - name: 'news'
-    label: "News"
+    label: 'News'
     folder: 'SMASH/content/news'
     format: 'frontmatter'
-    create: true
+    create: true,
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor: 
-      preview: false
-  - name: 'core'
-    label: "core"
-    folder: 'SMASH/content/core'
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string' }
+      - {label: 'Date', name: 'date', widget: 'datetime'}
+      - {label: 'News content', name: 'body', widget: 'markdown'}
+  - name: 'people'
+    label: 'People'
+    folder: 'SMASH/content/people'
     format: 'yaml'
-    create: false
-    slug: '{{slug}}'
-    editor: 
-      preview: false
+    create: true
+    fields:
+      - {label: 'Name', name: 'name', widget: 'string'}
+      - {label: 'Role', name: 'role', widget: 'string'}
+      - label: 'Bio'
+        name: 'bio'
+        widget: 'markdown'
+        buttons:
+          - 'bold'
+          - 'italic'
+          - 'link'
+          - 'quote'
+          - 'bulleted-list'
+          - 'numbered-list'
+      - label: "Social Links"
+        name: 'socialLinks'
+        widget: 'list'
+        alllow_add: true
+        field: 
+          label: 'Social Network'
+          name: 'socialLink'
+          widget: 'object'
+          fields:
+            - {label: 'Network Name', name: 'name', widget: 'string'}
+            - {label: 'Network Icon', name: 'icon', widget: 'string'}
+            - {label: 'Network Link', name: 'link', widget: 'string'}
   - name: 'smaart'
-  label: "smaart"
-  folder: 'SMASH/content/smaart'
-  format: 'yaml'
-  create: true
-  slug: '{{year}}-{{month}}-{{day}}'
-  editor: 
-    preview: false
+    label: 'SMART'
+    folder: 'SMASH/content/smaart'
+    format: 'yaml'
+    create: true
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string' }
+      - {label: 'Presenter', name: 'presenter', widget: 'string' }
+      - {label: 'Date', name: 'date', widget: 'datetime'}
+      - {label: 'YouTube Video ID', name: 'videoID', widget: 'string'}
+
+
+
+
+
+  # - name: 'blog'
+  #   label: 'Blog'
+  #   folder: 'SMASH/content/blog'
+  #   format: 'frontmatter'
+  #   create: true
+  #   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+  #   editor:
+  #     preview: false
+  #   fields:
+  #     - { label: 'Title', name: 'title', widget: 'string' }
+  #     - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  #     - { label: 'Description', name: 'description', widget: 'string' }
+  #     - { label: 'Body', name: 'body', widget: 'markdown' }
+  # - name: 'news'
+  #   label: "News"
+  #   folder: 'SMASH/content/news'
+  #   format: 'frontmatter'
+  #   create: true
+  #   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+  #   editor: 
+  #     preview: false
+  # - name: 'core'
+  #   label: "core"
+  #   folder: 'SMASH/content/core'
+  #   format: 'yaml'
+  #   create: false
+  #   slug: '{{slug}}'
+  #   editor: 
+  #     preview: false
+  # - name: 'smaart'
+  # label: "smaart"
+  # folder: 'SMASH/content/smaart'
+  # format: 'yaml'
+  # create: true
+  # slug: '{{year}}-{{month}}-{{day}}'
+  # editor: 
+  #   preview: false

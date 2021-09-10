@@ -28,5 +28,6 @@ export default {
   components: {
     pageTitle,
   },
+  layout: 'header-footer',
 }
 </script>

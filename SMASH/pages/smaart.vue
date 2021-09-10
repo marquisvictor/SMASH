@@ -13,27 +13,19 @@
           imperdiet sed euismod nisi porta lorem mollis aliquam ut. Et magnis
           dis parturient montes.
         </p> -->
-        <div class="flex flex-wrap m-auto -mx-2 overflow-hidden"></div>
-
         <div
-          class="grid grid-cols-1 gap-6 p-10 mx-auto md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
+          class="grid grid-cols-1 gap-6 p-10 mx-auto  md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
         >
-          <div
+          <Card
             v-for="video in smaartVideos"
-            :key="video.videoId"
-            class="flex flex-col justify-around overflow-hidden rounded shadow-lg "
-          >
-            <vue-tube :videoId="video.videoId" class="flex-shrink-0 w-full" />
-            <div class="flex flex-col justify-around flex-grow px-6 py-4">
-              <div class="mb-2 text-xl font-medium text-left">
-                {{ video.title }}
-              </div>
-              <p class="text-xl font-normal text-center">
-                {{ video.presenter }}
-              </p>
-              <p class="text-center">{{ video.date }}</p>
-            </div>
-          </div>
+            :key="video.title"
+            :title="video.title"
+            :date="video.date"
+            :video-id="video.videoId"
+            :subtitle="video.presenter"
+            class="max-w-md m-3"
+            style="min-height: 14rem"
+          />
         </div>
       </div>
     </pageTitle>
@@ -42,12 +34,13 @@
 
 <script>
 import pageTitle from '@/components/pageTitle.vue'
-import { VueTube } from 'vuetube'
+import Card from '~/components/Cards/Card.vue'
 export default {
   components: {
     pageTitle,
-    VueTube,
+    Card,
   },
+  layout: 'header-footer',
   async asyncData({ $content }) {
     const smaartVideos = await $content('smaart')
       .only(['title', 'presenter', 'date', 'videoId'])

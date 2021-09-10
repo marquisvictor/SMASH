@@ -1,0 +1,19 @@
+name: Matthew Tralka
+role: Head Developer
+bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut"
+socialLinks:
+- name: Facebook
+  icon: "mdi:facebook-box"
+  link: "http://www.facebook.com"
+- name: Github
+  icon: "mdi:github-box"
+  link: "http://www.github.com"
+- name: Youtube
+  icon: "mdi:youtube"
+  link: "http://www.youtube.com"
+- name: Twitter
+  icon: "mdi:twitter-box"
+  link: "http://www.twitter.com"
+

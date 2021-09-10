@@ -1,18 +1,7 @@
 <template>
-  <div>
-    <Header />
-    <Nuxt class="min-h-screen" />
-    <Footer />
-  </div>
+  <Nuxt class="min-h-screen" />
 </template>
 <script>
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-export default {
-  components: {
-    Header,
-    Footer,
-  },
-}
+export default {}
 </script>
 <style></style>
