@@ -1,16 +1,3 @@
-socialMediaIcons:
-  - name: Facebook
-    icon: mdi:facebook-box
-    link: http://www.facebook.com
-  - name: Github
-    icon: mdi:github-box
-    link: http://www.github.com
-  - name: Youtube
-    icon: mdi:youtube
-    link: http://www.youtube.com
-  - name: Twitter
-    icon: mdi:twitter-box
-    link: http://www.twitter.com
 footerText: |-
   **SMASH 2021**
 
