@@ -4,21 +4,16 @@
       <p
         class="max-w-sm text-xl font-bold leading-loose tracking-tight text-center  md:tracking-wide md:max-w-3xl md:text-3xl"
       >
-        <VueMarkdown>
-          {{ shortSentence }}
-        </VueMarkdown>
+        {{ shortSentence }}
       </p>
     </div>
   </section>
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
 export default {
   name: 'IndexText',
-  components: {
-    VueMarkdown,
-  },
+  components: {},
   data() {
     return {
       shortSentence: null,
