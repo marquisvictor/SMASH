@@ -41,7 +41,7 @@ collections:
               - {label: 'Root Navigation Item Name', name: 'title', widget: 'string'}
               - name: 'rowItems'
                 label: 'Row Items'
-                summary: "{{field.title}}"
+                summary: "{{fields.title}}"
                 widget: 'list'
                 fields:
                   - {label: 'Row Item Name', name: 'title', widget: 'string'}
@@ -89,6 +89,7 @@ collections:
     folder: 'SMASH/content/people'
     format: 'yaml'
     create: true
+    slug: {{fields.name}}
     fields:
       - {label: 'Name', name: 'name', widget: 'string'}
       - {label: 'Role', name: 'role', widget: 'string'}
@@ -105,20 +106,18 @@ collections:
       - label: "Social Links"
         name: 'socialLinks'
         widget: 'list'
-        alllow_add: true
-        field: 
-          widget: 'object'
-          name: 'socialPlatform'
-          fields:
-            - {label: 'Network Name', name: 'name', widget: 'string'}
-            - {label: 'Network Icon', name: 'icon', widget: 'string'}
-            - {label: 'Network Link', name: 'link', widget: 'string'}
+        summary: "{{fields.name}}"
+        allow_add: true
+        fields:
+          - {label: 'Network Name', name: 'name', widget: 'string'}
+          - {label: 'Network Icon', name: 'icon', widget: 'string'}
+          - {label: 'Network Link', name: 'link', widget: 'string'}
   - name: 'smaart'
     label: 'SMART'
     folder: 'SMASH/content/smaart'
     format: 'yaml'
     create: true
-    slug: '{{date}}-{{presenter}}'
+    slug: '{{presenter}}-{{date}}'
     fields:
       - {label: 'Title', name: 'title', widget: 'string' }
       - {label: 'Presenter', name: 'presenter', widget: 'string' }
