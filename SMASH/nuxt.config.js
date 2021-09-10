@@ -40,7 +40,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   // 'nuxt-fullpage.js'
-  modules: ['@nuxt/content', 'nuxt-fullpage.js'],
+  modules: ['@nuxt/content', 'nuxt-fullpage.js', '@nuxtjs/markdownit'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -48,6 +48,9 @@ export default {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     jit: true,
+  },
+  markdownit: {
+    runtime: true, // Support `$md()`
   },
   purgeIcons: {},
 }

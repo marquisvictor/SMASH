@@ -15,12 +15,13 @@
     "@iconify/iconify": "^2.0.4",
     "@nuxt/components": "^2.2.1",
     "@nuxt/content": "^1.14.0",
+    "@nuxtjs/markdownit": "^2.0.0",
     "@tailwindcss/typography": "^0.4.1",
     "core-js": "^3.9.1",
+    "markdown-it": "^12.2.0",
     "nuxt": "^2.15.3",
     "nuxt-fullpage.js": "0.0.3",
     "vue-horizontal": "^0.8.8",
-    "vue-markdown": "^2.2.4",
     "vuetube": "^1.0.1"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "@nuxtjs/device": "^2.1.0",
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/markdownit-loader": "^1.2.0",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",

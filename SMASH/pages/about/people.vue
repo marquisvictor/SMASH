@@ -2,7 +2,7 @@
   <div>
     <pageTitle title="Our People">
       <div
-        class="grid grid-cols-1 gap-6 p-10 mx-auto md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
+        class="grid grid-cols-1 gap-6 p-10 mx-auto  md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
       >
         <article
           v-for="person in people"
@@ -23,11 +23,11 @@
             </p>
           </div>
 
-          <p class="text-base text-gray-700" style="min-height: 9rem">
-            <VueMarkdown>
-              {{ person.bio }}
-            </VueMarkdown>
-          </p>
+          <p
+            class="text-base prose text-gray-700 md:prose-xl"
+            style="min-height: 9rem"
+            v-html="$md.render(person.bio)"
+          ></p>
           <div
             class="flex flex-row items-center justify-start w-full space-x-2"
           >
@@ -49,13 +49,12 @@
 <script>
 import pageTitle from '@/components/pageTitle'
 import Icon from '@/components/Icon.vue'
-import VueMarkdown from 'vue-markdown'
+
 export default {
   name: 'PageTitle',
   components: {
     pageTitle,
     Icon,
-    VueMarkdown,
   },
   layout: 'header-footer',
   data() {

@@ -2,11 +2,9 @@
   <footer id="footer" class="mx-auto max-w-7xl">
     <hr />
     <div
-      class="flex flex-row items-center justify-around w-full h-48 overflow-hidden flex-nowrap"
+      class="flex flex-row items-center justify-around w-full h-48 overflow-hidden  flex-nowrap"
     >
-      <div id="footer-text flex-shrink">
-        <vue-markdown>{{ footerText }}</vue-markdown>
-      </div>
+      <div id="footer-text flex-shrink" v-html="$md.render(footerText)"></div>
 
       <div class="flex flex-shrink space-x-2 overflow-hidden">
         <a
@@ -28,12 +26,10 @@
 
 <script>
 import Icon from '@/components/Icon.vue'
-import VueMarkdown from 'vue-markdown'
 export default {
   name: 'Footer',
   components: {
     Icon,
-    VueMarkdown,
   },
   props: {},
   data() {
