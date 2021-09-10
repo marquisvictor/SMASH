@@ -37,37 +37,33 @@ collections:
         fields:
           - label: 'Navigation Menu Items'
             name: 'navMenuItems'
-            widget: 'object'
+            widget: 'list'
             fields: 
-              - {label: 'Item Name', name: 'title', widget: 'string'}
-              - label: "Navigation Row Items"
-                name: 'rowItems'
-                widget: "list"
-                fields:
-                - label: "Row Item"
-                  name: rowItem
-                  widget: object
+              - widget: "object"
+              - fields:
+                - {label: 'Item Name', name: 'title', widget: 'string'}
+                - name: 'rowItems'
+                  label: 'Row Items'
+                  widget: 'object'
                   fields:
-                    - {label: 'Item Name', name: 'title', widget: 'string'}
-                    - {label: 'Item Link', name: 'link', widget: 'string'}
-                    - {label: 'Item Icon', name: 'icon', widget: 'string'}
-              - label: "Navigation Bottom Items"
-                name: 'bottomItems'
-                widget: "list"
-                fields:
-                  - label: "Bottom Item"
-                    name: bottomItem
-                    widget: object
-                    fields:
-                    - {label: 'Item Name', name: 'title', widget: 'string'}
-                    - {label: 'Item Link', name: 'link', widget: 'string'}
-                    - {label: 'Item Icon', name: 'icon', widget: 'string'}
-              - label: "End Button"
-                name: "button"
-                widget: "object"
-                fields:
-                  - {label: 'Button Title', name: 'title', widget: 'string'}
-                  - {label: 'Button Link', name: 'link', widget: 'string'}
+                    - {label: 'Row Item Name', name: 'title', widget: 'string'}
+                    - {label: 'Row Item Link', name: 'link', widget: 'string'}
+                    - {label: 'Row Item Icon', name: 'icon', widget: 'string'}
+                - label: "Bottom Items"
+                  name: 'bottomItems'
+                  widget: "list"
+                  fields:
+                    - widget: object
+                      fields:
+                      - {label: 'Bottom Item Name', name: 'title', widget: 'string'}
+                      - {label: 'Bottom Item Link', name: 'link', widget: 'string'}
+                      - {label: 'Bottom Item Icon', name: 'icon', widget: 'string'}
+          - label: "End Button"
+            name: "button"
+            widget: "object"
+            fields:
+              - {label: 'Button Title', name: 'title', widget: 'string'}
+              - {label: 'Button Link', name: 'link', widget: 'string'}
       - label : "Index Page"
         name: 'index'
         file: 'SMASH/content/index.yaml'
