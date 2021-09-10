@@ -1,7 +1,3 @@
-socialMedia:
-  - name: Facebook
-    icon: ic:round-file-copy
-    link: facebook.com
 socialNetworks:
   - name: Facebook
     icon: ic:round-file-copy
