@@ -14,17 +14,15 @@ collections:
         name: 'contact'
         file: 'SMASH/content/contact.yaml'
         fields:
-          - label: "Social Links"
-            name: 'socialMedia'
+          - label: "Social Networks"
+            name: 'socialNetworks'
             widget: 'list'
-            alllow_add: true
-            field:
-              name: 'socialPlatform' 
-              widget: 'object'
-              fields:
-                - {label: 'Network Name', name: 'name', widget: 'string'}
-                - {label: 'Network Icon', name: 'icon', widget: 'string'}
-                - {label: 'Network Link', name: 'link', widget: 'string'}
+            summary: "{{fields.name}}"
+            allow_add: true
+            fields:
+              - {label: 'Network Name', name: 'name', widget: 'string'}
+              - {label: 'Network Icon', name: 'icon', widget: 'string'}
+              - {label: 'Network Link', name: 'link', widget: 'string'}
       - label: 'SMASH Footer'
         name: 'footer'
         file: 'SMASH/content/footer.yaml'
@@ -131,45 +129,3 @@ collections:
       - {label: 'Presenter', name: 'presenter', widget: 'string' }
       - {label: 'Date', name: 'date', widget: 'datetime'}
       - {label: 'YouTube Video ID', name: 'videoId', widget: 'string'}
-
-
-
-
-
-  # - name: 'blog'
-  #   label: 'Blog'
-  #   folder: 'SMASH/content/blog'
-  #   format: 'frontmatter'
-  #   create: true
-  #   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - { label: 'Title', name: 'title', widget: 'string' }
-  #     - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-  #     - { label: 'Description', name: 'description', widget: 'string' }
-  #     - { label: 'Body', name: 'body', widget: 'markdown' }
-  # - name: 'news'
-  #   label: "News"
-  #   folder: 'SMASH/content/news'
-  #   format: 'frontmatter'
-  #   create: true
-  #   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-  #   editor: 
-  #     preview: false
-  # - name: 'core'
-  #   label: "core"
-  #   folder: 'SMASH/content/core'
-  #   format: 'yaml'
-  #   create: false
-  #   slug: '{{slug}}'
-  #   editor: 
-  #     preview: false
-  # - name: 'smaart'
-  # label: "smaart"
-  # folder: 'SMASH/content/smaart'
-  # format: 'yaml'
-  # create: true
-  # slug: '{{year}}-{{month}}-{{day}}'
-  # editor: 
-  #   preview: false
