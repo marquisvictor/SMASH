@@ -1,16 +1,5 @@
 socialMedia:
-- name: github
-  link: https://github.com/GEOSMASH
-  icon: mdi:github
-- name: twitter
-  link: 
-  icon: 
-- name: facebook
-  link:
-  icon:
-- name: youtube
-  link: 
-  icon:
-- name: gitter
-  link: 
-  icon: 
+  - socialPlatform:
+      name: Facebook
+      icon: facebookicon
+      link: facebook.com
