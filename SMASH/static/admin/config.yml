@@ -126,11 +126,12 @@ collections:
     folder: 'SMASH/content/smaart'
     format: 'yaml'
     create: true
+    slug: '{{date}}-{{presenter}}'
     fields:
       - {label: 'Title', name: 'title', widget: 'string' }
       - {label: 'Presenter', name: 'presenter', widget: 'string' }
       - {label: 'Date', name: 'date', widget: 'datetime'}
-      - {label: 'YouTube Video ID', name: 'videoID', widget: 'string'}
+      - {label: 'YouTube Video ID', name: 'videoId', widget: 'string'}
 
 
 
