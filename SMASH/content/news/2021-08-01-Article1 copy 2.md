@@ -1,6 +1,8 @@
 ---
+image: SMASH/img/dsc00997.jpg
 title: Implications of Scale for Tracing Contact Patterns in Movement
-date: 2021-04-01T17:46:48.665Z
+author: ss
+date: 2021-09-10T19:45:58.639Z
 ---
 # Big Boy Article
 
