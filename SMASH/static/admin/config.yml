@@ -116,7 +116,6 @@ collections:
         alllow_add: true
         field: 
           label: 'Social Network'
-          name: 'socialLink'
           widget: 'object'
           fields:
             - {label: 'Network Name', name: 'name', widget: 'string'}
