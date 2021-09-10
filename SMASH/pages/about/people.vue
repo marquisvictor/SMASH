@@ -9,7 +9,9 @@
           :key="person.name"
           class="flex flex-col items-center justify-start max-w-sm p-2 m-4 space-y-5 bg-white "
         >
-          <div class="w-full bg-red-400 rounded-md shadow-md h-60">
+          <div
+            class="w-full overflow-hidden bg-red-400 rounded-md shadow-md h-60"
+          >
             <img />
           </div>
           <div class="w-full space-y-2">

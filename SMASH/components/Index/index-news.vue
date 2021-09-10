@@ -91,7 +91,7 @@
 </template>
 
 <script>
-import Card from '@/components/Card'
+import Card from '@/components/Cards/Card'
 import VueHorizontal from 'vue-horizontal'
 import Icon from '@/components/Icon'
 export default {

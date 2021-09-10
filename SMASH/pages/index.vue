@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white max-w-7xl"
+    class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white  max-w-7xl"
   >
     <div class="flex flex-col min-h-screen">
       <Header class="flex-shrink-0" />
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
+import Header from '@/components/Header/Header.vue'
 import IndexNews from '@/components/Index/index-news.vue'
 import IndexText from '@/components/Index/index-text.vue'
 import IndexTitle from '@/components/Index/index-title.vue'

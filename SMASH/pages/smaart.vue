@@ -34,7 +34,7 @@
 
 <script>
 import pageTitle from '@/components/pageTitle.vue'
-import Card from '@/components/Card.vue'
+import Card from '~/components/Cards/Card.vue'
 export default {
   components: {
     pageTitle,

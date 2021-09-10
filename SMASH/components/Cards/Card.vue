@@ -8,7 +8,7 @@
         <img
           v-if="image && !videoId"
           img
-          src="../assets/img/cardSample.jpg"
+          src="@/assets/img/cardSample.jpg"
           class="w-full h-full"
         />
         <vue-tube
