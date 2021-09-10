@@ -37,15 +37,15 @@ collections:
           - label: 'Navigation Menu Items'
             name: 'navMenuItems'
             widget: 'list'
-              fields:
-                - {label: 'Item Name', name: 'title', widget: 'string'}
-                - name: 'rowItems'
-                  label: 'Row Items'
-                  widget: 'object'
-                  fields:
-                    - {label: 'Row Item Name', name: 'title', widget: 'string'}
-                    - {label: 'Row Item Link', name: 'link', widget: 'string'}
-                    - {label: 'Row Item Icon', name: 'icon', widget: 'string'}
+            fields:
+              - {label: 'Item Name', name: 'title', widget: 'string'}
+              - name: 'rowItems'
+                label: 'Row Items'
+                widget: 'object'
+                fields:
+                  - {label: 'Row Item Name', name: 'title', widget: 'string'}
+                  - {label: 'Row Item Link', name: 'link', widget: 'string'}
+                  - {label: 'Row Item Icon', name: 'icon', widget: 'string'}
               - label: "Bottom Items"
                 name: 'bottomItems'
                 widget: "list"
