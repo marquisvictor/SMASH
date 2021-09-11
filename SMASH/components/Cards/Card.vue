@@ -4,7 +4,7 @@
     :class="vueHorizontalChild ? 'card__container' : 'w-full h-full'"
   >
     <article class="relative w-full">
-      <div class="z-20 h-auto min-w-full bg-center bg-contain">
+      <div v-if="image || videoId" class="z-20 h-auto min-w-full bg-center bg-contain">
         <img
           v-if="image && !videoId"
           img
@@ -34,7 +34,7 @@
         </p>
 
         <p
-          class="mt-1 text-sm font-semibold leading-tight  md:text-base lg:text-lg"
+          class="mt-1 text-sm font-semibold leading-tight md:text-base lg:text-lg"
         >
           {{ title }}
         </p>

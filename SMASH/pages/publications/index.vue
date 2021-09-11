@@ -1,24 +1,46 @@
 <template>
   <div>
-    <pageTitle title="Publications"> </pageTitle>
-    <p
-      class="max-w-3xl mx-auto mt-4 text-2xl font-medium tracking-wide text-justify "
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Erat imperdiet sed
-      euismod nisi porta lorem mollis aliquam ut. Et magnis dis parturient
-      montes. Sed vulputate odio ut enim blandit volutpat maecenas volutpat
-      blandit. At auctor urna nunc id cursus metus aliquam eleifend mi. Feugiat
-      in ante metus dictum at tempor. Aliquet eget sit amet tellus cras
-      adipiscing enim. Odio morbi quis commodo odio aenean sed. Varius morbi
-      enim nunc faucibus a pellentesque sit. Tortor consequat id porta nibh
-      venenatis. Id eu nisl nunc mi. Dignissim enim sit amet venenatis urna
-      cursus eget. Cras fermentum odio eu feugiat. Cursus turpis massa tincidunt
-      dui ut ornare lectus sit. Nunc sed id semper risus in hendrerit gravida
-      rutrum. Egestas integer eget aliquet nibh praesent tristique. At volutpat
-      diam ut venenatis tellus in metus vulputate eu. Erat pellentesque
-      adipiscing commodo elit.
-    </p>
+    <pageTitle title="Publications">
+      <ul
+        class="flex flex-col items-center justify-start px-3 pb-5 space-y-6 overflow-visible  md:px-0"
+      >
+        <li
+          v-for="publication in publications"
+          :key="publication.title"
+          class="flex flex-col items-center max-w-3xl p-6 space-y-1 overflow-hidden rounded shadow-md  justify-evenly"
+        >
+          <div
+            :v-if="publication.authors"
+            class="flex flex-row items-center justify-start w-full space-x-4"
+          >
+            <span
+              :v-for="author in publication.authors"
+              class="px-3 py-1 text-sm font-bold tracking-tight text-white bg-indigo-500  rounded-2xl"
+            >
+              {{ author }}
+            </span>
+          </div>
+          <div class="space-y-3">
+            <p class="mt-1 text-base font-medium leading-tight lg:text-lg">
+              {{ publication.title }}
+            </p>
+            <div
+              class="flex flex-col items-center justify-center space-y-3 font-bold tracking-tighter  md:space-y-0 md:space-x-10 md:flex-row"
+            >
+              <a
+                :v-if="publication.file"
+                :href="publication.file"
+                class="p-2 hover:text-indigo-600"
+                >Download</a
+              >
+              <a :href="publication.link" class="p-2 hover:text-indigo-600"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </pageTitle>
   </div>
 </template>
 
@@ -29,5 +51,17 @@ export default {
     pageTitle,
   },
   layout: 'header-footer',
+  data() {
+    return {
+      publications: [],
+    }
+  },
+  async fetch() {
+    const publications = await this.$content('publications')
+      .sortBy('date')
+      .fetch()
+
+    this.publications = publications
+  },
 }
 </script>
