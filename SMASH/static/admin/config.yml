@@ -21,7 +21,7 @@ collections:
             allow_add: true
             fields:
               - {label: 'Network Name', name: 'name', widget: 'string'}
-              - {label: 'Network Icon', name: 'icon', widget: 'string'}
+              - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
               - {label: 'Network Link', name: 'link', widget: 'string'}
       - label: 'SMASH Footer'
         name: 'footer'
@@ -46,14 +46,14 @@ collections:
                 fields:
                   - {label: 'Row Item Name', name: 'title', widget: 'string'}
                   - {label: 'Row Item Link', name: 'link', widget: 'string'}
-                  - {label: 'Row Item Icon', name: 'icon', widget: 'string'}
+                  - {label: 'Row Item Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
               - label: "Bottom Items"
                 name: 'bottomItems'
                 widget: "list"
                 fields:
                   - {label: 'Bottom Item Name', name: 'title', widget: 'string'}
                   - {label: 'Bottom Item Link', name: 'link', widget: 'string'}
-                  - {label: 'Bottom Item Icon', name: 'icon', widget: 'string'}
+                  - {label: 'Bottom Item Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
           - label: "End Button"
             name: "button"
             widget: "object"
@@ -127,7 +127,7 @@ collections:
         allow_add: true
         fields:
           - {label: 'Network Name', name: 'name', widget: 'string'}
-          - {label: 'Network Icon', name: 'icon', widget: 'string'}
+          - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
           - {label: 'Network Link', name: 'link', widget: 'string'}
   - name: 'smaart'
     label: 'SMART'
