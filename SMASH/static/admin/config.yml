@@ -1,4 +1,5 @@
 site_url: https://staging.geosmash.net
+logo_url: https://staging.geosmash.net/static/img/SMASHLogo.svg
 
 backend:
   name: git-gateway
