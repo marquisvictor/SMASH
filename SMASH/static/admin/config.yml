@@ -87,18 +87,18 @@ collections:
           config:
             multiple: false
         media_folder: '/static/images'
-      - {label: 'Title', name: 'title', widget: 'string' }
+      - {label: 'Title', name: 'title', widget: 'string'}
       - label: 'Author(s)'
         name: 'authors'
         widget: 'list'
         field:
-          - label: 'Author'
-            name: 'author'
-            widget: 'relation'
-            collection: 'people'
-            search_fields: ['name']
-            value_field: 'name'
-            display_fields: ['name']
+          label: 'Author'
+          name: 'author'
+          widget: 'relation'
+          collection: 'people'
+          search_fields: ['name']
+          value_field: 'name'
+          display_fields: ['name']
       - {label: 'Date', name: 'date', widget: 'datetime'}
       - {label: 'News content', name: 'body', widget: 'markdown'}
   - name: 'people'
@@ -162,13 +162,13 @@ collections:
         name: 'authors'
         widget: 'list'
         field:
-          - label: 'Author'
-            name: 'author'
-            widget: 'relation'
-            collection: 'people'
-            search_fields: ['name']
-            value_field: 'name'
-            display_fields: ['name']
+          label: 'Author'
+          name: 'author'
+          widget: 'relation'
+          collection: 'people'
+          search_fields: ['name']
+          value_field: 'name'
+          display_fields: ['name']
       - label: 'Publication Date'
         name: 'date'
         widget: 'datetime'
