@@ -16,7 +16,7 @@
             <span
               v-for="author in publication.authors"
               :key="author"
-              class="px-3 py-1 text-sm font-bold tracking-tight text-white bg-indigo-500  rounded-2xl"
+              class="px-3 py-1 text-xs font-bold tracking-tight text-white bg-indigo-500  md:text-sm rounded-2xl"
             >
               {{ author }}
             </span>
