@@ -145,7 +145,7 @@ collections:
     folder: 'SMASH/content/publications'
     format: 'yaml'
     create: true
-    slug: '{{title}}'
+    slug: '{{date}}-{{authors}}'
     fields:
       - {label: 'Title', name: 'title', widget: 'string' }
       - label: 'File'

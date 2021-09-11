@@ -14,7 +14,8 @@
             class="flex flex-row items-center justify-start w-full space-x-4"
           >
             <span
-              :v-for="author in publication.authors"
+              v-for="author in publication.authors"
+              :key="author"
               class="px-3 py-1 text-sm font-bold tracking-tight text-white bg-indigo-500  rounded-2xl"
             >
               {{ author }}
@@ -28,7 +29,7 @@
               class="flex flex-col items-center justify-center space-y-3 font-bold tracking-tighter  md:space-y-0 md:space-x-10 md:flex-row"
             >
               <a
-                :v-if="publication.file"
+                v-if="publication.file"
                 :href="publication.file"
                 class="p-2 hover:text-indigo-600"
                 >Download</a
@@ -60,7 +61,6 @@ export default {
     const publications = await this.$content('publications')
       .sortBy('date')
       .fetch()
-
     this.publications = publications
   },
 }
