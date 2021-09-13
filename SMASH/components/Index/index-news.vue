@@ -18,11 +18,12 @@
             class="flex flex-row items-center self-start justify-around  md:self-end group"
             href="/news"
           >
-            <p
+            <nuxt-link
+              to="/news"
               class="text-sm font-semibold leading-3 text-gray-500 cursor-pointer  md:text-lg group-hover:underline group-hover:text-gray-800"
             >
               All News
-            </p>
+            </nuxt-link>
             <Icon
               icon="ic:outline-keyboard-arrow-right"
               class="w-4 h-4 cursor-pointer  md:h-6 md:w-6 group-hover:text-gray-800"
@@ -51,11 +52,12 @@
               <a
                 class="flex flex-row items-center justify-center w-48 text-3xl tracking-tight text-black cursor-pointer  mt-14 h-52 rounded-xl group"
               >
-                <p
+                <nuxt-link
+                  to="/news"
                   class="text-lg font-semibold leading-3 text-gray-500 cursor-pointer  group-hover:underline group-hover:text-gray-800"
                 >
                   All News
-                </p>
+                </nuxt-link>
                 <Icon
                   icon="ic:outline-keyboard-arrow-right"
                   class="w-6 h-6 cursor-pointer  md:h-6 md:w-6 group-hover:text-gray-800"
