@@ -32,7 +32,7 @@ export default {
     }
   },
   async fetch() {
-    const { title, subtitle } = await this.$content('index')
+    const { title, subtitle } = await this.$content('pages/index')
       .only(['title', 'subtitle'])
       .fetch()
 

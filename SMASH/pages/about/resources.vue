@@ -24,7 +24,7 @@ export default {
     }
   },
   async fetch() {
-    const resources = await this.$content('resources').fetch()
+    const resources = await this.$content('pages/resources').fetch()
     this.resources = resources
   },
 }

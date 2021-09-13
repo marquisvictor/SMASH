@@ -24,7 +24,7 @@ export default {
     }
   },
   async fetch() {
-    const objective = await this.$content('objective').only('objective').fetch()
+    const objective = await this.$content('pages/objective').fetch()
     this.objective = objective
   },
 }

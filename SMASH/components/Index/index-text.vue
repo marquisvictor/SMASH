@@ -20,7 +20,9 @@ export default {
     }
   },
   async fetch() {
-    const content = await this.$content('index').only(['shortSentence']).fetch()
+    const content = await this.$content('pages/index')
+      .only(['shortSentence'])
+      .fetch()
     this.shortSentence = content.shortSentence
   },
 }
