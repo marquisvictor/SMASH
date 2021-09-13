@@ -75,7 +75,6 @@ collections:
         media_library:
           config:
             multiple: false
-        media_folder: '/static/images'
       - {label: 'Title', name: 'title', widget: 'string'}
       - label: 'Author(s)'
         name: 'authors'
