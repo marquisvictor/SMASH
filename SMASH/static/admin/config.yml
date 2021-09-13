@@ -183,15 +183,15 @@ collections:
         file: 'SMASH/content/objective.yaml'
         fields:
           - {label: 'Objective', name: 'body', widget: 'markdown'}  
-          - label: "Social Networks"
-            name: 'socialNetworks'
-            widget: 'list'
-            summary: "{{fields.name}}"
-            allow_add: true
-            fields:
-              - {label: 'Network Name', name: 'name', widget: 'string'}
-              - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
-              - {label: 'Network Link', name: 'link', widget: 'string'}
+          # - label: "Social Networks"
+          #   name: 'socialNetworks'
+          #   widget: 'list'
+          #   summary: "{{fields.name}}"
+          #   allow_add: true
+          #   fields:
+          #     - {label: 'Network Name', name: 'name', widget: 'string'}
+          #     - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
+          #     - {label: 'Network Link', name: 'link', widget: 'string'}
       - label: 'Resources Page'
         name: 'resources'
         file: 'SMASH/content/contact.yaml'
