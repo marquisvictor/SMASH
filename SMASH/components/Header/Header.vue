@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full bg-white">
+  <header class="relative w-full bg-white">
     <div class="px-4 mx-auto max-w-7xl sm:px-6">
       <div
         class="flex items-center justify-between py-6 border-b-2 border-gray-100  md:justify-start md:space-x-10"
@@ -34,7 +34,7 @@
           </button>
         </div>
 
-        <nav class="hidden space-x-10 md:flex">
+        <nav class="hidden space-x-10 md:flex" role="navigation">
           <MenuItemDesktop
             v-for="(item, index) in navMenuItems"
             :key="index"
@@ -53,15 +53,8 @@
     </div>
 
     <!--
-    Mobile menu, show/hide based on mobile menu state.
-
-    Entering: "duration-200 ease-out"
-      From: "opacity-0 scale-95"
-      To: "opacity-100 scale-100"
-    Leaving: "duration-100 ease-in"
-      From: "opacity-100 scale-100"
-      To: "opacity-0 scale-95"
-  -->
+    Mobile menu
+    -->
     <div
       v-if="mobileMenuOpen"
       class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform  md:hidden"
@@ -97,7 +90,7 @@
             </div>
           </div>
           <div class="mt-6 ml-1">
-            <nav class="grid gap-y-8">
+            <nav class="grid gap-y-8" role="navigation">
               <a
                 v-for="navMenuRowItem in mobileNavMenuItems.rowItems"
                 :key="navMenuRowItem.title"
@@ -146,7 +139,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
