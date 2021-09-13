@@ -50,21 +50,21 @@
               class="max-w-xs mb-2 overflow-visible md:mb-4"
             />
             <div class="flex items-start justify-center">
-              <a
+              <nuxt-link
+                to="/news"
                 class="flex flex-row items-center justify-center w-48 text-3xl tracking-tight text-black cursor-pointer  mt-14 h-52 rounded-xl group"
               >
-                <nuxt-link
-                  to="/news"
+                <p
                   class="text-lg font-semibold leading-3 text-gray-500 cursor-pointer  group-hover:underline group-hover:text-gray-800"
                 >
                   All News
-                </nuxt-link>
+                </p>
                 <Icon
                   icon="ic:outline-keyboard-arrow-right"
                   class="w-6 h-6 cursor-pointer  md:h-6 md:w-6 group-hover:text-gray-800"
                   aria-hidden="true"
                 />
-              </a>
+              </nuxt-link>
             </div>
           </vue-horizontal>
         </div>
