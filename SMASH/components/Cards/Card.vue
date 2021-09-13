@@ -3,48 +3,53 @@
     class=""
     :class="vueHorizontalChild ? 'card__container' : 'w-full h-full'"
   >
-    <article class="relative w-full">
-      <div v-if="image || videoId" class="z-20 h-auto min-w-full bg-center bg-contain">
-        <img
-          v-if="image && !videoId"
-          img
-          src="@/assets/img/cardSample.jpg"
-          class="w-full h-full"
-        />
-        <vue-tube
-          v-if="videoId && !image"
-          :videoId="videoId"
-          class="flex-shrink-0 w-full"
-        />
-      </div>
+    <nuxt-link :to="link">
+      <article class="relative w-full">
+        <div
+          v-if="image || videoId"
+          class="z-20 h-auto min-w-full bg-center bg-contain"
+        >
+          <img
+            v-if="image && !videoId"
+            img
+            src="@/assets/img/cardSample.jpg"
+            class="w-full h-full"
+          />
+          <vue-tube
+            v-if="videoId && !image"
+            :videoId="videoId"
+            class="flex-shrink-0 w-full"
+          />
+        </div>
 
-      <div
-        class="z-50 w-full p-3 mx-auto break-normal bg-white shadow-lg"
-        :class="[
-          offset
-            ? '-mt-16 rounded-lg card-text__container relative'
-            : 'mt-0 rounded-b-lg w-full pt-4 pb-4',
-        ]"
-        :style="!vueHorizontalChild ? 'min-height: 11rem' : ''"
-      >
-        <p
-          class="flex text-xs font-semibold tracking-wide text-gray-500 uppercase bg-teal-200 rounded-full "
+        <div
+          class="z-50 w-full p-3 mx-auto break-normal bg-white shadow-lg"
+          :class="[
+            offset
+              ? '-mt-16 rounded-lg card-text__container relative'
+              : 'mt-0 rounded-b-lg w-full pt-4 pb-4',
+          ]"
+          :style="!vueHorizontalChild ? 'min-height: 11rem' : ''"
         >
-          {{ new Date(date).toDateString() }}
-        </p>
+          <p
+            class="flex text-xs font-semibold tracking-wide text-gray-500 uppercase bg-teal-200 rounded-full "
+          >
+            {{ new Date(date).toDateString() }}
+          </p>
 
-        <p
-          class="mt-1 text-sm font-semibold leading-tight md:text-base lg:text-lg"
-        >
-          {{ title }}
-        </p>
-        <p
-          class="mt-1 text-xs font-medium leading-tight md:text-sm lg:text-base"
-        >
-          {{ subtitle }}
-        </p>
-      </div>
-    </article>
+          <p
+            class="mt-1 text-sm font-semibold leading-tight  md:text-base lg:text-lg"
+          >
+            {{ title }}
+          </p>
+          <p
+            class="mt-1 text-xs font-medium leading-tight  md:text-sm lg:text-base"
+          >
+            {{ subtitle }}
+          </p>
+        </div>
+      </article>
+    </nuxt-link>
   </div>
 </template>
 
@@ -88,6 +93,11 @@ export default {
     vueHorizontalChild: {
       type: Boolean,
       default: false,
+      required: false,
+    },
+    link: {
+      type: String,
+      default: '',
       required: false,
     },
   },

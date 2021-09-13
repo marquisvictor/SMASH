@@ -44,6 +44,7 @@
               :key="index"
               :title="news.title"
               :date="news.createdAt"
+              :link="'/news/' + news.slug"
               image="news.image"
               offset
               class="max-w-xs mb-2 overflow-visible md:mb-4"
