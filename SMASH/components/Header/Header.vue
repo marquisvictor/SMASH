@@ -5,18 +5,25 @@
         class="flex items-center justify-between py-6 border-b-2 border-gray-100  md:justify-start md:space-x-10"
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a v-if="!onHome" href="/" class="flex items-center">
+          <nuxt-link v-if="!onHome" to="/" class="flex items-center">
             <span class="sr-only">SMASH</span>
 
             <img
               class="w-auto h-8 sm:h-10"
+              height="40"
+              width="40"
               src="~/assets/SMASHLogo.svg"
               alt="SMASH Logo"
             />
-            <p v-if="!onHome" class="pl-2 text-4xl font-bold tracking-wider">
+            <abbr
+              v-if="!onHome"
+              class="pl-2 text-4xl font-bold tracking-wider"
+              title="Spatial Multiscale Analytical Science Hub"
+              style="text-decoration: none !important"
+            >
               SMASH
-            </p>
-          </a>
+            </abbr>
+          </nuxt-link>
         </div>
         <div id="first" class="-my-2 -mr-2 md:hidden">
           <button
