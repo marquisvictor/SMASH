@@ -110,7 +110,7 @@ export default {
     }
   },
   async fetch() {
-    const news = await this.$content('news').limit(5).fetch()
+    const news = await this.$content('news').limit(5).sortBy('date').fetch()
     this.newsPosts = news
   },
   methods: {
