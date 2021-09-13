@@ -182,7 +182,7 @@ collections:
         name: 'objective'
         file: 'SMASH/content/objective.yaml'
         fields:
-          - {label: 'Objective', name: 'objective', widget: 'markdown'}  
+          - {label: 'Objective', name: 'body', widget: 'markdown'}  
           - label: "Social Networks"
             name: 'socialNetworks'
             widget: 'list'

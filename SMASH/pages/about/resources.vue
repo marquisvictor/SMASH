@@ -1,10 +1,11 @@
 <template>
   <div>
     <pageTitle title="Resources">
-      <p
+      <div
+        v-if="resources.body"
         class="max-w-3xl mx-auto mt-4 text-2xl font-medium tracking-wide prose prose-2xl text-justify "
         v-html="$md.render(resources.body)"
-      ></p>
+      ></div>
     </pageTitle>
   </div>
 </template>
