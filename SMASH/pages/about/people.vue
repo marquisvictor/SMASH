@@ -23,11 +23,11 @@
             </p>
           </div>
 
-          <p
+          <div
             class="text-base prose text-gray-700 md:prose-xl"
             style="min-height: 9rem"
             v-html="$md.render(person.bio)"
-          ></p>
+          ></div>
           <div
             v-if="person.socialLinks"
             class="flex flex-row items-center justify-start w-full space-x-2"
