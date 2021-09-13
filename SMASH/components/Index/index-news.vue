@@ -14,22 +14,21 @@
           <h2 class="text-5xl font-bold tracking-wide text-left md:text-7xl">
             Latest News
           </h2>
-          <a
+          <nuxt-link
+            to="/news"
             class="flex flex-row items-center self-start justify-around  md:self-end group"
-            href="/news"
           >
-            <nuxt-link
-              to="/news"
+            <p
               class="text-sm font-semibold leading-3 text-gray-500 cursor-pointer  md:text-lg group-hover:underline group-hover:text-gray-800"
             >
               All News
-            </nuxt-link>
+            </p>
             <Icon
               icon="ic:outline-keyboard-arrow-right"
               class="w-4 h-4 cursor-pointer  md:h-6 md:w-6 group-hover:text-gray-800"
               aria-hidden="true"
             />
-          </a>
+          </nuxt-link>
         </div>
       </div>
       <div class="w-full md:space-y-6">

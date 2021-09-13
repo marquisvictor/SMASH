@@ -60,8 +60,7 @@ collections:
             widget: "object"
             fields:
               - {label: 'Button Title', name: 'title', widget: 'string'}
-              - {label: 'Button Link', name: 'link', widget: 'string'}
-        
+              - {label: 'Button Link', name: 'link', widget: 'string'}      
   - name: 'news'
     label: 'News'
     folder: 'SMASH/content/news'

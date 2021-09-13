@@ -173,7 +173,7 @@ export default {
     }
   },
   async fetch() {
-    const content = await this.$content('header')
+    const content = await this.$content('core/header')
       .only(['navMenuItems', 'button'])
       .fetch()
     this.navMenuItems = content.navMenuItems

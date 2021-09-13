@@ -39,8 +39,8 @@ export default {
     }
   },
   async fetch() {
-    const footerContent = await this.$content('footer').fetch()
-    const socialMedia = await this.$content('contact')
+    const footerContent = await this.$content('core/footer').fetch()
+    const socialMedia = await this.$content('core/contact')
       .only('socialMedia')
       .fetch()
     this.footerText = footerContent.footerText
