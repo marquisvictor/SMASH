@@ -194,6 +194,6 @@ collections:
           #     - {label: 'Network Link', name: 'link', widget: 'string'}
       - label: 'Resources Page'
         name: 'resources'
-        file: 'SMASH/content/contact.yaml'
+        file: 'SMASH/content/resources.yaml'
         fields:
           - {label: 'Resources', name: 'body', widget: 'markdown'}  
