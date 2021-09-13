@@ -9,3 +9,4 @@ socialLinks:
   - name: Github
     icon: mdi:github
     link: github.com
+priority: 1

@@ -111,6 +111,14 @@ collections:
     fields:
       - {label: 'Name', name: 'name', widget: 'string'}
       - {label: 'Role', name: 'role', widget: 'string'}
+      - label: 'List Order'
+        name: 'priority'
+        widget: 'number'
+        default: 5
+        value_type: 'int'
+        min: 1
+        max: 10
+        step: 1
       - label: 'Bio'
         name: 'bio'
         widget: 'markdown'

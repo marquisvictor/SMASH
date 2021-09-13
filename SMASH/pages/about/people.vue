@@ -65,7 +65,8 @@ export default {
   },
   async fetch() {
     const people = await this.$content('people')
-      .only(['name', 'role', 'bio', 'socialLinks'])
+      .sortBy('priority')
+      .sortBy('name')
       .fetch()
 
     this.people = people
