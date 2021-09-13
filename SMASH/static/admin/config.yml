@@ -13,7 +13,7 @@ collections:
     files:
       - label: 'SMASH Contact Info'
         name: 'contact'
-        file: 'SMASH/content/contact.yaml'
+        file: 'SMASH/content/core/contact.yaml'
         fields:
           - label: "Social Networks"
             name: 'socialNetworks'
@@ -26,14 +26,14 @@ collections:
               - {label: 'Network Link', name: 'link', widget: 'string'}
       - label: 'SMASH Footer'
         name: 'footer'
-        file: 'SMASH/content/footer.yaml'
+        file: 'SMASH/content/core/footer.yaml'
         fields:
           - label: 'Left Text'
             name: 'footerText'
             widget: 'markdown'
       - label : "SMASH Header"
         name: 'header'
-        file: 'SMASH/content/header.yaml'
+        file: 'SMASH/content/core/header.yaml'
         fields:
           - label: 'Navigation Menu Items'
             name: 'navMenuItems'
@@ -61,18 +61,7 @@ collections:
             fields:
               - {label: 'Button Title', name: 'title', widget: 'string'}
               - {label: 'Button Link', name: 'link', widget: 'string'}
-      - label : "Index Page"
-        name: 'index'
-        file: 'SMASH/content/index.yaml'
-        fields:
-          - {label: 'Index title', name: 'title', widget: 'string'}
-          - {label: 'Index Subtitle', name: 'subtitle', widget: 'string'}
-          - {label: 'Index Short Sentence', name: 'shortSentence', widget: 'text'}
-      - label : "Objective Page"
-        name: 'objective'
-        file: 'SMASH/content/objective.yaml'
-        fields:
-          - {label: 'Objective', name: 'objective', widget: 'markdown'}    
+        
   - name: 'news'
     label: 'News'
     folder: 'SMASH/content/news'
@@ -181,5 +170,32 @@ collections:
       - label: 'Publication Date'
         name: 'date'
         widget: 'datetime'
-
-
+  - name: 'SMASH Pages'
+    label: "pages"
+    files:
+      - label : "Index Page"
+        name: 'index'
+        file: 'SMASH/content/index.yaml'
+        fields:
+          - {label: 'Index title', name: 'title', widget: 'string'}
+          - {label: 'Index Subtitle', name: 'subtitle', widget: 'string'}
+          - {label: 'Index Short Sentence', name: 'shortSentence', widget: 'text'}
+      - label : "Objective Page"
+        name: 'objective'
+        file: 'SMASH/content/objective.yaml'
+        fields:
+          - {label: 'Objective', name: 'objective', widget: 'markdown'}  
+          - label: "Social Networks"
+            name: 'socialNetworks'
+            widget: 'list'
+            summary: "{{fields.name}}"
+            allow_add: true
+            fields:
+              - {label: 'Network Name', name: 'name', widget: 'string'}
+              - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
+              - {label: 'Network Link', name: 'link', widget: 'string'}
+      - label: 'Resources Page'
+        name: 'resources'
+        file: 'SMASH/content/contact.yaml'
+        fields:
+          - {label: 'Resources', name: 'body', widget: 'markdown'}  
