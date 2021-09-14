@@ -138,7 +138,7 @@
           <div>
             <a
               :href="button.link"
-              class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm  hover:bg-indigo-700"
+              class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-black border border-transparent rounded-md shadow-sm  hover:bg-indigo-700"
             >
               {{ button.title }}
             </a>
