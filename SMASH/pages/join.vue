@@ -21,11 +21,6 @@
           method="POST"
           @submit.prevent
         >
-          <div class="hidden">
-            <label
-              >Don’t fill this out if you’re human: <input name="bot-field"
-            /></label>
-          </div>
           <div class="flex flex-row space-x-10 md:space-x-20">
             <div class="flex flex-col space-y-2 leading-tight tracking-tight">
               <label class="font-bold text-gray-700"> First Name </label>
