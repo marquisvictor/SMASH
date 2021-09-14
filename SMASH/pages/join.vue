@@ -40,6 +40,7 @@
                   border-0 border-b-2 border-gray-200
                   focus:ring-0
                   focus:border-black
+                  py-2
                 "
                 type="text"
                 name="firstName"
@@ -59,6 +60,7 @@
                   border-0 border-b-2 border-gray-200
                   focus:ring-0
                   focus:border-black
+                  py-2
                 "
                 type="text"
                 name="lastName"
@@ -89,15 +91,7 @@
           </div>
           <div class="flex flex-col items-center justify-center space-x-12">
             <textarea
-              class="
-                mt-0
-                block
-                w-full
-                px-0.5
-                border-0 border-b-2 border-gray-200
-                focus:ring-0
-                focus:border-black
-              "
+              class="flex-shrink-0 block w-full p-1 mt-0 border-0 border-b-2 border-gray-200  focus:ring-0 focus:border-black"
               name="message"
             ></textarea>
           </div>
