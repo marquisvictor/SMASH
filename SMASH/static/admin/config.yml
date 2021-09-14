@@ -198,7 +198,7 @@ collections:
         fields:
           - {label: 'Resources', name: 'body', widget: 'markdown'}  
       - label: 'Join Page'
-      name: 'join'
-      file: 'SMASH/content/join.yaml'
-      fields:
-        - {label: 'Body message', name: 'body', widget: 'markdown'} 
+        name: 'join'
+        file: 'SMASH/content/join.yaml'
+        fields:
+          - {label: 'Body message', name: 'body', widget: 'markdown'} 
