@@ -3,7 +3,7 @@
     <pageTitle title="Resources">
       <div
         v-if="resources.body"
-        class="max-w-3xl px-4 mt-4 text-2xl prose text-justify  md:prose-2xl md:px-0"
+        class="max-w-3xl px-4 mx-auto mt-4 text-2xl prose text-justify  md:prose-2xl md:px-0"
         v-html="$md.render(resources.body)"
       ></div>
     </pageTitle>

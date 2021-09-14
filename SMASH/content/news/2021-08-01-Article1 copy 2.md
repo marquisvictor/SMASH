@@ -1,9 +1,18 @@
 ---
 image: /static/uploads/img_5410.jpg
 title: Implications of Scale for Tracing Contact Patterns in Movement
-author: ss
+authors:
+  - Matthew Tralka
+  - Tyler Hoffman
 date: 2021-09-10T19:45:58.639Z
 ---
-# Big Boy Article
 
-This is the large amount of content available to read for everyone yaay
+A new study by geographical sciences researchers, Drs. Kuishuang Feng, Giovanni Baiocchi, and Laixiang Sun, in collaboration with Pan He at Cardiff University and Klaus Hubacek at University of Groningen, reveals that a healthy diet with lower environmental impacts is achievable within current food budgets for almost 95% of people, but such dietary patterns are unaffordable for 38% of blacks and Hispanics in the lowest income and education groups.
+
+The prevalent dietary patterns in the United States have long been criticized as unhealthy and impactful on the ecological environment. Nevertheless, the nutritional and environmental outcomes of diets present disparities across population groups with different racial/ethnic and socioeconomic status. A new study published in Nature Food shows that those who are well-paid and/or well educated are more likely to adopt healthier diets but are also responsible for larger environmental impacts in terms of GHG emissions, blue water footprint, land occupation, as well as energy consumption. While shifting to healthy diet can reduce the environment impacts and is affordable for the majority, the disadvantaged groups may still be stuck on the way of change.
+
+“Our data analysis shows that the individuals with higher income and/or educational level tend to have a higher consumption of fruits, dairy and livestock products, seafood, etc. as well as less added sugar and a better composition of fatty acid that includes a larger proportion of non-saturated fats, but also more sodium that are suggested by the Dietary Guidelines for Americans,” says Kuishuang Feng, UMD researcher who co-authored the study with an international team including other two UMD researchers, one former PhD student and one former faculty of UMD. Food items with such nutrition contents are often with lower energy density but higher nutrient density and may also have higher environmental impacts in per unit of weight, say the researchers.
+
+“However, there is considerable room for improving the nutritional quality and reducing environmental impacts simultaneously even for these groups by reducing the excessive meat consumption and increasing the intake of vegetables, fruits, etc.” says Giovanni Baiocchi, the second UMD co-author of the study. Although healthy foods can be more expensive than the cheap, empty calories, the optimization programming of the study indicates that a healthy diet with lower environmental impacts is achievable within current food budgets for most people, except 38% of blacks and Hispanics in the lowest income and education groups. “As a result,” says Laixiang Sun, the third UMD co-author of the study, “policies that make nutritious food more affordable would promote better nutrition and improved environmental outcomes simultaneously, particularly for more vulnerable socio-economic groups.”  “Further research and policy practices are required to explore how to motivate behavioral and lifestyle changes needed to improve the quality of individual diets and reduce their adverse environmental impacts” added by Giovanni Baiocchi.
+
+This study for the first time quantified the environmental impacts and nutrition quality of the dietary records of individuals from a biannual nationally representative nutrition survey, National Health and Nutrition Examination Survey (NHANES), from 2005 to 2016. The researchers used an optimization algorithm to figure out dietary patterns that satisfy the nutritional requirements with smallest changes from the habitual diet of each individual, with the expenditure and environmental impacts further evaluated.  
