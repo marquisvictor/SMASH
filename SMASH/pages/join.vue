@@ -15,7 +15,6 @@
       <div class="flex items-center justify-center py-10">
         <form
           class="space-y-12"
-          netlify-honeypot="bot-field"
           data-netlify="true"
           name="contact"
           method="POST"
