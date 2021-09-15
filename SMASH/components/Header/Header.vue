@@ -12,7 +12,7 @@
               class="w-auto h-8 sm:h-10"
               height="40"
               width="40"
-              src="~/assets/SMASHLogo.svg"
+              :src="imageLink"
               alt="SMASH Logo"
             />
             <abbr
@@ -73,11 +73,7 @@
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
             <a href="/" class="flex items-center space-x-2">
-              <img
-                class="w-auto h-8"
-                src="~/assets/SMASHLogo.svg"
-                alt="SMASH Logo"
-              />
+              <img class="w-auto h-8" :src="imageLink" alt="SMASH Logo" />
               <p class="text-lg font-bold tracking-wider">SMASH</p>
             </a>
 
@@ -174,10 +170,11 @@ export default {
   },
   async fetch() {
     const content = await this.$content('core/header')
-      .only(['navMenuItems', 'button'])
+      .only(['navMenuItems', 'button', 'image'])
       .fetch()
     this.navMenuItems = content.navMenuItems
     this.button = content.button
+    this.image = content.image
   },
   computed: {
     onHome() {
@@ -201,6 +198,16 @@ export default {
       mobileNavMenuItems.rowItems = mobileNavMenuItems.rowItems.flat(2)
       mobileNavMenuItems.bottomItems = mobileNavMenuItems.bottomItems.flat(2)
       return mobileNavMenuItems
+    },
+    imageLink() {
+      if (!this.image) {
+        return
+      }
+
+      return require(`/static/uploads/${this.image.replace(
+        '/static/uploads/',
+        ''
+      )}`)
     },
   },
   methods: {

@@ -60,7 +60,14 @@ collections:
             widget: "object"
             fields:
               - {label: 'Button Title', name: 'title', widget: 'string'}
-              - {label: 'Button Link', name: 'link', widget: 'string'}      
+              - {label: 'Button Link', name: 'link', widget: 'string'}  
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+            allow_multiple: false
+            media_library:
+              config:
+                multiple: false    
   - name: 'news'
     label: 'News'
     folder: 'SMASH/content/news'

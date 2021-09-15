@@ -36,3 +36,4 @@ navMenuItems:
 button:
   title: Join our Team!
   link: "/join"
+image: /static/uploads/SMASHLogo.svg
