@@ -72,7 +72,11 @@
           v-if="!$device.isMobile"
           class="flex flex-row items-center justify-center h-12 mb-2 -mt-3 space-x-6  md:space-x-2 md:mb-0"
         >
-          <button class="p-4 md:p-0" @click="prevNews">
+          <button
+            class="p-4 md:p-0"
+            aria-label="Previous News Stories"
+            @click="prevNews"
+          >
             <Icon
               icon="ic:outline-keyboard-arrow-left"
               class="w-12 h-12 cursor-pointer  md:h-10 md:w-10 group-hover:text-gray-800"
@@ -80,7 +84,11 @@
             />
           </button>
 
-          <button class="p-4 md:p-0" @click="nextNews">
+          <button
+            class="p-4 md:p-0"
+            aria-label="Next News Stories"
+            @click="nextNews"
+          >
             <Icon
               icon="ic:outline-keyboard-arrow-right"
               class="w-12 h-12 cursor-pointer  md:h-10 md:w-10 group-hover:text-gray-800"
