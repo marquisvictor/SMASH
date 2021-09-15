@@ -22,6 +22,7 @@
     "core-js": "^3.9.1",
     "markdown-it": "^12.2.0",
     "nuxt": "^2.15.3",
+    "nuxt-social-meta": "^1.0.0",
     "vue-horizontal": "^0.8.8",
     "vuetube": "^1.0.1"
   },

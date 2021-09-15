@@ -1,8 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'SMASH',
     htmlAttrs: {
@@ -18,21 +16,12 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     'nuxt-purge-icons-module',
     '@nuxtjs/device',
@@ -40,11 +29,26 @@ export default {
     '@aceforth/nuxt-netlify',
     '@luxdamore/nuxt-humans-txt',
   ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/content', '@nuxtjs/markdownit', '@nuxt/image'],
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/markdownit',
+    '@nuxt/image',
+    [
+      'nuxt-social-meta',
+      {
+        url: 'geosmash.net',
+        title: 'SMASH',
+        site_name: 'SMASH',
+        description: 'Spatial Multiscale Analytical Research Hub',
+        img: 'SMASHLogo.svg',
+        img_size: { width: '400', height: '400' },
+        locale: 'en_US',
+        twitter: '@GEOSMASH',
+        twitter_card: 'summary_large_image',
+        theme_color: '#4f46e5',
+      },
+    ],
+  ],
   build: {},
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
