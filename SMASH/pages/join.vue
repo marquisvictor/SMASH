@@ -33,9 +33,9 @@
                   pr-0.5
                   bg-gray-50
                   border-0 border-b-2 border-gray-200
+                  py-2
                   focus:ring-0
                   focus:border-black
-                  py-2
                 "
                 type="text"
                 name="firstName"
@@ -53,9 +53,9 @@
                   pr-0.5
                   bg-gray-50
                   border-0 border-b-2 border-gray-200
+                  py-2
                   focus:ring-0
                   focus:border-black
-                  py-2
                 "
                 type="text"
                 name="lastName"
