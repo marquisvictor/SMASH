@@ -20,6 +20,7 @@
           method="POST"
           @submit.prevent
         >
+          <input type="hidden" value="contact" name="form-name" />
           <div class="flex flex-row space-x-10 md:space-x-20">
             <p class="flex flex-col space-y-2 leading-tight tracking-tight">
               <label class="font-bold text-gray-700"> First Name </label>
