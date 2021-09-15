@@ -41,7 +41,7 @@ export default {
         site_name: 'SMASH',
         description:
           'SMASH @ UMD is a subsection of the Center for Geospatial Information Science dedicated to exploring multiscale properties as they pertain to the human existance',
-        img: 'static/SMASHLogo.svg',
+        img: 'SMASHLogo.svg',
         img_size: { width: '400', height: '400' },
         locale: 'en_US',
         twitter: '@GEOSMASH',
