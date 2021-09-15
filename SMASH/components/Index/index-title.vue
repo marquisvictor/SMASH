@@ -3,8 +3,10 @@
     <div class="flex items-center justify-center max-h-60">
       <img
         class="h-full w-52 md:w-72"
-        src="~/assets/SMASHLogo.svg"
+        :src="imageLink"
         alt="SMASH Logo"
+        height="250"
+        width="250"
       />
     </div>
 
@@ -29,15 +31,29 @@ export default {
     return {
       title: '',
       subtitle: '',
+      image: '',
     }
   },
   async fetch() {
-    const { title, subtitle } = await this.$content('pages/index')
-      .only(['title', 'subtitle'])
+    const { title, subtitle, image } = await this.$content('pages/index')
+      .only(['title', 'subtitle', 'image'])
       .fetch()
 
     this.title = title
     this.subtitle = subtitle
+    this.image = image
+  },
+  computed: {
+    imageLink() {
+      if (!this.image) {
+        return
+      }
+
+      return require(`@/static/uploads/${this.image.replace(
+        '/static/uploads/',
+        ''
+      )}`)
+    },
   },
 }
 </script>

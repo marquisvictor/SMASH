@@ -186,6 +186,13 @@ collections:
           - {label: 'Index title', name: 'title', widget: 'string'}
           - {label: 'Index Subtitle', name: 'subtitle', widget: 'string'}
           - {label: 'Index Short Sentence', name: 'shortSentence', widget: 'text'}
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+            allow_multiple: false
+            media_library:
+              config:
+                multiple: false
       - label : "Objective Page"
         name: 'objective'
         file: 'SMASH/content/objective.yaml'
