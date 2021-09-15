@@ -21,7 +21,7 @@
           @submit.prevent
         >
           <div class="flex flex-row space-x-10 md:space-x-20">
-            <div class="flex flex-col space-y-2 leading-tight tracking-tight">
+            <p class="flex flex-col space-y-2 leading-tight tracking-tight">
               <label class="font-bold text-gray-700"> First Name </label>
               <input
                 class="
@@ -40,8 +40,8 @@
                 name="firstName"
                 placeholder="John"
               />
-            </div>
-            <div class="flex flex-col space-y-2 leading-tight tracking-tight">
+            </p>
+            <p class="flex flex-col space-y-2 leading-tight tracking-tight">
               <label class="font-bold text-gray-700"> Last Name </label>
               <input
                 class="
@@ -60,9 +60,9 @@
                 name="lastName"
                 placeholder="Smith"
               />
-            </div>
+            </p>
           </div>
-          <div
+          <p
             class="flex flex-row items-center justify-center space-x-6  md:space-x-12"
           >
             <label class="font-bold text-gray-700"> Email </label>
@@ -82,13 +82,13 @@
               name="email"
               placeholder="john@example.com"
             />
-          </div>
-          <div class="flex flex-col items-center justify-center space-x-12">
+          </p>
+          <p class="flex flex-col items-center justify-center space-x-12">
             <textarea
               class="flex-shrink-0 block w-full p-1 mt-0 border-0 border-b-2 border-gray-200  focus:ring-0 focus:border-black"
               name="message"
             ></textarea>
-          </div>
+          </p>
           <div class="flex flex-row items-center justify-center">
             <button
               class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-black border border-transparent rounded-md shadow-sm  hover:bg-indigo-700"
