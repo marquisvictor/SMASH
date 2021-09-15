@@ -81,10 +81,13 @@ export default {
         value: 'Designer & Developer',
       },
       {
-        key: 'Undergraduate',
+        key: 'Undergraduate at',
         value: 'University of Maryland College Park',
       },
-      'www.tralka.xyz',
+      {
+        key: 'Website',
+        value: 'www.tralka.xyz',
+      },
       false,
     ],
     site: [

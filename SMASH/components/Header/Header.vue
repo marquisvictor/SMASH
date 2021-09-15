@@ -12,7 +12,7 @@
               class="w-auto h-8 sm:h-10"
               height="40"
               width="40"
-              :src="imageLink"
+              :src="image"
               alt="SMASH Logo"
               quality="50"
             />
@@ -73,25 +73,16 @@
       >
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
-            <a href="/" class="flex items-center space-x-2">
-              <!-- <nuxt-img
+            <nuxt-link to="/" class="flex items-center space-x-2">
+              <nuxt-img
                 height="40"
                 width="40"
                 class="w-auto h-8"
-                :src="imageLink"
+                :src="image"
                 alt="SMASH Logo"
-                quality="50"
-              /> -->
-              <nuxt-img
-                class="w-auto h-8 sm:h-10"
-                height="40"
-                width="40"
-                :src="imageLink"
-                alt="SMASH Logo"
-                quality="50"
               />
               <p class="text-lg font-bold tracking-wider">SMASH</p>
-            </a>
+            </nuxt-link>
 
             <div class="-mr-2">
               <button
@@ -182,15 +173,16 @@ export default {
       button: {},
       mobileMenuOpen: false,
       branding: {},
+      image: '',
     }
   },
   async fetch() {
     const content = await this.$content('core/header')
       .only(['navMenuItems', 'button', 'image'])
       .fetch()
+    this.image = await this.getImageLink(content.image)
     this.navMenuItems = content.navMenuItems
     this.button = content.button
-    this.image = content.image
   },
   computed: {
     onHome() {
@@ -217,7 +209,7 @@ export default {
     },
     imageLink() {
       if (!this.image) {
-        return '/uploads/'
+        this.getImageLink()
       }
       return '/uploads/' + this.image.replace('/static/uploads/', '')
     },
@@ -228,6 +220,9 @@ export default {
     },
     closeMobileMenu() {
       this.mobileMenuOpen = false
+    },
+    getImageLink(image) {
+      return '/uploads/' + image.replace('/static/uploads/', '')
     },
   },
 }
