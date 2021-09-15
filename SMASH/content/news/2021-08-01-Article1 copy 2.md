@@ -6,6 +6,7 @@ authors:
   - Matthew Tralka
   - Tyler Hoffman
 date: 2021-09-10T19:45:58.639Z
+imageAlt: "Alt Text"
 ---
 # Big Boy Article
 

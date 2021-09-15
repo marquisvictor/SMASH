@@ -8,10 +8,11 @@
           <Card
             v-for="article in news"
             :key="article.slug"
-            image="article.image"
+            :image="article.image"
             :link="article.path"
             :title="article.title"
             :date="article.date"
+            :image-alt="article.imageAlt"
             class="max-w-md m-3"
             style="min-height: 14rem"
           />

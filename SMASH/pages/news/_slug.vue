@@ -106,8 +106,6 @@ export default {
         .sortBy('date')
         .surround(params.slug)
         .fetch()
-
-      console.log(prev)
     } catch (e) {
       error({ message: 'No surrounding publications found' })
     }

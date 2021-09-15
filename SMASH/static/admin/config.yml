@@ -75,6 +75,7 @@ collections:
         media_library:
           config:
             multiple: false
+      - {label: 'Image Alt Text', name: 'imageAlt', widget: 'string'}
       - {label: 'Title', name: 'title', widget: 'string'}
       - label: 'Author(s)'
         name: 'authors'
@@ -125,6 +126,13 @@ collections:
           - {label: 'Network Name', name: 'name', widget: 'string'}
           - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
           - {label: 'Network Link', name: 'link', widget: 'string'}
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
+        allow_multiple: false
+        media_library:
+          config:
+            multiple: false
   - name: 'smaart'
     label: 'SMART'
     folder: 'SMASH/content/smaart'

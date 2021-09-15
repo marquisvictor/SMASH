@@ -11,13 +11,15 @@
         >
           <img
             v-if="image && !videoId"
-            img
-            src="@/assets/img/cardSample.jpg"
+            :src="imageLink"
+            :alt="imageAlt"
             class="w-full h-full"
+            height="400"
+            width="280"
           />
           <vue-tube
             v-if="videoId && !image"
-            :videoId="videoId"
+            :video-id="videoId"
             class="flex-shrink-0 w-full"
           />
         </div>
@@ -99,6 +101,23 @@ export default {
       type: String,
       default: '',
       required: false,
+    },
+    imageAlt: {
+      type: String,
+      default: '',
+      required: false,
+    },
+  },
+  computed: {
+    imageLink() {
+      if (!this.image) {
+        return
+      }
+
+      return require(`/static/uploads/${this.image.replace(
+        '/static/uploads/',
+        ''
+      )}`)
     },
   },
 }
