@@ -9,13 +9,12 @@
           v-if="image || videoId"
           class="z-20 h-auto min-w-full bg-center bg-contain"
         >
-          <img
+          <nuxt-img
             v-if="image && !videoId"
             :src="imageLink"
             :alt="imageAlt"
             class="w-full h-full"
-            height="400"
-            width="280"
+            quality="50"
           />
           <vue-tube
             v-if="videoId && !image"
@@ -113,11 +112,7 @@ export default {
       if (!this.image) {
         return
       }
-
-      return require(`/static/uploads/${this.image.replace(
-        '/static/uploads/',
-        ''
-      )}`)
+      return '/uploads/' + this.image.replace('/static/uploads/', '')
     },
   },
 }

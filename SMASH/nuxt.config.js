@@ -1,4 +1,3 @@
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -37,11 +36,11 @@ export default {
     '@nuxtjs/tailwindcss',
     'nuxt-purge-icons-module',
     '@nuxtjs/device',
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  // 'nuxt-fullpage.js'
-  modules: ['@nuxt/content', 'nuxt-fullpage.js', '@nuxtjs/markdownit'],
+  modules: ['@nuxt/content', '@nuxtjs/markdownit', '@nuxt/image'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -54,4 +53,5 @@ export default {
     runtime: true, // Support `$md()`
   },
   purgeIcons: {},
+  image: {},
 }

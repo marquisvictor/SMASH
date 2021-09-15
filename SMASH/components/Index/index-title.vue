@@ -1,12 +1,12 @@
 <template>
   <section class="flex flex-col justify-center space-y-2 section">
     <div class="flex items-center justify-center max-h-60">
-      <img
+      <nuxt-img
         class="h-full w-52 md:w-72"
+        height="288"
+        width="266"
         :src="imageLink"
         alt="SMASH Logo"
-        height="250"
-        width="250"
       />
     </div>
 
@@ -46,13 +46,9 @@ export default {
   computed: {
     imageLink() {
       if (!this.image) {
-        return
+        return '/uploads'
       }
-
-      return require(`@/static/uploads/${this.image.replace(
-        '/static/uploads/',
-        ''
-      )}`)
+      return '/uploads/' + this.image.replace('/static/uploads/', '')
     },
   },
 }

@@ -10,12 +10,14 @@
           class="flex flex-col items-center justify-start max-w-sm p-2 m-4 space-y-5 bg-white "
         >
           <div class="w-full overflow-hidden rounded-md shadow-md h-60">
-            <img
+            <nuxt-img
+              fit="cover"
               height="280"
               width="280"
               class="w-full h-full"
               :src="imageLink(person.image)"
               :alt="`Photo of ${person.name}`"
+              quality="50"
             />
           </div>
           <div class="w-full space-y-2">
@@ -77,10 +79,11 @@ export default {
   },
   methods: {
     imageLink(imagePath) {
-      return require(`/static/uploads/${imagePath.replace(
-        '/static/uploads/',
-        ''
-      )}`)
+      // return require(`/static/uploads/${imagePath.replace(
+      //   '/static/uploads/',
+      //   ''
+      // )}`)
+      return '/uploads/' + imagePath.replace('/static/uploads/', '')
     },
   },
 }

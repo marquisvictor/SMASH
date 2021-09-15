@@ -8,12 +8,13 @@
           <nuxt-link v-if="!onHome" to="/" class="flex items-center">
             <span class="sr-only">SMASH</span>
 
-            <img
+            <nuxt-img
               class="w-auto h-8 sm:h-10"
               height="40"
               width="40"
               :src="imageLink"
               alt="SMASH Logo"
+              quality="50"
             />
             <abbr
               v-if="!onHome"
@@ -73,7 +74,14 @@
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
             <a href="/" class="flex items-center space-x-2">
-              <img class="w-auto h-8" :src="imageLink" alt="SMASH Logo" />
+              <nuxt-img
+                height="40"
+                width="40"
+                class="w-auto h-8"
+                :src="imageLink"
+                alt="SMASH Logo"
+                quality="50"
+              />
               <p class="text-lg font-bold tracking-wider">SMASH</p>
             </a>
 
@@ -201,13 +209,9 @@ export default {
     },
     imageLink() {
       if (!this.image) {
-        return
+        return '/uploads/'
       }
-
-      return require(`/static/uploads/${this.image.replace(
-        '/static/uploads/',
-        ''
-      )}`)
+      return '/uploads/' + this.image.replace('/static/uploads/', '')
     },
   },
   methods: {
