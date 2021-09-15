@@ -37,6 +37,7 @@ export default {
     'nuxt-purge-icons-module',
     '@nuxtjs/device',
     '@nuxt/image',
+    '@aceforth/nuxt-netlify',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -54,4 +55,18 @@ export default {
   },
   purgeIcons: {},
   image: {},
+  netlify: {
+    mergeSecurityHeaders: true,
+    headers: {
+      '/favicon.ico': ['Cache-Control: public, max-age=86400']
+    },
+    redirects: [
+      {
+        from: '/about',
+        to: '/',
+        status: 302,
+        force: true,
+      },
+    ],
+  },
 }

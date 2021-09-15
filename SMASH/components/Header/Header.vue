@@ -74,10 +74,18 @@
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
             <a href="/" class="flex items-center space-x-2">
-              <nuxt-img
+              <!-- <nuxt-img
                 height="40"
                 width="40"
                 class="w-auto h-8"
+                :src="imageLink"
+                alt="SMASH Logo"
+                quality="50"
+              /> -->
+              <nuxt-img
+                class="w-auto h-8 sm:h-10"
+                height="40"
+                width="40"
                 :src="imageLink"
                 alt="SMASH Logo"
                 quality="50"
