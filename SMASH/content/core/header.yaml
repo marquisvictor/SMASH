@@ -2,7 +2,7 @@ navMenuItems:
   - title: About
     rowItems:
       - title: About
-        link: /about/about
+        link: /about/objective
         icon: ic:round-info
       - title: People
         link: /about/people
