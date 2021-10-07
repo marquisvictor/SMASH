@@ -1,8 +1,8 @@
 navMenuItems:
   - title: About
     rowItems:
-      - title: Objective
-        link: /about/objective
+      - title: About
+        link: /about/about
         icon: ic:round-info
       - title: People
         link: /about/people
