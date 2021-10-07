@@ -1,39 +1,38 @@
----
 navMenuItems:
-- title: About
-  rowItems:
-  - title: Objective
-    link: /about/objective
-    icon: ic:round-info
-  - title: People
-    link: /about/people
-    icon: ic:round-people
-  - title: Resources
-    link: /about/resources
-    icon: ic:round-source
-  bottomItems:
-  - title: News
-    link: "/news"
-    icon: ic:round-file-copy
-- title: Our Work
-  rowItems:
-  - title: Projects
-    link: /projects
-    subtitle:
-    icon: ic:round-construction
-  - title: SMAART
-    link: /smaart
-    subtitle: Spatial Multiscale Analytics, Applied Research, and Technology Seminar
-    icon: ic:round-video-library
-  - title: Publications
-    link: /publications
-    subtitle:
-    icon: ic:round-file-copy
-  bottomItems:
-  - title: Github
-    link: https://github.com/GEOSMASH
-    icon: mdi:github
+  - title: About
+    rowItems:
+      - title: Objective
+        link: /about/objective
+        icon: ic:round-info
+      - title: People
+        link: /about/people
+        icon: ic:round-people
+      - title: Resources
+        link: /about/resources
+        icon: ic:round-source
+    bottomItems:
+      - title: News
+        link: /news
+        icon: ic:round-file-copy
+  - title: Our Work
+    rowItems:
+      - title: Projects
+        link: /projects
+        subtitle: null
+        icon: ic:round-construction
+      - title: SMAART
+        link: /smaart
+        subtitle: Spatial Multiscale Analytics, Applied Research, and Technology Seminar
+        icon: ic:round-video-library
+      - title: Publications
+        link: /publications
+        subtitle: null
+        icon: ic:round-file-copy
+    bottomItems:
+      - title: Github
+        link: https://github.com/GEOSMASH
+        icon: mdi:github
 button:
-  title: Join our Team!
-  link: "/join"
+  title: Contact us!
+  link: /join
 image: /static/uploads/SMASHLogo.svg
