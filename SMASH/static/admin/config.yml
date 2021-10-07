@@ -188,7 +188,7 @@ collections:
     files:
       - label : "Index Page"
         name: 'index'
-        file: 'SMASH/content/index.yaml'
+        file: 'SMASH/content/pages/index.yaml'
         fields:
           - {label: 'Index title', name: 'title', widget: 'string'}
           - {label: 'Index Subtitle', name: 'subtitle', widget: 'string'}
@@ -202,7 +202,7 @@ collections:
                 multiple: false
       - label : "Objective Page"
         name: 'objective'
-        file: 'SMASH/content/objective.yaml'
+        file: 'SMASH/content/pages/objective.yaml'
         fields:
           - {label: 'Objective', name: 'body', widget: 'markdown'}  
           # - label: "Social Networks"
@@ -216,11 +216,11 @@ collections:
           #     - {label: 'Network Link', name: 'link', widget: 'string'}
       - label: 'Resources Page'
         name: 'resources'
-        file: 'SMASH/content/resources.yaml'
+        file: 'SMASH/content/pages/resources.yaml'
         fields:
           - {label: 'Resources', name: 'body', widget: 'markdown'}  
       - label: 'Join Page'
         name: 'join'
-        file: 'SMASH/content/join.yaml'
+        file: 'SMASH/content/pages/join.yaml'
         fields:
           - {label: 'Body message', name: 'body', widget: 'markdown'} 
