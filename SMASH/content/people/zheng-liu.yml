@@ -9,5 +9,8 @@ bio: Zheng Liu is a Ph.D. candidate in the Center for Geographical Information
   application of GIScience in the self-driving industry. Before joining UMD, he
   obtained his Bachelor of Science in Geographical Information Science at Peking
   University.
-socialLinks: []
+socialLinks:
+  - icon: carbon:information-filled
+    name: Website
+    link: https://geog.umd.edu/gradprofile/liu/zheng
 image: /static/uploads/zheng.jpg
