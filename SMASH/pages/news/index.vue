@@ -32,7 +32,7 @@ export default {
   },
   layout: 'header-footer',
   async asyncData({ $content }) {
-    const news = await $content('news').sortBy('date').fetch()
+    const news = await $content('news').sortBy('date', 'desc').fetch()
 
     return {
       news,
