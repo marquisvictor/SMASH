@@ -42,5 +42,5 @@ navMenuItems:
     bottomItems: []
 button:
   title: Contact us!
-  link: /join
+  link: /contact
 image: /static/uploads/SMASHLogo.svg
