@@ -66,7 +66,19 @@ export default {
     },
     redirects: [
       {
-        from: '/about',
+        from: '/overview',
+        to: '/',
+        status: 302,
+        force: true,
+      },
+      {
+        from: '/resources',
+        to: '/',
+        status: 302,
+        force: true,
+      },
+      {
+        from: '/projects',
         to: '/',
         status: 302,
         force: true,
