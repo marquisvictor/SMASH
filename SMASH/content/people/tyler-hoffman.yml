@@ -1,9 +1,14 @@
 name: Tyler Hoffman
-role: Consultant
-bio: Bacon ipsum dolor amet sausage short loin andouille frankfurter spare ribs
-  t-bone pig pork pork belly drumstick beef strip steak meatloaf pork loin
-  bresaola. Turkey frankfurter short loin pork loin rump beef ribs swine fatback
-  shank. Turducken shoulder brisket, burgdoggen pork chop jerky porchetta flank
-  prosciutto ribeye. Sirloin doner burgdoggen t-bone.
-priority: 3
-image: /static/uploads/img_5410.jpg
+role: Affiliate
+priority: 5
+bio: "Coming from a background of math and computer science, Tyler is interested
+  in methods development and algorithm design for spatial data science. He's
+  also an advocate for the use of spatial methods in broader research. In his
+  spare time, Tyler loves watching movies, playing video games, and biking. He's
+  currently a Ph.D student at Arizona State University in the Spatial Analysis
+  Research Center (SPARC). "
+socialLinks:
+  - name: Website
+    icon: carbon:information-filled
+    link: thoffman1.github.io
+image: /static/uploads/unnamed.jpg

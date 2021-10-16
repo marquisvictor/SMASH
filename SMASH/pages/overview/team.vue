@@ -14,7 +14,7 @@
               fit="cover"
               height="280"
               width="280"
-              class="w-full h-full"
+              class="w-full h-full object-cover"
               :src="imageLink(person.image)"
               :alt="`Photo of ${person.name}`"
               quality="50"
@@ -30,7 +30,7 @@
           </div>
 
           <div
-            class="text-base prose text-gray-700 md:prose-xl"
+            class="text-base prose text-gray-700 md:prose-xl text-justify"
             style="min-height: 9rem"
             v-html="$md.render(person.bio)"
           ></div>
