@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pageTitle title="Our People">
+    <pageTitle :title="content.title || 'Our Team'">
       <div
         class="grid grid-cols-1 gap-6 p-10 mx-auto  md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
       >
@@ -58,7 +58,7 @@ import pageTitle from '@/components/pageTitle'
 import Icon from '@/components/Icon.vue'
 
 export default {
-  name: 'PageTitle',
+  name: 'Team',
   components: {
     pageTitle,
     Icon,
@@ -67,6 +67,7 @@ export default {
   data() {
     return {
       people: [],
+      content: null,
     }
   },
   async fetch() {
@@ -75,14 +76,13 @@ export default {
       .sortBy('name')
       .fetch()
 
+    const content = await this.$content('overview/team').fetch()
+
     this.people = people
+    this.content = content
   },
   methods: {
     imageLink(imagePath) {
-      // return require(`/static/uploads/${imagePath.replace(
-      //   '/static/uploads/',
-      //   ''
-      // )}`)
       return '/uploads/' + imagePath.replace('/static/uploads/', '')
     },
   },

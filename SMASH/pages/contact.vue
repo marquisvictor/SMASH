@@ -4,12 +4,14 @@
       class="max-w-4xl p-4 mx-2 mt-10 mb-16 space-y-12 overflow-hidden bg-gray-100 rounded-md shadow-2xl  md:w-10/12 md:mx-10"
     >
       <div class="space-y-4 md:ml-3 md:mt-3">
-        <h2 class="text-3xl font-bold tracking-wide">Join Us!</h2>
+        <h2 class="text-3xl font-bold tracking-wide">
+          {{ content.title || 'Contact' }}
+        </h2>
 
         <div
-          v-if="join.body"
+          v-if="content.body"
           class="tracking-tight prose prose-lg md:w-6/12"
-          v-html="$md.render(join.body)"
+          v-html="$md.render(content.body)"
         ></div>
       </div>
       <div class="flex items-center justify-center py-10">
@@ -109,12 +111,12 @@ export default {
   layout: 'header-footer',
   data() {
     return {
-      join: '',
+      content: null,
     }
   },
   async fetch() {
-    const join = await this.$content('pages/join').fetch()
-    this.join = join
+    const content = await this.$content('pages/contact').fetch()
+    this.content = content
   },
 }
 </script>

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <pageTitle title="Objective">
+    <pageTitle :title="content.title || 'About'">
       <div
         v-if="objective.body"
-        class="max-w-3xl px-4 mx-auto mt-4 prose text-justify md:prose-2xl md:px-0"
-        v-html="$md.render(objective.body)"
+        class="max-w-3xl px-4 mx-auto mt-4 prose text-justify  md:prose-2xl md:px-0"
+        v-html="$md.render(content.body)"
       ></div>
     </pageTitle>
   </div>
@@ -20,12 +20,12 @@ export default {
   layout: 'header-footer',
   data() {
     return {
-      objective: '',
+      content: null,
     }
   },
   async fetch() {
-    const objective = await this.$content('pages/objective').fetch()
-    this.objective = objective
+    const content = await this.$content('pages/objective').fetch()
+    this.content = content
   },
 }
 </script>

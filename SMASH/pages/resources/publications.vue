@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pageTitle title="Publications">
+    <pageTitle :title="content.title || 'Publications'">
       <ul
         class="flex flex-col items-center justify-start px-3 pb-5 space-y-6 overflow-visible md:px-0"
       >
@@ -55,13 +55,18 @@ export default {
   data() {
     return {
       publications: [],
+      content: null,
     }
   },
   async fetch() {
     const publications = await this.$content('publications')
       .sortBy('date')
       .fetch()
+
+    const content = await this.$content('resources/publications')
+
     this.publications = publications
+    this.content = content
   },
 }
 </script>

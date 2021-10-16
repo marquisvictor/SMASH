@@ -1,8 +1,11 @@
 <template>
   <div>
     <pageTitle
-      title="SMAART"
-      subtitle="Spatial Multiscale Analytics, Applied Research, and Technology Seminar"
+      :title="content.title || 'SMAART'"
+      :subtitle="
+        content.subtitle ||
+        'Spatial Multiscale Analytics, Applied Research, and Technology Seminar'
+      "
     >
       <div
         class="grid grid-cols-1 gap-6 p-10 mx-auto  md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
@@ -36,8 +39,11 @@ export default {
       .only(['title', 'presenter', 'date', 'videoId'])
       .fetch()
 
+    const content = await $content('resources/smaart').fetch()
+
     return {
       smaartVideos,
+      content,
     }
   },
 }

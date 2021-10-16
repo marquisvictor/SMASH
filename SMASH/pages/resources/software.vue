@@ -1,10 +1,10 @@
 <template>
   <div>
-    <pageTitle title="Resources">
+    <pageTitle :title="content.title || 'Software'">
       <div
-        v-if="resources.body"
+        v-if="content.body"
         class="max-w-3xl px-4 mx-auto mt-4 text-2xl prose text-justify  md:prose-2xl md:px-0"
-        v-html="$md.render(resources.body)"
+        v-html="$md.render(content.body || '')"
       ></div>
     </pageTitle>
   </div>
@@ -20,12 +20,12 @@ export default {
   layout: 'header-footer',
   data() {
     return {
-      resources: '',
+      content: '',
     }
   },
   async fetch() {
-    const resources = await this.$content('pages/resources').fetch()
-    this.resources = resources
+    const content = await this.$content('resources/software').fetch()
+    this.content = content
   },
 }
 </script>

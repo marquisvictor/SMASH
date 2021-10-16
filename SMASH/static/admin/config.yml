@@ -188,7 +188,7 @@ collections:
     files:
       - label : "Index Page"
         name: 'index'
-        file: 'SMASH/content/index.yaml'
+        file: 'SMASH/content/pages/index.yaml'
         fields:
           - {label: 'Index title', name: 'title', widget: 'string'}
           - {label: 'Index Subtitle', name: 'subtitle', widget: 'string'}
@@ -200,27 +200,48 @@ collections:
             media_library:
               config:
                 multiple: false
-      - label : "Objective Page"
-        name: 'objective'
-        file: 'SMASH/content/objective.yaml'
+      - label: 'Contact Page'
+        name: 'contact'
+        file: 'SMASH/content/pages/contact.yaml'
         fields:
-          - {label: 'Objective', name: 'body', widget: 'markdown'}  
-          # - label: "Social Networks"
-          #   name: 'socialNetworks'
-          #   widget: 'list'
-          #   summary: "{{fields.name}}"
-          #   allow_add: true
-          #   fields:
-          #     - {label: 'Network Name', name: 'name', widget: 'string'}
-          #     - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
-          #     - {label: 'Network Link', name: 'link', widget: 'string'}
-      - label: 'Resources Page'
-        name: 'resources'
-        file: 'SMASH/content/resources.yaml'
-        fields:
-          - {label: 'Resources', name: 'body', widget: 'markdown'}  
-      - label: 'Join Page'
-        name: 'join'
-        file: 'SMASH/content/join.yaml'
-        fields:
-          - {label: 'Body message', name: 'body', widget: 'markdown'} 
+          - {label: 'Body', name: 'body', widget: 'markdown'} 
+          - {label: 'Title', name: 'title', widget: 'string'} 
+  - name: 'overview'
+    label: "Overview"
+    files:
+    - label : "About Page"
+      name: 'about'
+      file: 'SMASH/content/overview/about.yaml'
+      fields:
+        - {label: 'Objective', name: 'body', widget: 'markdown'}  
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+    - label : "Team Page"
+      name: 'team'
+      file: 'SMASH/content/overview/team.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+    - label : "News Page"
+      name: 'news'
+      file: 'SMASH/content/overview/news.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+  - name: 'resources'
+    label: "Resources"
+    files:
+    - label : "Software Page"
+      name: 'software'
+      file: 'SMASH/content/resources/software.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+        - {label: 'Body', name: 'body', widget: 'markdown'}  
+    - label : "Publications Page"
+      name: 'publications'
+      file: 'SMASH/content/resources/publications.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+    - label : "SMAART Page"
+      name: 'smaart'
+      file: 'SMASH/content/resources/smaart.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+        - {label: 'Page Subtitle', name: 'subtitle', widget: 'string'} 
