@@ -183,8 +183,8 @@ collections:
       - label: 'Publication Date'
         name: 'date'
         widget: 'datetime'
-  - name: 'SMASH Pages'
-    label: "pages"
+  - name: 'pages'
+    label: "SMASH Pages"
     files:
       - label : "Index Page"
         name: 'index'
@@ -204,8 +204,8 @@ collections:
         name: 'contact'
         file: 'SMASH/content/pages/contact.yaml'
         fields:
-          - {label: 'Body', name: 'body', widget: 'markdown'} 
           - {label: 'Title', name: 'title', widget: 'string'} 
+          - {label: 'Body', name: 'body', widget: 'markdown'} 
   - name: 'overview'
     label: "Overview"
     files:
