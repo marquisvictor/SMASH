@@ -2,10 +2,10 @@ navMenuItems:
   - title: Overview
     rowItems:
       - title: About
-        link: /about
+        link: /overview/about
         icon: ic:round-info
       - title: Team
-        link: /team
+        link: /overview/team
         icon: ic:round-people
     bottomItems:
       - title: News
