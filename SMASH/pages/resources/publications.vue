@@ -2,12 +2,12 @@
   <div>
     <pageTitle :title="content.title || 'Publications'">
       <ul
-        class="flex flex-col items-center justify-start px-3 pb-5 space-y-6 overflow-visible md:px-0"
+        class="flex flex-col items-center justify-start px-3 pb-5 space-y-6 overflow-visible  md:px-0"
       >
         <li
           v-for="publication in publications"
           :key="publication.title"
-          class="flex flex-col items-center max-w-3xl p-6 space-y-1 overflow-hidden rounded shadow-md justify-evenly"
+          class="flex flex-col items-center max-w-3xl p-6 space-y-1 overflow-hidden rounded shadow-md  justify-evenly"
         >
           <div
             :v-if="publication.authors"
@@ -24,7 +24,7 @@
               {{ publication.title }}
             </p>
             <div
-              class="flex flex-col items-center justify-center space-y-3 font-bold tracking-tighter md:space-y-0 md:space-x-10 md:flex-row"
+              class="flex flex-col items-center justify-center space-y-3 font-bold tracking-tighter  md:space-y-0 md:space-x-10 md:flex-row"
             >
               <a
                 v-if="publication.file"
@@ -63,7 +63,7 @@ export default {
       .sortBy('date')
       .fetch()
 
-    const content = await this.$content('resources/publications')
+    const content = await this.$content('resources/publications').fetch()
 
     this.publications = publications
     this.content = content
