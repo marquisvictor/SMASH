@@ -184,7 +184,7 @@ collections:
         name: 'date'
         widget: 'datetime'
   - name: 'pages'
-    label: "SMASH Pages"
+    label: "General Pages"
     files:
       - label : "Index Page"
         name: 'index'
@@ -213,8 +213,8 @@ collections:
       name: 'about'
       file: 'SMASH/content/overview/about.yaml'
       fields:
-        - {label: 'Objective', name: 'body', widget: 'markdown'}  
         - {label: 'Page Title', name: 'title', widget: 'string'} 
+        - {label: 'Objective', name: 'body', widget: 'markdown'}  
     - label : "Team Page"
       name: 'team'
       file: 'SMASH/content/overview/team.yaml'
