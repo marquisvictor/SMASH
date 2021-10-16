@@ -15,7 +15,7 @@
         >
           <Icon
             :icon="icon.icon"
-            class="w-6 h-6 md:w-12 md:h-12 max-w-12 max-h-12"
+            class="w-6 h-6 md:w-10 md:h-10 max-w-12 max-h-10"
             aria-hidden="true"
           />
         </a>
@@ -41,10 +41,10 @@ export default {
   async fetch() {
     const footerContent = await this.$content('core/footer').fetch()
     const socialMedia = await this.$content('core/contact')
-      .only('socialMedia')
+      .only('socialNetworks')
       .fetch()
     this.footerText = footerContent.footerText
-    this.mediaIcons = socialMedia.socialMedia
+    this.mediaIcons = socialMedia.socialNetworks
   },
   computed: {},
   methods: {},
