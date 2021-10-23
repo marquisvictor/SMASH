@@ -1,5 +1,5 @@
 ---
-image: https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png
+image: /static/uploads/index.jpg
 title: New NSF grant awarded
 author: ss
 imageAlt: Alt Text
