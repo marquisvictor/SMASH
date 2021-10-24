@@ -24,7 +24,7 @@
 
           <nuxt-content
             :document="post"
-            class="max-w-3xl px-1 mx-auto mt-4 prose-lg text-justify  md:prose-2xl md:px-0"
+            class="max-w-3xl px-1 mx-auto mt-4 prose prose-lg text-justify  md:prose-lg md:px-0"
           />
         </article>
 
@@ -118,3 +118,16 @@ export default {
   },
 }
 </script>
+<style>
+.md\:prose-2xl h1 {
+  font-size: 2em !important;
+}
+
+.prose-lg h1 {
+  font-size: 1.5em;
+}
+
+.custom_h1 {
+  font-size: 1.5em;
+}
+</style>

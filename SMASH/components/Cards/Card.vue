@@ -10,9 +10,9 @@
           class="z-20 h-auto min-w-full bg-center bg-contain"
         >
           <nuxt-img
-            v-if="image && !videoId"
+            v-if="image && !videoId && imageLink"
             :src="imageLink"
-            :alt="imageAlt"
+            :alt="imageAlt || `Picture for ${title}`"
             class="w-full h-full min-h-[300px] object-scale-down"
             quality="50"
           />
@@ -39,12 +39,12 @@
           </p>
 
           <p
-            class="mt-1 text-sm font-semibold leading-tight  md:text-base lg:text-lg"
+            class="mt-1 text-sm font-semibold leading-tight md:text-base lg:text-lg"
           >
             {{ title }}
           </p>
           <p
-            class="mt-1 text-xs font-medium leading-tight  md:text-sm lg:text-base"
+            class="mt-1 text-xs font-medium leading-tight md:text-sm lg:text-base"
           >
             {{ subtitle }}
           </p>
