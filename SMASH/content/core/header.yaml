@@ -33,7 +33,7 @@ navMenuItems:
         icon: mdi:fountain-pen-tip
   - title: Projects
     rowItems:
-      - title: Spatial Analysis
+      - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
         icon: el:network
         link: /
       - title: Visualizations
