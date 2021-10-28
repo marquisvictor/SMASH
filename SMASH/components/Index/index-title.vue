@@ -16,7 +16,7 @@
       </h1>
       <p
         class="max-w-xs px-1 text-lg font-light tracking-wide  md:max-w-md md:text-3xl"
-      >
+      
         {{ subtitle }}
       </p>
     </div>
