@@ -2,7 +2,7 @@
   <div>
     <pageTitle :title="content.title || 'Our Team'">
       <div
-        class="grid grid-cols-1 gap-6 p-10 mx-auto  md:w-11/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
+        class="grid grid-cols-1 gap-6 p-10 mx-auto  md:w-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
       >
         <article
           v-for="person in people"
