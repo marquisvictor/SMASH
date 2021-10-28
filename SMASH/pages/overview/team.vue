@@ -7,7 +7,7 @@
         <article
           v-for="person in people"
           :key="person.name"
-          class="flex flex-col items-center justify-start max-w-lg p-2 m-4 space-y-5 bg-white "
+          class="flex flex-col items-center justify-start max-w-6xl p-2 m-4 space-y-5 bg-white "
         >
           <div class="overflow-hidden rounded-md shadow-md h-60">
             <nuxt-img
