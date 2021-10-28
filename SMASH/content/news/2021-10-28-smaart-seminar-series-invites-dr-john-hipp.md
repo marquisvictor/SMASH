@@ -22,4 +22,4 @@ In recent years, crime and place scholars have often justified a focus on ever-s
 
 
 
-![](/static/uploads/smaart_hipp.png "test")
+![Flyer](/static/uploads/smaart_hipp.png "test")
