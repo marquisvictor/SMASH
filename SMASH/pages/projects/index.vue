@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pageTitle title="Projects"> </pageTitle>
+    <pageTitle title="Coming soon!"> </pageTitle>
     <p
       class="max-w-3xl mx-auto mt-4 text-2xl font-medium tracking-wide text-justify "
     >
