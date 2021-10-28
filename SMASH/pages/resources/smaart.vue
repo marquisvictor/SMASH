@@ -17,7 +17,7 @@
           :date="video.date"
           :video-id="video.videoId"
           :subtitle="video.presenter"
-          class="max-w-md m-3"
+          class="max-w-3xl m-3"
           style="min-height: 14rem"
         />
       </div>
