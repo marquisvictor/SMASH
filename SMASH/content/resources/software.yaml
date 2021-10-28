@@ -5,18 +5,18 @@ body: >-
   available.
 
 
-  # PySAL Packages
+  ## PySAL Packages
 
 
 
 
-  ## mgwr
+  ### mgwr
 
 
-  ## spint
+  ### spint
 
 
-  ## spglm
+  ### spglm
 
 
-  # Spatial Interaction Decision Analytics (SIDA) Dashboard
+  ## SIDA Dashboard
