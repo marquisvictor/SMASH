@@ -20,4 +20,4 @@ In recent years, crime and place scholars have often justified a focus on ever-s
 
 ![](https://pysal.org/hisp.png)
 
-![](https://www.dropbox.com/s/9j9knxfkiydoij3/smaart_hipp.png)
+![](https://geospatial.umd.edu/sites/geospatial.umd.edu/files/users/toshan/smaart_hipp.png)
