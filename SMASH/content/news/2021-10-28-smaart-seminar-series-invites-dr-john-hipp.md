@@ -6,8 +6,6 @@ authors:
   - Dr. Taylor Oshan
 date: 2021-08-10T15:04:34.722Z
 ---
-
-
 Dr. John Hipp will give an invited talk on "Accounting For Spatial Mobility: Consequences For Ecological Studies Of Crime". He is a Professor in the Department of Criminology, Law and Society at University of California, Irvine.
 
 **Event Date and Time**: Tuesday, 8/24, 2021 @ 2:00PM
@@ -20,6 +18,6 @@ In recent years, crime and place scholars have often justified a focus on ever-s
 
 **Please Register Here:** <https://bit.ly/3v1fQ0M>
 
-
+![](https://pysal.org/hisp.png)
 
 ![](https://www.dropbox.com/s/9j9knxfkiydoij3/smaart_hipp.png?dl=0)
