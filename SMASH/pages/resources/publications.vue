@@ -5,7 +5,7 @@
         class="flex flex-col items-center justify-start px-3 pb-5 space-y-6 overflow-visible  md:px-0"
       >
         <li
-          v-for="publication in publications"
+          v-for="publication in publications.slice().reverse()"
           :key="publication.title"
           class="flex flex-col items-center max-w-6xl p-6 space-y-1 overflow-hidden rounded shadow-md  justify-evenly"
         >
