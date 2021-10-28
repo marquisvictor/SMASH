@@ -32,19 +32,19 @@ navMenuItems:
     rowItems:
       - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
         icon: icon-park-outline:refraction
-        link: https://staging.geosmash.net/projects/index
+        link: projects/index
       - title: Modeling Urban Disparities and Dynamics (MUDD)
-        link: /
+        link: projects/index
         icon: maki:city
-      - link: /
+      - link: projects/index
         icon: bx:bx-network-chart
         title: Spatial Processes Induced on Networks over Time (SPINT)
       - title: Applied Transit Analytics and Ridership Informatics (ATARI)
-        link: /
+        link: projects/index
         icon: mdi:train
       - title: Efficient, Accessible, & Sustainable Infrastructure for Extracting
           Remotely-sensed (EASIER) Data
-        link: /
+        link: projects/index
         icon: mdi:satellite-variant
     bottomItems: []
 button:
