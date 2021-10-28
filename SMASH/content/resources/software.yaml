@@ -2,12 +2,13 @@ title: Software
 body: >-
   The SMASH team regularly produces and maintains open source software and
   tools. Below you will find some information about products that are currently
-  available.
-
+  available.  
+    
 
   ## PySAL Packages
 
 
+  The Python Spatial Analysis Library (PySAL) is a federation of packages for handling, exploring, analyzing, and visualizing spatial data. For more info, check out the [project web page](https://pysal.org/) and [this paper](https://onlinelibrary.wiley.com/doi/10.1111/gean.12276).
 
 
   ### mgwr
@@ -16,7 +17,7 @@ body: >-
   ### spint
 
 
-  ### spglm
+  ### spglm   
 
 
   ## SIDA Dashboard
