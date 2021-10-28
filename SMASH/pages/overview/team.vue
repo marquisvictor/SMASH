@@ -9,12 +9,12 @@
           :key="person.name"
           class="flex flex-col items-center justify-start max-w-lg p-2 m-4 space-y-5 bg-white "
         >
-          <div class="overflow-hidden rounded-md shadow-md h-60">
+          <div class="overflow-hidden rounded-md shadow-md h-80">
             <nuxt-img
               fit="cover"
               height="280"
               width="280"
-              class="object-contain w-full h-full"
+              class="object-contain w-full h-full text-center"
               :src="imageLink(person.image)"
               :alt="`Photo of ${person.name}`"
               quality="50"
