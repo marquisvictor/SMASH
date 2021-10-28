@@ -11,13 +11,22 @@ body: >-
   The Python Spatial Analysis Library (PySAL) is a federation of packages for handling, exploring, analyzing, and visualizing spatial data. For more info, check out the [project web page](https://pysal.org/) and [this paper](https://onlinelibrary.wiley.com/doi/10.1111/gean.12276).
 
 
-  ### mgwr
+  ### mgwr: multiscale geographically weighted regression
 
 
-  ### spint
+  This package provides an API 
 
 
-  ### spglm   
+  ### spint: spatial interaction
+
+
+  This package provides an API 
+
+
+  ### spglm: sparse generalized linear models
+
+
+  This package provides an API 
 
 
   ## SIDA Dashboard
