@@ -7,7 +7,7 @@
         <li
           v-for="publication in publications"
           :key="publication.title"
-          class="flex flex-col items-center max-w-3xl p-6 space-y-1 overflow-hidden rounded shadow-md  justify-evenly"
+          class="flex flex-col items-center max-w-6xl p-6 space-y-1 overflow-hidden rounded shadow-md  justify-evenly"
         >
           <div
             :v-if="publication.authors"
