@@ -25,20 +25,27 @@ navMenuItems:
         subtitle: Spatial Multiscale Analytics, Applied Research, and Technology Seminar
         icon: ic:round-video-library
     bottomItems:
-      - title: Github
-        link: https://github.com/GEOSMASH
-        icon: mdi:github
       - title: Blog
         link: /blog
         icon: mdi:fountain-pen-tip
   - title: Projects
     rowItems:
       - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
-        icon: el:network
+        icon: icon-park-outline:refraction
         link: /
-      - title: Visualizations
+      - title: Modeling Urban Disparities and Dynamics (MUDD)
         link: /
-        icon: ic:twotone-map
+        icon: maki:city
+      - link: /
+        icon: bx:bx-network-chart
+        title: Spatial Processes Induced on Networks over Time (SPINT)
+      - title: Applied Transit Analytics and Ridership Informatics (ATARI)
+        link: /
+        icon: mdi:train
+      - title: Efficient, Accessible, & Sustainable Infrastructure for Extracting
+          Remotely-sensed (EASIER) Data
+        link: /
+        icon: mdi:satellite-variant
     bottomItems: []
 button:
   title: Contact us!
