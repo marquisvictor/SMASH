@@ -32,7 +32,7 @@ navMenuItems:
     rowItems:
       - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
         icon: icon-park-outline:refraction
-        link: /
+        link: https://staging.geosmash.net/projects/index
       - title: Modeling Urban Disparities and Dynamics (MUDD)
         link: /
         icon: maki:city
