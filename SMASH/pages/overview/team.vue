@@ -14,13 +14,13 @@
               fit="cover"
               height="280"
               width="280"
-              class="object-contain w-full h-full text-center"
+              class="object-contain w-full h-full"
               :src="imageLink(person.image)"
               :alt="`Photo of ${person.name}`"
               quality="50"
             />
           </div>
-          <div class="w-full space-y-2">
+          <div class="w-full space-y-2 text-center">
             <p class="text-lg font-bold leading-4 tracking-wide">
               {{ person.name }}
             </p>
