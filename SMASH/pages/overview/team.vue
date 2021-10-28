@@ -21,10 +21,10 @@
             />
           </div>
           <div class="w-full space-y-2 text-center">
-            <p class="text-lg font-bold leading-4 tracking-wide">
+            <p class="text-xl font-bold leading-4 tracking-wide">
               {{ person.name }}
             </p>
-            <p class="text-base font-semibold tracking-tighter text-blue-600">
+            <p class="text-lg font-semibold tracking-tighter text-blue-600">
               {{ person.role }}
             </p>
           </div>
