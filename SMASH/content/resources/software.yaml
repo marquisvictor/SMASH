@@ -23,7 +23,7 @@ body: >-
   The **spint** package provides an API for the calibration of ***sp***atial ***int***eraction models. [Code can be found here](https://github.com/pysal/spint) and a [practical tutorial here](https://openjournals.wu.ac.at/region/paper_175_revised/175.html).
 
 
-  ### spglm: 
+  ### spglm
 
 
   The sparse generalized linear models (**spglm**) package provides an API for generalized linear models that are optimized for sparse design matrices with many zero values. [Code can be found here](https://github.com/pysal/spglm).
