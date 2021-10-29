@@ -14,19 +14,19 @@ body: >-
   ### mgwr: multiscale geographically weighted regression
 
 
-  This package provides an API 
+  This package provides an API for geographically weighted regression (GWR) and multiscale geographically weighted regression (MGWR). [Code can be found here](https://github.com/pysal/mgwr) and a [practical tutorial here](https://www.mdpi.com/2220-9964/8/6/269/htm).
 
 
   ### spint: spatial interaction
 
 
-  This package provides an API 
+  This package provides an API for the calibration of spatial interaction models. [Code can be found here](https://github.com/pysal/spint) and a [practical tutorial here](https://openjournals.wu.ac.at/region/paper_175_revised/175.html).
 
 
   ### spglm: sparse generalized linear models
 
 
-  This package provides an API 
+  This package provides an API for generalized linear models that are optimized for sparse design matrices with many zero values. [Code can be found here](https://github.com/pysal/spglm).
 
 
   ## SIDA Dashboard
