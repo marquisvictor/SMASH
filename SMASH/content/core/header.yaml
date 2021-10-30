@@ -11,7 +11,7 @@ navMenuItems:
       - title: News
         link: /news
         icon: ic:round-file-copy
- - title: Resources
+  - title: Resources
     rowItems:
       - title: Software
         link: /resources/software
@@ -39,7 +39,7 @@ navMenuItems:
       - link: /projects/index
         icon: bx:bx-network-chart
         title: Spatial Processes Induced on Networks over Time (SPINT)
-      - title: Applied Transit Analysis and Ridership Informatics (ATARI)
+      - title: Applied Transit Analytics and Ridership Informatics (ATARI)
         link: /projects/index
         icon: mdi:train
       - title: Efficient, Accessible, & Sustainable Infrastructure for Extracting
