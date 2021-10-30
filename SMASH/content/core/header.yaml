@@ -11,23 +11,7 @@ navMenuItems:
       - title: News
         link: /news
         icon: ic:round-file-copy
-  - title: Resources
-    rowItems:
-      - title: Software
-        link: /resources/software
-        icon: eos-icons:software
-      - title: Publications
-        link: /resources/publications
-        subtitle: null
-        icon: ic:round-file-copy
-      - title: SMAART
-        link: /resources/smaart
-        subtitle: Spatial Multiscale Analytics, Applied Research, and Technology Seminar
-        icon: ic:round-video-library
-    bottomItems:
-      - title: Blog
-        link: /blog
-        icon: mdi:fountain-pen-tip
+ 
   - title: Projects
     rowItems:
       - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
@@ -47,6 +31,23 @@ navMenuItems:
         link: /projects/index
         icon: mdi:satellite-variant
     bottomItems: []
+ - title: Resources
+    rowItems:
+      - title: Software
+        link: /resources/software
+        icon: eos-icons:software
+      - title: Publications
+        link: /resources/publications
+        subtitle: null
+        icon: ic:round-file-copy
+      - title: SMAART
+        link: /resources/smaart
+        subtitle: Spatial Multiscale Analytics, Applied Research, and Technology Seminar
+        icon: ic:round-video-library
+    bottomItems:
+      - title: Blog
+        link: /blog
+        icon: mdi:fountain-pen-tip
 button:
   title: Contact us!
   link: /contact
