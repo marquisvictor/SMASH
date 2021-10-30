@@ -37,6 +37,7 @@ export default {
   async asyncData({ $content }) {
     const smaartVideos = await $content('smaart')
       .only(['title', 'presenter', 'date', 'videoId'])
+      .sortBy('date')
       .fetch()
 
     const content = await $content('resources/smaart').fetch()
