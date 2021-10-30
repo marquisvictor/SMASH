@@ -39,7 +39,7 @@ navMenuItems:
       - link: /projects/index
         icon: bx:bx-network-chart
         title: Spatial Processes Induced on Networks over Time (SPINT)
-      - title: Applied Transit Analytics and Ridership Informatics (ATARI)
+      - title: Applied Transit Analysis and Ridership Informatics (ATARI)
         link: /projects/index
         icon: mdi:train
       - title: Efficient, Accessible, & Sustainable Infrastructure for Extracting
