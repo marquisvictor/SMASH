@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="SMASHLogo"
+    class="logo"
     width="245"
     height="180"
     viewBox="0 0 518 483"
@@ -1565,11 +1565,7 @@
 </template>
 
 <style>
-<<<<<<< HEAD
 .logo {
-=======
-.SMASHLogo {
->>>>>>> 782342d9581a7bc40e85c5c78f736afe0f45b87a
   animation: 1s appear;
   margin: auto;
 }

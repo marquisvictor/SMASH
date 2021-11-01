@@ -1,4 +1,4 @@
-# SMASH.
+# SMASH
 
 ## Build Setup
 
@@ -9,9 +9,6 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# fix everything
-$ npm run lint:fix
-
 # build for production and launch server
 $ npm run build
 $ npm run start
@@ -20,5 +17,4 @@ $ npm run start
 $ npm run generate
 ```
 
-- Icons from https://icones.netlify.app/collection/all
-- Change .Prettier for lint
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
