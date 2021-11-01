@@ -1,25 +1,37 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">SMASH</h1>
-      <p class="subtitle">Coming Soon.</p>
+  <div
+    class="mx-auto overflow-x-hidden overflow-y-hidden font-sans bg-white  max-w-7xl"
+  >
+    <div class="flex flex-col min-h-screen">
+      <Header class="flex-shrink-0" />
+      <index-title class="flex-grow min-h-full" />
     </div>
+    <index-text class="section" />
+    <index-news class="section" />
+    <Footer class="mt-32" />
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header/Header.vue'
+import IndexNews from '@/components/Index/index-news.vue'
+import IndexText from '@/components/Index/index-text.vue'
+import IndexTitle from '@/components/Index/index-title.vue'
+import Footer from '@/components/Footer.vue'
 export default {
   head() {
     return {
       script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+        {
+          src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
+        },
       ],
     }
   },
 }
 </script>
 
+<<<<<<< HEAD
 <style>
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
@@ -55,5 +67,10 @@ export default {
 
 .links {
   padding-top: 15px;
+=======
+<style scoped>
+.section {
+  min-height: 80vh;
+>>>>>>> 782342d9581a7bc40e85c5c78f736afe0f45b87a
 }
 </style>

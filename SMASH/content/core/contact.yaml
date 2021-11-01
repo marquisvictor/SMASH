@@ -1,0 +1,7 @@
+socialNetworks:
+  - name: YouTube
+    icon: logos:youtube-icon
+    link: https://www.youtube.com/
+  - name: Github
+    icon: mdi:github
+    link: https://github.com/GEOSMASH

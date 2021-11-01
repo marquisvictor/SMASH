@@ -1,6 +1,8 @@
 # SMASH
+
+test
  
-Future website for SMASH.
+Future website for SMASH
 
 ## Tools
 
