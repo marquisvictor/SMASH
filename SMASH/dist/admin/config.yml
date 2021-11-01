@@ -1,0 +1,247 @@
+site_url: https://staging.geosmash.net
+logo_url: https://staging.geosmash.net/SMASHLogo.svg
+
+backend:
+  name: git-gateway
+  branch: staging
+media_folder: SMASH/static/uploads
+public_folder: /static/uploads
+
+collections:
+  - name: 'core'
+    label: 'SMASH Core Info'
+    files:
+      - label: 'SMASH Contact Info'
+        name: 'contact'
+        file: 'SMASH/content/core/contact.yaml'
+        fields:
+          - label: "Social Networks"
+            name: 'socialNetworks'
+            widget: 'list'
+            summary: "{{fields.name}}"
+            allow_add: true
+            fields:
+              - {label: 'Network Name', name: 'name', widget: 'string'}
+              - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
+              - {label: 'Network Link', name: 'link', widget: 'string'}
+      - label: 'SMASH Footer'
+        name: 'footer'
+        file: 'SMASH/content/core/footer.yaml'
+        fields:
+          - label: 'Left Text'
+            name: 'footerText'
+            widget: 'markdown'
+      - label : "SMASH Header"
+        name: 'header'
+        file: 'SMASH/content/core/header.yaml'
+        fields:
+          - label: 'Navigation Menu Items'
+            name: 'navMenuItems'
+            widget: 'list'
+            fields:
+              - {label: 'Root Navigation Item Name', name: 'title', widget: 'string'}
+              - name: 'rowItems'
+                label: 'Row Items'
+                summary: "{{fields.title}}"
+                widget: 'list'
+                fields:
+                  - {label: 'Row Item Name', name: 'title', widget: 'string'}
+                  - {label: 'Row Item Link', name: 'link', widget: 'string'}
+                  - {label: 'Row Item Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
+              - label: "Bottom Items"
+                name: 'bottomItems'
+                widget: "list"
+                fields:
+                  - {label: 'Bottom Item Name', name: 'title', widget: 'string'}
+                  - {label: 'Bottom Item Link', name: 'link', widget: 'string'}
+                  - {label: 'Bottom Item Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
+          - label: "End Button"
+            name: "button"
+            widget: "object"
+            fields:
+              - {label: 'Button Title', name: 'title', widget: 'string'}
+              - {label: 'Button Link', name: 'link', widget: 'string'}  
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+            allow_multiple: false
+            media_library:
+              config:
+                multiple: false    
+  - name: 'news'
+    label: 'News'
+    folder: 'SMASH/content/news'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
+        allow_multiple: false
+        media_library:
+          config:
+            multiple: false
+      - {label: 'Image Alt Text', name: 'imageAlt', widget: 'string'}
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - label: 'Author(s)'
+        name: 'authors'
+        widget: 'list'
+        field:
+          label: 'Author'
+          name: 'author'
+          widget: 'relation'
+          collection: 'people'
+          search_fields: ['name']
+          value_field: 'name'
+          display_fields: ['name']
+      - {label: 'Date', name: 'date', widget: 'datetime'}
+      - {label: 'News content', name: 'body', widget: 'markdown'}
+  - name: 'people'
+    label: 'People'
+    folder: 'SMASH/content/people'
+    format: 'yaml'
+    create: true
+    slug: '{{fields.name}}'
+    fields:
+      - {label: 'Name', name: 'name', widget: 'string'}
+      - {label: 'Role', name: 'role', widget: 'string'}
+      - label: 'List Order'
+        name: 'priority'
+        widget: 'number'
+        default: 5
+        value_type: 'int'
+        min: 1
+        max: 10
+        step: 1
+      - label: 'Bio'
+        name: 'bio'
+        widget: 'markdown'
+        editor_components:
+          - 'bold'
+          - 'italic'
+          - 'link'
+          - 'quote'
+          - 'bulleted-list'
+          - 'numbered-list'
+      - label: "Social Links"
+        name: 'socialLinks'
+        widget: 'list'
+        summary: "{{fields.name}}"
+        allow_add: true
+        fields:
+          - {label: 'Network Name', name: 'name', widget: 'string'}
+          - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
+          - {label: 'Network Link', name: 'link', widget: 'string'}
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
+        allow_multiple: false
+        media_library:
+          config:
+            multiple: false
+  - name: 'smaart'
+    label: 'SMART'
+    folder: 'SMASH/content/smaart'
+    format: 'yaml'
+    create: true
+    slug: '{{presenter}}-{{date}}'
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string' }
+      - {label: 'Presenter', name: 'presenter', widget: 'string' }
+      - {label: 'Date', name: 'date', widget: 'datetime'}
+      - {label: 'YouTube Video ID', name: 'videoId', widget: 'string'}
+  - name: 'publications'
+    label: 'Publications'
+    folder: 'SMASH/content/publications'
+    format: 'yaml'
+    create: true
+    slug: '{{date}}-{{authors}}'
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string' }
+      - label: 'File'
+        name: 'file'
+        widget: 'file'
+        allow_multiple: false
+        media_library:
+          config:
+            multiple: false
+        required: false
+        media_folder: '/static/files'
+      - {label: 'Link', name: 'link', widget: 'string' }
+      - label: 'Author(s)'
+        name: 'authors'
+        widget: 'list'
+        field:
+          label: 'Author'
+          name: 'author'
+          widget: 'relation'
+          collection: 'people'
+          search_fields: ['name']
+          value_field: 'name'
+          display_fields: ['name']
+      - label: 'Publication Date'
+        name: 'date'
+        widget: 'datetime'
+  - name: 'pages'
+    label: "General Pages"
+    files:
+      - label : "Index Page"
+        name: 'index'
+        file: 'SMASH/content/pages/index.yaml'
+        fields:
+          - {label: 'Index title', name: 'title', widget: 'string'}
+          - {label: 'Index Subtitle', name: 'subtitle', widget: 'string'}
+          - {label: 'Index Short Sentence', name: 'shortSentence', widget: 'text'}
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+            allow_multiple: false
+            media_library:
+              config:
+                multiple: false
+      - label: 'Contact Page'
+        name: 'contact'
+        file: 'SMASH/content/pages/contact.yaml'
+        fields:
+          - {label: 'Title', name: 'title', widget: 'string'} 
+          - {label: 'Body', name: 'body', widget: 'markdown'} 
+  - name: 'overview'
+    label: "Overview"
+    files:
+    - label : "About Page"
+      name: 'about'
+      file: 'SMASH/content/overview/about.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+        - {label: 'Objective', name: 'body', widget: 'markdown'}  
+    - label : "Team Page"
+      name: 'team'
+      file: 'SMASH/content/overview/team.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+    - label : "News Page"
+      name: 'news'
+      file: 'SMASH/content/overview/news.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+  - name: 'resources'
+    label: "Resources"
+    files:
+    - label : "Software Page"
+      name: 'software'
+      file: 'SMASH/content/resources/software.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+        - {label: 'Body', name: 'body', widget: 'markdown'}  
+    - label : "Publications Page"
+      name: 'publications'
+      file: 'SMASH/content/resources/publications.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+    - label : "SMAART Page"
+      name: 'smaart'
+      file: 'SMASH/content/resources/smaart.yaml'
+      fields:
+        - {label: 'Page Title', name: 'title', widget: 'string'} 
+        - {label: 'Page Subtitle', name: 'subtitle', widget: 'string'} 

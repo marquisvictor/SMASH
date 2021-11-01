@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1635803672",layout:"default",error:{message:"Publication not found",statusCode:500},serverRendered:false,routePath:"\u002Fprojects\u002Findex",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:null},content:{dbHash:"4e9c5f3f"}}};
