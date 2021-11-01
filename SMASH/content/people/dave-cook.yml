@@ -1,0 +1,17 @@
+name: Dave Cook
+role: MS Student; Member
+priority: 6
+bio: Dave Cook is a data science, GEOINT and AI/ML practitioner in Washington,
+  DC. He is passionate about the transformational power of AI/ML in GEOINT and
+  MULTI-INT, particularly in building operational standards and best practices
+  for data pipelining and readiness. Over his 25+ year career in the public and
+  private sector, Dave has focused on solving complex challenges in law
+  enforcement, intelligence, defense, health and across leading corporations
+  worldwide. Believing that bad data is worse than no data, and good data is
+  more a marathon than a sprint, Dave holds to the power of lifelong learning,
+  disciplined training, and endless reinvention.
+socialLinks:
+  - name: Github
+    icon: mdi:github
+    link: https://github.com/DaveDCGIS
+image: /static/uploads/davecook-0011.jpg
