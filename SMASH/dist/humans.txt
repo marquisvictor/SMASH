@@ -1,6 +1,0 @@
-Matthew Tralka: Designer & Developer
-Undergraduate at: University of Maryland College Park
-Website: www.tralka.xyz
-
-/* SITE */
-Last update: 11/01/2021
