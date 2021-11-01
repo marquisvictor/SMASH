@@ -1,4 +1,6 @@
 # SMASH
+
+test
  
 Future website for SMASH
 
