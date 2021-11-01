@@ -1,5 +1,5 @@
 navMenuItems:
-  - title: Overview
+  - title: Overviews
     rowItems:
       - title: About
         link: /overview/about
