@@ -1,5 +1,6 @@
-site_url: https://staging.geosmash.net
-logo_url: https://staging.geosmash.net/SMASHLogo.svg
+site_url: https://geosmash.net
+logo_url: https://geosmash.net/SMASHLogo.svg
+publish_mode: editorial_workflow
 
 backend:
   name: git-gateway
