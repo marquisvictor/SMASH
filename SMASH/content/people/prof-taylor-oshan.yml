@@ -1,11 +1,19 @@
 name: Dr. Taylor Oshan
 role: Assistant Professor; Lead
 priority: 1
-bio: Bacon ipsum dolor amet kevin bacon ham sausage tri-tip doner leberkas jerky
-  pork loin buffalo shank landjaeger prosciutto. Biltong ribeye sausage jerky.
-  Pig porchetta bresaola fatback buffalo shankle chicken shank. Shank picanha
-  fatback, porchetta pancetta venison brisket. Porchetta tri-tip alcatra chislic
-  spare ribs buffalo.
+bio: I am broadly interested in characterizing spatial patterns and processes
+  through the use of quantitative geographic methods, which typically falls
+  under the banners of spatial analysis and spatial statistics, geographic
+  information science, and the emerging discipline of spatial data
+  science. Overall, my research has targeted the development of multivariate
+  spatial statistics and how they can be used to capture how relationships
+  change by spatial and temporal contexts. This includes issues of theory,
+  interpretation, scalability, and integration of traditional geographic models
+  with novel "big" datasets, as well as applications in public health, crime,
+  urban mobility, and transportation systems. I also participate in open source
+  software development and building cyber-infrastructure to support my research
+  and teaching and facilitate the replicability and reproducibility of the
+  geographical sciences.
 socialLinks:
   - name: Github
     icon: mdi:github
