@@ -10,10 +10,7 @@ bio: I am broadly interested in characterizing spatial patterns and processes
   change by spatial and temporal contexts. This includes issues of theory,
   interpretation, scalability, and integration of traditional geographic models
   with novel "big" datasets, as well as applications in public health, crime,
-  urban mobility, and transportation systems. I also participate in open source
-  software development and building cyber-infrastructure to support my research
-  and teaching and facilitate the replicability and reproducibility of the
-  geographical sciences.
+  urban mobility, and transportation systems.
 socialLinks:
   - name: Github
     icon: mdi:github
