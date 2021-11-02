@@ -1,9 +1,21 @@
 name: Matthew Tralka
 role: Head Developer; Member
 priority: 4
-bio: Bacon ipsum dolor amet kevin bacon ham sausage tri-tip doner leberkas jerky
-  pork loin buffalo shank landjaeger prosciutto. Biltong ribeye sausage jerky.
-  Pig porchetta bresaola fatback buffalo shankle chicken shank. Shank picanha
-  fatback, porchetta pancetta venison brisket. Porchetta tri-tip alcatra chislic
-  spare ribs buffalo.
-image: /static/uploads/img_5410.jpg
+bio: "Matthew Tralka (he/him) is a senior earning a degree in Geographical
+  Sciences: Geospatial Data Science with a minor in Remote Sensing of
+  Environmental Change. Matthew is a research assistant in both GI Science and
+  Remote Sensing with an overall focus in advancing morphological image
+  processing techniques for performance at scale and creating sustainable and
+  accessible cyber-infrastructure for distributed computing initiatives.
+  Explicitly, his latest work on IARPA’s WATCH project involves accelerating
+  novel at-scale cloud detection workflows for heterogeneous datasets. In his
+  free time, Matthew enjoys promoting data-equity initiatives and contributing
+  to the open source community."
+socialLinks:
+  - icon: mdi:github
+    name: Github
+    link: https://github.com/mtralka
+  - name: Website
+    icon: mdi:information
+    link: https://tralka.xyz/
+image: /static/uploads/tralka-matthew-profile.jpg
