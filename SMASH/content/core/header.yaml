@@ -11,7 +11,7 @@ navMenuItems:
         link: /news
         icon: ic:round-file-copy
       - title: Blog
-        link: /blog
+        link: /overview/blog
         icon: mdi:fountain-pen-tip
     bottomItems: []
   - title: Projects
