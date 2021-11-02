@@ -6,13 +6,13 @@
     >
 # Spatially Weighted Analysis of Multiscale Processes (SWAMP)
 
-# Modeling Urban Disparities & Dynamics (MUDD)
+# Modeling Urban Disparities \& Dynamics (MUDD)
 
 # Spatial Processes Inducing Networks over Time (SPINT)
 
 # Applied Transit Analysis and Ridership Informatics (ATARI)
 
-# Efficient, Accessible, & Sustainable Infrastructure for Extracting Remotely-sensed (EASIER) Data
+# Efficient, Accessible, \& Sustainable Infrastructure for Extracting Remotely-sensed (EASIER) Data
     </p>
   </div>
 </template>
