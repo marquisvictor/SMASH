@@ -13,8 +13,9 @@ navMenuItems:
       - title: Blog
         link: /blog
         icon: mdi:fountain-pen-tip
-    bottomItems:[]
+    bottomItems: []
   - title: Projects
+    topItems: []
     rowItems:
       - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
         icon: icon-park-outline:refraction
