@@ -7,11 +7,15 @@ navMenuItems:
       - title: Team
         link: /overview/team
         icon: ic:round-people
-    bottomItems:
       - title: News
         link: /news
         icon: ic:round-file-copy
+      - title: Blog
+        link: /blog
+        icon: mdi:fountain-pen-tip
+    bottomItems:[]
   - title: Projects
+    topItems: []
     rowItems:
       - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
         icon: icon-park-outline:refraction
@@ -43,10 +47,7 @@ navMenuItems:
         link: /resources/smaart
         subtitle: Spatial Multiscale Analytics, Applied Research, and Technology Seminar
         icon: ic:round-video-library
-    bottomItems:
-      - title: Blog
-        link: /blog
-        icon: mdi:fountain-pen-tip
+    bottomItems: []
 button:
   title: Contact us!
   link: /contact
