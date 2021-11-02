@@ -10,10 +10,10 @@ navMenuItems:
       - title: News
         link: /news
         icon: ic:round-file-copy
+    bottomItems:
       - title: Blog
         link: /blog
         icon: mdi:fountain-pen-tip
-    bottomItems: []
   - title: Projects
     topItems: []
     rowItems:
