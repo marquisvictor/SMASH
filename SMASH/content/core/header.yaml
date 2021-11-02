@@ -34,7 +34,7 @@ navMenuItems:
         icon: mdi:satellite-variant
     bottomItems:
       - title: Synopsis of All Projects
-        link: /projects
+        link: /projects/index
         icon: mdi:clipboard-list-outline
   - title: Resources
     rowItems:
