@@ -1,28 +1,31 @@
 <template>
   <div>
-    <pageTitle title="Coming soon!"> </pageTitle>
-    <p
-      class="max-w-3xl mx-auto mt-4 text-2xl font-medium tracking-wide text-justify "
-    >-
-# Spatially Weighted Analysis of Multiscale Processes (SWAMP)
-
-# Modeling Urban Disparities &amp; Dynamics (MUDD)
-
-# Spatial Processes Inducing Networks over Time (SPINT)
-
-# Applied Transit Analysis and Ridership Informatics (ATARI)
-
-# Efficient, Accessible, &amp; Sustainable Infrastructure for Extracting Remotely-sensed (EASIER) Data
-    </p>
+    <pageTitle :title="content.title || 'Projects'">
+      <div
+        v-if="content.body"
+        class="max-w-6xl px-4 mx-auto mt-4 text-2xl prose text-justify  md:prose-2xl md:px-0"
+        v-html="$md.render(content.body || '')"
+      ></div>
+    </pageTitle>
   </div>
 </template>
 
 <script>
-import pageTitle from '@/components/pageTitle.vue'
+import pageTitle from '@/components/pageTitle'
 export default {
+  name: 'PageTitle',
   components: {
     pageTitle,
   },
   layout: 'header-footer',
+  data() {
+    return {
+      content: '',
+    }
+  },
+  async fetch() {
+    const content = await this.$content('projects/index').fetch()
+    this.content = content
+  },
 }
 </script>
