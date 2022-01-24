@@ -19,15 +19,15 @@ navMenuItems:
     rowItems:
       - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
         icon: icon-park-outline:refraction
-        link: /projects/index
+        link: /projects/spatially-weighted-analysis-of-multiscale-processes
       - title: Modeling Urban Disparities and Dynamics (MUDD)
-        link: /projects/index
+        link: /projects/modeling-urban-disparities-and-dynamics
         icon: maki:city
-      - link: /projects/index
+      - link: /projects/spatial-processes-inducing-networks-over-time
         icon: bx:bx-network-chart
         title: Spatial Processes Inducing Networks over Time (SPINT)
       - title: Applied Transit Analysis and Ridership Informatics (ATARI)
-        link: /projects/index
+        link: /projects/applied-transit-analysis-and-ridership-informatics
         icon: mdi:train
       - title:
           Efficient, Accessible, & Sustainable Infrastructure for Extracting
