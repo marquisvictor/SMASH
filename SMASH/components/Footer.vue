@@ -2,7 +2,7 @@
   <footer id="footer" class="mx-auto max-w-7xl">
     <hr />
     <div
-      class="flex flex-row items-center justify-around w-full h-48 overflow-hidden  flex-nowrap"
+      class="flex flex-row items-center justify-around w-full h-48 overflow-hidden flex-nowrap"
     >
       <div id="footer-text flex-shrink" v-html="$md.render(footerText)"></div>
 

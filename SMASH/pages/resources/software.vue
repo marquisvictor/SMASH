@@ -1,21 +1,19 @@
 <template>
   <div>
-    <pageTitle :title="content.title || 'Software'">
-      <div
-        v-if="content.body"
-        class="max-w-6xl px-4 mx-auto mt-4 text-2xl prose text-justify  md:prose-2xl md:px-0"
-        v-html="$md.render(content.body || '')"
-      ></div>
-    </pageTitle>
+    <basic-page-template
+      :title="content.title"
+      :body-content="content"
+    >
+    </basic-page-template>
   </div>
 </template>
 
 <script>
-import pageTitle from '@/components/pageTitle'
+import BasicPageTemplate from '@/components/basicPageTemplate.vue'
 export default {
   name: 'PageTitle',
   components: {
-    pageTitle,
+    BasicPageTemplate,
   },
   layout: 'header-footer',
   data() {

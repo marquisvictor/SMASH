@@ -1,36 +1,31 @@
 <template>
   <div>
-    <pageTitle :title="content.title || 'About'">
-      <div
-        v-if="content.subtitle"
-        class="max-w-6xl px-4 mx-auto mt-4 prose text-center md:prose-2xl md:px-0"
-        v-html="$md.render(content.subtitle)"
-      ></div>
-      <div
-        v-if="content.body"
-        class="max-w-6xl px-4 mx-auto mt-4 prose text-justify md:prose-2xl md:px-0"
-        v-html="$md.render(content.body)"
-      ></div>
-    </pageTitle>
+    <basic-page-template
+      :title="page.title"
+      :subtitle="page.subtitle"
+      :body-content="page"
+    >
+    </basic-page-template>
   </div>
 </template>
 
 <script>
-import pageTitle from '@/components/pageTitle'
+import BasicPageTemplate from '@/components/basicPageTemplate.vue'
 export default {
   name: 'Objective',
   components: {
-    pageTitle,
+    BasicPageTemplate
   },
   layout: 'header-footer',
   data() {
     return {
-      content: null,
+      page: null,
     }
   },
   async fetch() {
-    const content = await this.$content('overview/about').fetch()
-    this.content = content
+    const page = await this.$content('overview/about').fetch()
+    this.page = page
+    console.log(page)
   },
 }
 </script>

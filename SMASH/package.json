@@ -9,13 +9,15 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.vue ."
+    "lint:fix": "eslint --fix --ext .js,.jsx,.vue .",
+    "proxy": "npx netlify-cms-proxy-server"
   },
   "dependencies": {
     "@iconify/iconify": "^2.0.4",
     "@luxdamore/nuxt-humans-txt": "^1.0.2",
     "@nuxt/components": "^2.2.1",
     "@nuxt/content": "^1.14.0",
+    "@nuxtjs/composition-api": "^0.31.0",
     "@nuxtjs/markdownit": "^2.0.0",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",

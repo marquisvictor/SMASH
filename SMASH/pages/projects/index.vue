@@ -1,31 +1,44 @@
 <template>
   <div>
-    <pageTitle :title="content.title || 'Projects'">
-      <div
-        v-if="content.body"
-        class="max-w-6xl px-4 mx-auto mt-4 text-2xl prose text-justify  md:prose-2xl md:px-0"
-        v-html="$md.render(content.body || '')"
-      ></div>
-    </pageTitle>
+    <basic-page-template
+      title="Projects"
+    >
+    <ul
+        class="px-3 pb-5 space-y-6 overflow-visible md:px-0"
+      >
+        <li
+          v-for="project in projects"
+          :key="project.title"
+          class="flex flex-col items-center justify-start w-full"
+        >
+        
+            <horizontal-card
+              class="w-full md:w-3/4"
+              :icon="project.icon"
+              :text="project.title"
+              :link="project.path"
+            />
+          
+        </li>
+      </ul>
+    </basic-page-template>
   </div>
 </template>
 
 <script>
-import pageTitle from '@/components/pageTitle'
+import BasicPageTemplate from '@/components/basicPageTemplate.vue'
+import HorizontalCard from '~/components/Cards/HorizontalCard.vue'
 export default {
-  name: 'PageTitle',
   components: {
-    pageTitle,
+    BasicPageTemplate,
+    HorizontalCard
   },
   layout: 'header-footer',
-  data() {
+  async asyncData({ $content }) {
+    const projects = await $content('projects').fetch()
     return {
-      content: '',
+      projects,
     }
-  },
-  async fetch() {
-    const content = await this.$content('projects/index').fetch()
-    this.content = content
   },
 }
 </script>

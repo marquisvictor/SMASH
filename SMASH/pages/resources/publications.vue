@@ -1,13 +1,15 @@
 <template>
   <div>
-    <pageTitle :title="content.title || 'Publications'">
-      <ul
-        class="flex flex-col items-center justify-start px-3 pb-5 space-y-6 overflow-visible  md:px-0"
+    <basic-page-template
+      :title="content.title"
+    >
+    <ul
+        class="flex flex-col items-center justify-start px-3 pb-5 space-y-6 overflow-visible md:px-0"
       >
         <li
           v-for="publication in publications.slice().reverse()"
           :key="publication.title"
-          class="flex flex-col items-center max-w-6xl p-6 space-y-1 overflow-hidden rounded shadow-md  justify-evenly"
+          class="flex flex-col items-center max-w-6xl p-6 space-y-1 overflow-hidden rounded shadow-md justify-evenly"
         >
           <div
             :v-if="publication.authors"
@@ -24,7 +26,7 @@
               {{ publication.title }}
             </p>
             <div
-              class="flex flex-col items-center justify-center space-y-3 font-bold tracking-tighter  md:space-y-0 md:space-x-10 md:flex-row"
+              class="flex flex-col items-center justify-center space-y-3 font-bold tracking-tighter md:space-y-0 md:space-x-10 md:flex-row"
             >
               <a
                 v-if="publication.file"
@@ -39,16 +41,16 @@
           </div>
         </li>
       </ul>
-    </pageTitle>
+    </basic-page-template>
   </div>
 </template>
 
 <script>
-import pageTitle from '@/components/pageTitle.vue'
+import BasicPageTemplate from '@/components/basicPageTemplate.vue'
 import Pill from '@/components/Pill'
 export default {
   components: {
-    pageTitle,
+    BasicPageTemplate,
     Pill,
   },
   layout: 'header-footer',

@@ -5,6 +5,7 @@ publish_mode: editorial_workflow
 backend:
   name: git-gateway
   branch: main
+
 media_folder: SMASH/static/uploads
 public_folder: /static/uploads
 
@@ -16,15 +17,20 @@ collections:
         name: 'contact'
         file: 'SMASH/content/core/contact.yaml'
         fields:
-          - label: "Social Networks"
+          - label: 'Social Networks'
             name: 'socialNetworks'
             widget: 'list'
-            summary: "{{fields.name}}"
+            summary: '{{fields.name}}'
             allow_add: true
             fields:
-              - {label: 'Network Name', name: 'name', widget: 'string'}
-              - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
-              - {label: 'Network Link', name: 'link', widget: 'string'}
+              - { label: 'Network Name', name: 'name', widget: 'string' }
+              - {
+                  label: 'Network Icon',
+                  name: 'icon',
+                  widget: 'string',
+                  hint: '[options](https://icones.netlify.app/collection/all)',
+                }
+              - { label: 'Network Link', name: 'link', widget: 'string' }
       - label: 'SMASH Footer'
         name: 'footer'
         file: 'SMASH/content/core/footer.yaml'
@@ -32,7 +38,7 @@ collections:
           - label: 'Left Text'
             name: 'footerText'
             widget: 'markdown'
-      - label : "SMASH Header"
+      - label: 'SMASH Header'
         name: 'header'
         file: 'SMASH/content/core/header.yaml'
         fields:
@@ -40,35 +46,57 @@ collections:
             name: 'navMenuItems'
             widget: 'list'
             fields:
-              - {label: 'Root Navigation Item Name', name: 'title', widget: 'string'}
+              - {
+                  label: 'Root Navigation Item Name',
+                  name: 'title',
+                  widget: 'string',
+                }
               - name: 'rowItems'
                 label: 'Row Items'
-                summary: "{{fields.title}}"
+                summary: '{{fields.title}}'
                 widget: 'list'
                 fields:
-                  - {label: 'Row Item Name', name: 'title', widget: 'string'}
-                  - {label: 'Row Item Link', name: 'link', widget: 'string'}
-                  - {label: 'Row Item Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
-              - label: "Bottom Items"
+                  - { label: 'Row Item Name', name: 'title', widget: 'string' }
+                  - { label: 'Row Item Link', name: 'link', widget: 'string' }
+                  - {
+                      label: 'Row Item Icon',
+                      name: 'icon',
+                      widget: 'string',
+                      hint: '[options](https://icones.netlify.app/collection/all)',
+                    }
+              - label: 'Bottom Items'
                 name: 'bottomItems'
-                widget: "list"
+                widget: 'list'
                 fields:
-                  - {label: 'Bottom Item Name', name: 'title', widget: 'string'}
-                  - {label: 'Bottom Item Link', name: 'link', widget: 'string'}
-                  - {label: 'Bottom Item Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
-          - label: "End Button"
-            name: "button"
-            widget: "object"
+                  - {
+                      label: 'Bottom Item Name',
+                      name: 'title',
+                      widget: 'string',
+                    }
+                  - {
+                      label: 'Bottom Item Link',
+                      name: 'link',
+                      widget: 'string',
+                    }
+                  - {
+                      label: 'Bottom Item Icon',
+                      name: 'icon',
+                      widget: 'string',
+                      hint: '[options](https://icones.netlify.app/collection/all)',
+                    }
+          - label: 'End Button'
+            name: 'button'
+            widget: 'object'
             fields:
-              - {label: 'Button Title', name: 'title', widget: 'string'}
-              - {label: 'Button Link', name: 'link', widget: 'string'}  
+              - { label: 'Button Title', name: 'title', widget: 'string' }
+              - { label: 'Button Link', name: 'link', widget: 'string' }
           - label: 'Image'
             name: 'image'
             widget: 'image'
             allow_multiple: false
             media_library:
               config:
-                multiple: false    
+                multiple: false
   - name: 'news'
     label: 'News'
     folder: 'SMASH/content/news'
@@ -83,8 +111,8 @@ collections:
         media_library:
           config:
             multiple: false
-      - {label: 'Image Alt Text', name: 'imageAlt', widget: 'string'}
-      - {label: 'Title', name: 'title', widget: 'string'}
+      - { label: 'Image Alt Text', name: 'imageAlt', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
       - label: 'Author(s)'
         name: 'authors'
         widget: 'list'
@@ -96,8 +124,51 @@ collections:
           search_fields: ['name']
           value_field: 'name'
           display_fields: ['name']
-      - {label: 'Date', name: 'date', widget: 'datetime'}
-      - {label: 'News content', name: 'body', widget: 'markdown'}
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'News content', name: 'body', widget: 'markdown' }
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'SMASH/content/blog'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
+        allow_multiple: false
+        media_library:
+          config:
+            multiple: false
+      - { label: 'Image Alt Text', name: 'imageAlt', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - label: 'Author(s)'
+        name: 'authors'
+        widget: 'list'
+        field:
+          label: 'Author'
+          name: 'author'
+          widget: 'relation'
+          collection: 'people'
+          search_fields: ['name']
+          value_field: 'name'
+          display_fields: ['name']
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Blog content', name: 'body', widget: 'markdown' }
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'SMASH/content/projects'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - label: 'Project Icon',
+        name: 'icon',
+        widget: 'string',
+        hint: '[options](https://icones.netlify.app/collection/all)'
+      - { label: 'Project title', name: 'title', widget: 'string' }
+      - { label: 'Project abbreviation', name: 'abbreviation', widget: 'string' }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
   - name: 'people'
     label: 'People'
     folder: 'SMASH/content/people'
@@ -105,8 +176,8 @@ collections:
     create: true
     slug: '{{fields.name}}'
     fields:
-      - {label: 'Name', name: 'name', widget: 'string'}
-      - {label: 'Role', name: 'role', widget: 'string'}
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Role', name: 'role', widget: 'string' }
       - label: 'List Order'
         name: 'priority'
         widget: 'number'
@@ -125,15 +196,20 @@ collections:
           - 'quote'
           - 'bulleted-list'
           - 'numbered-list'
-      - label: "Social Links"
+      - label: 'Social Links'
         name: 'socialLinks'
         widget: 'list'
-        summary: "{{fields.name}}"
+        summary: '{{fields.name}}'
         allow_add: true
         fields:
-          - {label: 'Network Name', name: 'name', widget: 'string'}
-          - {label: 'Network Icon', name: 'icon', widget: 'string', hint: "[options](https://icones.netlify.app/collection/all)"}
-          - {label: 'Network Link', name: 'link', widget: 'string'}
+          - { label: 'Network Name', name: 'name', widget: 'string' }
+          - {
+              label: 'Network Icon',
+              name: 'icon',
+              widget: 'string',
+              hint: '[options](https://icones.netlify.app/collection/all)',
+            }
+          - { label: 'Network Link', name: 'link', widget: 'string' }
       - label: 'Image'
         name: 'image'
         widget: 'image'
@@ -148,10 +224,10 @@ collections:
     create: true
     slug: '{{presenter}}-{{date}}'
     fields:
-      - {label: 'Title', name: 'title', widget: 'string' }
-      - {label: 'Presenter', name: 'presenter', widget: 'string' }
-      - {label: 'Date', name: 'date', widget: 'datetime'}
-      - {label: 'YouTube Video ID', name: 'videoId', widget: 'string'}
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Presenter', name: 'presenter', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'YouTube Video ID', name: 'videoId', widget: 'string' }
   - name: 'publications'
     label: 'Publications'
     folder: 'SMASH/content/publications'
@@ -159,7 +235,7 @@ collections:
     create: true
     slug: '{{date}}-{{authors}}'
     fields:
-      - {label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
       - label: 'File'
         name: 'file'
         widget: 'file'
@@ -169,7 +245,7 @@ collections:
             multiple: false
         required: false
         media_folder: '/static/files'
-      - {label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Link', name: 'link', widget: 'string' }
       - label: 'Author(s)'
         name: 'authors'
         widget: 'list'
@@ -185,15 +261,19 @@ collections:
         name: 'date'
         widget: 'datetime'
   - name: 'pages'
-    label: "General Pages"
+    label: 'General Pages'
     files:
-      - label : "Index Page"
+      - label: 'Index Page'
         name: 'index'
         file: 'SMASH/content/pages/index.yaml'
         fields:
-          - {label: 'Index title', name: 'title', widget: 'string'}
-          - {label: 'Index Subtitle', name: 'subtitle', widget: 'string'}
-          - {label: 'Index Short Sentence', name: 'shortSentence', widget: 'text'}
+          - { label: 'Index title', name: 'title', widget: 'string' }
+          - { label: 'Index Subtitle', name: 'subtitle', widget: 'string' }
+          - {
+              label: 'Index Short Sentence',
+              name: 'shortSentence',
+              widget: 'text',
+            }
           - label: 'Image'
             name: 'image'
             widget: 'image'
@@ -205,44 +285,49 @@ collections:
         name: 'contact'
         file: 'SMASH/content/pages/contact.yaml'
         fields:
-          - {label: 'Title', name: 'title', widget: 'string'} 
-          - {label: 'Body', name: 'body', widget: 'markdown'} 
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'overview'
-    label: "Overview"
+    label: 'Overview'
     files:
-    - label : "About Page"
-      name: 'about'
-      file: 'SMASH/content/overview/about.yaml'
-      fields:
-        - {label: 'Page Title', name: 'title', widget: 'string'} 
-        - {label: 'Objective', name: 'body', widget: 'markdown'}  
-    - label : "Team Page"
-      name: 'team'
-      file: 'SMASH/content/overview/team.yaml'
-      fields:
-        - {label: 'Page Title', name: 'title', widget: 'string'} 
-    - label : "News Page"
-      name: 'news'
-      file: 'SMASH/content/overview/news.yaml'
-      fields:
-        - {label: 'Page Title', name: 'title', widget: 'string'} 
+      - label: 'About Page'
+        name: 'about'
+        file: 'SMASH/content/overview/about.md'
+        fields:
+          - { label: 'Page Title', name: 'title', widget: 'string' }
+          - { label: 'Objective', name: 'body', widget: 'markdown' }
+      - label: 'Team Page'
+        name: 'team'
+        file: 'SMASH/content/overview/team.yaml'
+        fields:
+          - { label: 'Page Title', name: 'title', widget: 'string' }
+      - label: 'News Page'
+        name: 'news'
+        file: 'SMASH/content/overview/news.yaml'
+        fields:
+          - { label: 'Page Title', name: 'title', widget: 'string' }
+      - label: 'Blog Page'
+        name: 'blog'
+        file: 'SMASH/content/overview/blog.yaml'
+        fields:
+          - { label: 'Page Title', name: 'title', widget: 'string' }
   - name: 'resources'
-    label: "Resources"
+    label: 'Resources'
     files:
-    - label : "Software Page"
-      name: 'software'
-      file: 'SMASH/content/resources/software.yaml'
-      fields:
-        - {label: 'Page Title', name: 'title', widget: 'string'} 
-        - {label: 'Body', name: 'body', widget: 'markdown'}  
-    - label : "Publications Page"
-      name: 'publications'
-      file: 'SMASH/content/resources/publications.yaml'
-      fields:
-        - {label: 'Page Title', name: 'title', widget: 'string'} 
-    - label : "SMAART Page"
-      name: 'smaart'
-      file: 'SMASH/content/resources/smaart.yaml'
-      fields:
-        - {label: 'Page Title', name: 'title', widget: 'string'} 
-        - {label: 'Page Subtitle', name: 'subtitle', widget: 'string'} 
+      - label: 'Software Page'
+        name: 'software'
+        file: 'SMASH/content/resources/software.md'
+        fields:
+          - { label: 'Page Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Publications Page'
+        name: 'publications'
+        file: 'SMASH/content/resources/publications.yaml'
+        fields:
+          - { label: 'Page Title', name: 'title', widget: 'string' }
+      - label: 'SMAART Page'
+        name: 'smaart'
+        file: 'SMASH/content/resources/smaart.yaml'
+        fields:
+          - { label: 'Page Title', name: 'title', widget: 'string' }
+          - { label: 'Page Subtitle', name: 'subtitle', widget: 'string' }

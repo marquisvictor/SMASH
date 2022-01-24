@@ -1,15 +1,18 @@
 <template>
   <div>
-    <pageTitle :title="content.title || 'Our Team'">
-      <div
-        class="grid grid-cols-1 gap-6 p-10 mx-auto  md:w-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
+    <div>
+    <basic-page-template
+      :title="content.title"
+    >
+    <div
+        class="grid grid-cols-1 gap-6 p-2 mx-auto md:p-10 md:w-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
       >
         <article
           v-for="person in people"
           :key="person.name"
-          class="flex flex-col items-center justify-start max-w-lg p-2 m-4 space-y-5 bg-white "
+          class="flex flex-col items-center justify-start max-w-lg p-2 space-y-5 bg-white "
         >
-          <div class="overflow-hidden rounded-md shadow-md h-80">
+          <div class="overflow-hidden rounded-md shadow-md ">
             <nuxt-img
               fit="cover"
               height="280"
@@ -42,6 +45,7 @@
               v-for="icon in person.socialLinks"
               :key="icon.name"
               :href="icon.link"
+              target="_blank"
               class="p-1 overflow-hidden rounded-md hover:bg-gray-400"
             >
               <Icon :icon="icon.icon" class="w-7 h-7" aria-hidden="true" />
@@ -49,18 +53,18 @@
           </div>
         </article>
       </div>
-    </pageTitle>
+    </basic-page-template>
+  </div>
   </div>
 </template>
 
 <script>
-import pageTitle from '@/components/pageTitle'
+import BasicPageTemplate from '@/components/basicPageTemplate.vue'
 import Icon from '@/components/Icon.vue'
-
 export default {
   name: 'Team',
   components: {
-    pageTitle,
+    BasicPageTemplate,
     Icon,
   },
   layout: 'header-footer',

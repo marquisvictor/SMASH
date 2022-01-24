@@ -1,4 +1,4 @@
-# SMASH.
+# SMASH
 
 ## Build Setup
 
@@ -19,6 +19,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-- Icons from https://icones.netlify.app/collection/all
-- Change .Prettier for lint

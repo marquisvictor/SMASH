@@ -12,7 +12,7 @@
           class="flex flex-col justify-center md:flex-row md:space-x-7 md:space-y-0 space-y-7 md:justify-start"
         >
           <h2 class="text-5xl font-bold tracking-wide text-left md:text-7xl">
-            Latest News
+            News
           </h2>
           <nuxt-link
             to="/news"
@@ -103,8 +103,8 @@
 
 <script>
 import Card from '@/components/Cards/Card'
-import VueHorizontal from 'vue-horizontal'
 import Icon from '@/components/Icon'
+import VueHorizontal from 'vue-horizontal'
 export default {
   name: 'IndexNews',
   components: {
