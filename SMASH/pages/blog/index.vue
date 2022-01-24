@@ -21,10 +21,9 @@
                     <p class="w-full text-xs text-left text-gray-500 md:text-base">
                         {{ new Date(project.date).toLocaleDateString() }}
                     </p>
-                    <p class="text-base font-medium leading-tight text-left flex-grow-1 lg:text-xl md:text-lg">
+                    <p class="w-full text-base font-medium leading-tight text-left flex-grow-1 lg:text-xl md:text-lg">
                         {{project.title}}
                     </p>
-                    <!-- class="" -->
                     <div v-if="project.authors" class="flex flex-col items-center justify-start space-y-3 md:space-y-0 md:space-x-3 md:w-full md:flex-row">
                         <Pill
                             v-for="author in project.authors"

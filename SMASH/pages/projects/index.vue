@@ -11,7 +11,6 @@
           :key="project.title"
           class="flex flex-col items-center justify-start w-full"
         >
-        
             <horizontal-card
               class="w-full md:w-3/4"
               :icon="project.icon"
