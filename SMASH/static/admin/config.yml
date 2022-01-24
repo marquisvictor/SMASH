@@ -162,12 +162,16 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - label: 'Project Icon',
-        name: 'icon',
-        widget: 'string',
+      - label: 'Project Icon'
+        name: 'icon'
+        widget: 'string'
         hint: '[options](https://icones.netlify.app/collection/all)'
       - { label: 'Project title', name: 'title', widget: 'string' }
-      - { label: 'Project abbreviation', name: 'abbreviation', widget: 'string' }
+      - {
+          label: 'Project abbreviation',
+          name: 'abbreviation',
+          widget: 'string',
+        }
       - { label: 'Content', name: 'body', widget: 'markdown' }
   - name: 'people'
     label: 'People'
