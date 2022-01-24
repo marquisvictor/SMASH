@@ -14,7 +14,6 @@ navMenuItems:
       - title: Blog
         link: /blog
         icon: mdi:fountain-pen-tip
-
   - title: Projects
     rowItems:
       - title: Spatially Weighted Analysis of Multiscale Processes (SWAMP)
@@ -29,10 +28,9 @@ navMenuItems:
       - title: Applied Transit Analysis and Ridership Informatics (ATARI)
         link: /projects/applied-transit-analysis-and-ridership-informatics
         icon: mdi:train
-      - title:
-          Efficient, Accessible, & Sustainable Infrastructure for Extracting
+      - title: Efficient, Accessible, & Sustainable Infrastructure for Extracting
           Remotely-sensed (EASIER) Data
-        link: /projects/index
+        link: /projects/efficient-accessible-sustainable-infrastructure-for-remotely-sensed-data
         icon: mdi:satellite-variant
     bottomItems:
       - title: Synopsis of All Projects
