@@ -74,6 +74,12 @@ export default {
         status: 302,
         force: true,
       },
+      {
+        from: '/projects/index',
+        to: '/projects',
+        status: 302,
+        force: true,
+      },
     ],
   },
   humansTxt: {
