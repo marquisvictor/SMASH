@@ -42,7 +42,7 @@
               v-for="(news, index) in newsPosts"
               :key="index"
               :title="news.title"
-              :date="news.createdAt"
+              :date="news.date"
               :link="news.path"
               :image="news.image"
               :image-alt="news.imageAlt"
