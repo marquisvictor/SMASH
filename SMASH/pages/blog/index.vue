@@ -1,8 +1,13 @@
 <template>
   <div>
     <basic-page-template
-      :title="content.title"
     >
+      <template #title>
+        <!-- <vue-mathjax formula="{E}[{scale}]{ating Spatial Analysis}"></vue-mathjax> -->
+        <h2 class="max-w-4xl mx-auto text-2xl font-bold tracking-wide md:text-4xl">
+          {{content.title}}
+        </h2>
+      </template>
     <ul
         class="pb-5 space-y-6 overflow-visible md:px-0"
       >
@@ -49,7 +54,7 @@ export default {
   components: {
     BasicPageTemplate,
     HorizontalCard,
-    Pill
+    Pill,
   },
   layout: 'header-footer',
   async asyncData({ $content }) {
@@ -60,5 +65,29 @@ export default {
       content
     }
   },
+  head() {
+    
+      return {
+        script: [
+          {
+            hid: 'MathJaxConfig',
+            innerHTML: `
+            MathJax = {
+                options: {
+                    enableMenu: false
+                }
+            }
+            `,
+            type: 'text/javascript',
+            charset: 'utf-8'
+          },
+          {
+            hid: 'MathJax',
+            src: 
+            'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+          }
+        ],
+      }
+    },
 }
 </script>
