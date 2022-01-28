@@ -3,9 +3,8 @@
     <basic-page-template
     >
       <template #title>
-        <!-- <vue-mathjax formula="{E}[{scale}]{ating Spatial Analysis}"></vue-mathjax> -->
         <h2 class="max-w-4xl mx-auto text-2xl font-bold tracking-wide md:text-4xl">
-          {{content.title}}
+          <vue-math-jax :formula="content.title"></vue-math-jax>
         </h2>
       </template>
     <ul
@@ -48,13 +47,14 @@
 <script>
 import BasicPageTemplate from '@/components/basicPageTemplate.vue'
 import Pill from '@/components/Pill'
+import VueMathJax from "@/components/VueMathJax.vue"
 import HorizontalCard from '~/components/Cards/HorizontalCard.vue'
-
 export default {
   components: {
     BasicPageTemplate,
     HorizontalCard,
     Pill,
+    VueMathJax
   },
   layout: 'header-footer',
   async asyncData({ $content }) {
@@ -65,29 +65,5 @@ export default {
       content
     }
   },
-  head() {
-    
-      return {
-        script: [
-          {
-            hid: 'MathJaxConfig',
-            innerHTML: `
-            MathJax = {
-                options: {
-                    enableMenu: false
-                }
-            }
-            `,
-            type: 'text/javascript',
-            charset: 'utf-8'
-          },
-          {
-            hid: 'MathJax',
-            src: 
-            'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
-          }
-        ],
-      }
-    },
 }
 </script>
