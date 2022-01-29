@@ -51,6 +51,7 @@ export default {
             if (!window.MathJax) {
                 node.innerHTML = "Blog";
                 console.error("No MathJax Found") // eslint-disable-line
+                setTimeout(this.render, 200)
                 return
             }
             MathJax.typesetClear([node]);  // eslint-disable-line
