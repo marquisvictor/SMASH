@@ -3,8 +3,9 @@ logo_url: https://geosmash.net/SMASHLogo.svg
 publish_mode: editorial_workflow
 
 backend:
-  name: git-gateway
+  name: github
   branch: main
+  repo: GEOSMASH/SMASH
 
 media_folder: SMASH/static/uploads
 public_folder: /static/uploads
