@@ -6,6 +6,7 @@ backend:
   name: github
   branch: main
   repo: GEOSMASH/SMASH
+  open_authoring: true
 
 media_folder: SMASH/static/uploads
 public_folder: /static/uploads
