@@ -1,5 +1,5 @@
 ---
-image: /static/uploads/tgis.v26.2.cover.jpg
+image: /static/uploads/tgis.v26.2.cover.png
 imageAlt: tgis
 title: New publication in TGIS!
 authors:
