@@ -1,5 +1,5 @@
 ---
-image: https://onlinelibrary.wiley.com/toc/14679671/2021/0/0
+image: /static/uploads/tgis.v26.2.cover.jpg
 imageAlt: tgis
 title: New publication in TGIS!
 authors:
