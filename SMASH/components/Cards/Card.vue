@@ -13,7 +13,7 @@
             v-if="image && !videoId && imageLink"
             :src="imageLink"
             :alt="imageAlt || `Picture for ${title}`"
-            class="w-full h-full min-h-[300px] object-scale-down"
+            class="w-full h-full min-h-[300px] max-h-[300px] object-scale-down"
             quality="50"
           />
           <vue-tube
