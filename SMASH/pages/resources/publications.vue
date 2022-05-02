@@ -34,6 +34,18 @@
                 class="p-2 hover:text-indigo-600"
                 >Download</a
               >
+              <a
+                v-if="publication.code"
+                :href="publication.code"
+                class="p-2 hover:text-indigo-600"
+                >Code</a
+              >
+              <a
+                v-if="publication.prepend"
+                :href="publication.prepend"
+                class="p-2 hover:text-indigo-600"
+                >Prepend</a
+              >
               <a :href="publication.link" class="p-2 hover:text-indigo-600"
                 >Read More</a
               >
