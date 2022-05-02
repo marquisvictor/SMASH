@@ -1,0 +1,5 @@
+FROM node:16 
+
+RUN mkdir /SMASH
+
+WORKDIR /SMASH
