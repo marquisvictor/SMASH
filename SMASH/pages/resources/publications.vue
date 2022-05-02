@@ -9,7 +9,7 @@
         <li
           v-for="publication in publications.slice().reverse()"
           :key="publication.title"
-          class="flex flex-col items-center max-w-6xl p-6 space-y-1 overflow-hidden rounded shadow-md justify-evenly"
+          class="flex flex-col items-center max-w-4xl w-full p-6 space-y-1 overflow-hidden rounded shadow-md justify-evenly bg-gray-100"
         >
           <div
             :v-if="publication.authors"
