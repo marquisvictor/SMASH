@@ -9,7 +9,7 @@
         <li
           v-for="publication in publications.slice().reverse()"
           :key="publication.title"
-          class="flex flex-col items-center max-w-6xl p-6 space-y-1 overflow-hidden rounded shadow-md justify-evenly"
+          class="flex flex-col items-center max-w-4xl w-full p-6 space-y-1 overflow-hidden rounded shadow-md justify-evenly bg-gray-100"
         >
           <div
             :v-if="publication.authors"
@@ -33,6 +33,18 @@
                 :href="publication.file"
                 class="p-2 hover:text-indigo-600"
                 >Download</a
+              >
+              <a
+                v-if="publication.code"
+                :href="publication.code"
+                class="p-2 hover:text-indigo-600"
+                >Code</a
+              >
+              <a
+                v-if="publication.prepend"
+                :href="publication.prepend"
+                class="p-2 hover:text-indigo-600"
+                >Prepend</a
               >
               <a :href="publication.link" class="p-2 hover:text-indigo-600"
                 >Read More</a

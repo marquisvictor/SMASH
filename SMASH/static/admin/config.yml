@@ -252,6 +252,8 @@ collections:
         required: false
         media_folder: '/static/files'
       - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Code', name: 'code', widget: 'string' }
+      - { label: 'Prepend', name: 'prepend', widget: 'string' }
       - label: 'Author(s)'
         name: 'authors'
         widget: 'list'

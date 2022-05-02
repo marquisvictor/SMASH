@@ -1,0 +1,14 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: dockerfile
+    restart: unless-stopped
+    ports: 
+      - 3000:3000
+    volumes: 
+      - ./SMASH:/SMASH
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    tty: true
