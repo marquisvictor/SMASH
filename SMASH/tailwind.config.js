@@ -1,8 +1,7 @@
 module.exports = {
   purge: {
     options: {
-      purge: {
-      }
+      purge: {},
     },
     content: [
       'components/**/*.vue',
@@ -17,14 +16,10 @@ module.exports = {
   },
   darkMode: false,
   theme: {
-    extend: {
-      // fontFamily: {
-      //   sans: ['Chillax-Regular']
-      // },
-    },
+    extend: {},
   },
   variants: {
     transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms'),],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 }
