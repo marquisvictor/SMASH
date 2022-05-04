@@ -1,15 +1,13 @@
 <template>
   <div>
-    <basic-page-template
-      :title="content.title"
-    >
-    <ul
-        class="flex flex-col items-center justify-start px-3 pb-5 space-y-6 overflow-visible md:px-0"
+    <basic-page-template :title="content.title">
+      <ul
+        class="flex flex-col items-center justify-start px-0 pb-5 space-y-6 overflow-visible md:px-3"
       >
         <li
           v-for="publication in publications.slice().reverse()"
           :key="publication.title"
-          class="flex flex-col items-center max-w-4xl w-full p-6 space-y-1 overflow-hidden rounded shadow-md justify-evenly bg-gray-100"
+          class="flex flex-col items-center w-full max-w-4xl p-6 space-y-1 overflow-hidden bg-gray-100 rounded shadow-md justify-evenly"
         >
           <div
             :v-if="publication.authors"
