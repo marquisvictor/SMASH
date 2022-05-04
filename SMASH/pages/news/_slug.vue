@@ -29,38 +29,16 @@
         </article>
 
         <div
-          class="flex flex-col items-center justify-around  md:items-start md:flex-row"
+          class="flex items-center justify-around  md:items-start flex-row"
         >
-          <nuxt-link
-            v-if="prev"
-            :to="prev.path"
-            class="flex flex-col items-center justify-around p-2 space-y-1  md:space-y-3"
-          >
-            <Icon
-              icon="ic:outline-keyboard-arrow-left"
-              class="flex-shrink-0 w-12 h-12 text-indigo-600"
-              aria-hidden="true"
-            />
-            <div class="space-y-1 text-center">
-              <p
-                class="hidden overflow-hidden font-semibold text-center break-normal  md:block"
-                style="max-width: 12rem; max-height: 6rem"
-              >
-                {{ prev.title }}
-              </p>
-              <span class="text-xs text-gray-500 uppercase md:hidden"
-                >Previous Article</span
-              >
-            </div>
-          </nuxt-link>
 
           <nuxt-link
             v-if="next"
             :to="next.path"
-            class="flex flex-col items-center justify-around p-2 space-y-1  md:space-y-3"
+            class="flex flex-col items-center  md:flex-row items-center justify-around p-2 "
           >
             <Icon
-              icon="ic:outline-keyboard-arrow-right"
+              icon="ic:outline-keyboard-arrow-left"
               class="flex-shrink-0 w-12 h-12 text-indigo-600"
               aria-hidden="true"
             />
@@ -73,6 +51,29 @@
               </p>
               <span class="text-xs text-gray-500 uppercase md:hidden"
                 >Next Article</span
+              >
+            </div>
+          </nuxt-link>
+
+          <nuxt-link
+            v-if="prev"
+            :to="prev.path"
+            class="flex flex-col items-center  md:flex-row-reverse items-center justify-around p-2 "
+          >
+            <Icon
+              icon="ic:outline-keyboard-arrow-right"
+              class="flex-shrink-0 w-12 h-12 text-indigo-600"
+              aria-hidden="true"
+            />
+            <div class="space-y-1 text-center">
+              <p
+                class="hidden overflow-hidden font-semibold text-center break-normal  md:block"
+                style="max-width: 12rem; max-height: 6rem"
+              >
+                {{ prev.title }}
+              </p>
+              <span class="text-xs text-gray-500 uppercase md:hidden"
+                >Previous Article</span
               >
             </div>
           </nuxt-link>
