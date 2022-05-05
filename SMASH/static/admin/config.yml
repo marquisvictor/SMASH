@@ -252,8 +252,13 @@ collections:
         required: false
         media_folder: '/static/files'
       - { label: 'Link', name: 'link', widget: 'string' }
-      - { label: 'Code', name: 'code', widget: 'string' }
-      - { label: 'Prepend', name: 'prepend', widget: 'string' }
+      - { label: 'Code', name: 'code', widget: 'string', required: false }
+      - {
+          label: 'Preprint',
+          name: 'preprint',
+          widget: 'string',
+          required: false,
+        }
       - label: 'Author(s)'
         name: 'authors'
         widget: 'list'

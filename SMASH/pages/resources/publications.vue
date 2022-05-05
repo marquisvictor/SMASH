@@ -39,10 +39,10 @@
                 >Code</a
               >
               <a
-                v-if="publication.prepend"
-                :href="publication.prepend"
+                v-if="publication.preprint"
+                :href="publication.preprint"
                 class="p-2 hover:text-indigo-600"
-                >Prepend</a
+                >Preprint</a
               >
               <a :href="publication.link" class="p-2 hover:text-indigo-600"
                 >Read More</a
