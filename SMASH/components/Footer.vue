@@ -12,6 +12,7 @@
           :key="icon.name"
           :href="icon.link"
           class="p-1 overflow-hidden rounded-md hover:bg-gray-400"
+          target="_blank"
         >
           <Icon
             :icon="icon.icon"
