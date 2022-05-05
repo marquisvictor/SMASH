@@ -17,7 +17,7 @@
             :src="imageLink"
             :alt="imageAlt || `Picture for ${text}`"
             class="w-3/4 h-3/4 min-h-[300px] object-scale-down max-h-10 max-w-10"
-            quality="50"
+            quality="30"
         />
       </div>
       <div class="flex-shrink-0 w-1/2 h-full p-2">

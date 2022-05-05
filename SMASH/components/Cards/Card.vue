@@ -14,7 +14,7 @@
             :src="imageLink"
             :alt="imageAlt || `Picture for ${title}`"
             class="w-full h-full min-h-[300px] max-h-[300px] object-scale-down"
-            quality="50"
+            quality="30"
           />
           <vue-tube
             v-if="videoId && !image"
@@ -33,7 +33,7 @@
           :style="!vueHorizontalChild ? 'min-height: 11rem' : ''"
         >
           <p
-            class="flex text-xs font-semibold tracking-wide text-gray-500 uppercase bg-teal-200 rounded-full "
+            class="flex text-xs font-semibold tracking-wide text-gray-500 uppercase bg-teal-200 rounded-full"
           >
             {{ new Date(date).toDateString() }}
           </p>

@@ -14,7 +14,7 @@
               width="40"
               :src="image"
               alt="SMASH Logo"
-              quality="50"
+              quality="30"
             />
             <abbr
               v-if="!onHome"
@@ -80,6 +80,7 @@
                 class="w-auto h-8"
                 :src="image"
                 alt="SMASH Logo"
+                quality="30"
               />
               <p class="text-lg font-bold tracking-wider">SMASH</p>
             </nuxt-link>

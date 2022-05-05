@@ -20,7 +20,7 @@
               class="object-contain w-full h-full"
               :src="imageLink(person.image)"
               :alt="`Photo of ${person.name}`"
-              quality="50"
+              quality="30"
             />
           </div>
           <div class="w-full space-y-2 text-center">
