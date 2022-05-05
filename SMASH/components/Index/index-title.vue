@@ -9,6 +9,7 @@
           width="266"
           :src="imageLink"
           alt="SMASH Logo"
+          quality="30"
         />
       </div>
 

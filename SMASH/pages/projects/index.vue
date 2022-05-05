@@ -1,23 +1,18 @@
 <template>
   <div>
-    <basic-page-template
-      title="Projects"
-    >
-    <ul
-        class="px-3 pb-5 space-y-6 overflow-visible md:px-0"
-      >
+    <basic-page-template title="Projects">
+      <ul class="px-3 pb-5 space-y-6 overflow-visible md:px-0">
         <li
           v-for="project in projects"
           :key="project.title"
           class="flex flex-col items-center justify-start w-full"
         >
-            <horizontal-card
-              class="w-full md:w-3/4"
-              :icon="project.icon"
-              :text="project.title"
-              :link="project.path"
-            />
-          
+          <horizontal-card
+            class="w-full bg-gray-100 shadow-md md:w-3/4"
+            :icon="project.icon"
+            :text="project.title"
+            :link="project.path"
+          />
         </li>
       </ul>
     </basic-page-template>
@@ -30,7 +25,7 @@ import HorizontalCard from '~/components/Cards/HorizontalCard.vue'
 export default {
   components: {
     BasicPageTemplate,
-    HorizontalCard
+    HorizontalCard,
   },
   layout: 'header-footer',
   async asyncData({ $content }) {
