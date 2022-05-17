@@ -15,7 +15,6 @@
         class="relative z-50 inline-flex items-center text-xl font-medium bg-white rounded-md  group hover:text-gray-900 focus:outline-none"
         :class="active ? 'text-gray-900' : 'text-gray-500'"
         :aria-expanded="isOpen"
-        @click="toggle"
         @mouseover="show"
         @mouseleave="delayHide"
       >
