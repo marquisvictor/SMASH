@@ -22,19 +22,19 @@ Based on the station categories and the trip duration, a rule-based classificati
 
 The classification system is applied to bike trips in 2019 and 2020. Daily aggregated results of 2019 show that before COVID-19, most trips are modal integration or modal substitution with public transit and less than 10 percent of total trips are complementation of public transit. Winter has fewer MI trips than MS, while during summer times MI and MS have the same share. In 2020 after the COVID-19 started, results show that there was an increase in the mode substitution and a decrease in the mode integration after the outbreak in April 2020. This can naturally result in a longer trip duration. But the increase of MS trips was mostly during weekends which is shown as the red spikes. This means people take many long-distance trips during weekends which is different from 2019 patterns.
 
-![Trip semantics in 2019](/static/uploads/trip_by_label_2019.svg)
+![Trip semantics in 2019](/uploads/trip_by_label_2019.svg)
 
-![Trip semantics in 2020](/static/uploads/trip_by_label_2020.svg)
+![Trip semantics in 2020](/uploads/trip_by_label_2020.svg)
 
 The result provides encouraging evidence that demonstrates a shift from public transit to bike trips. In the second part, the explanation of the substitution is discussed by exploring some heuristic reasons. Intuitively the reasons are 1) the health concern, 2) the extra delay from reduced services, and 3) free membership program. The context of free membership is that during the first two months of COVID-19, free one-year membership of Citi Bike was granted to healthcare workers in NYC. Since the influence of free membership was discussed in the two other papers (Teixeira and Lopes 2020, Pase et al, 2020), the rest two reasons are discussed in the following results. The methods is for delay time analysis is to collect delay information of PT while the travel time matrix of public transit and bike-share is used to evaluate the health concern reasons. Travel time matrix of public transit is pulled from map service TravelTime and the bike-share matrix is computed from the mean value of bike trip duration.
 
 A daily time series plot aligning covid cases, subway delay information, subway ridership number, and bike trip by mode semantics is plotted below. The first plot starting at the top shows the daily count of confirmed COVID cases in NYC. The  From delay information, we can see the delay happened following the first wave of covid which last just a month. But the increase of MS trips existed longer than 1 month. The mismatch of timeline downvotes the delay reason. Increasing weekend trips also indicate that the delay factor is not a very significant one.
 
-![](/static/uploads/delay_covid_timeseries.svg)
+![](/uploads/delay_covid_timeseries.svg)
 
 The travel time matrices of public transit and bike share compare the time trade-off between the same origin and destination. The heatmap shows the difference of trip distribution between two periods, from June to Aug in 2019 and 2020 which is not affected by delays in public transit service. The deep blue blocks below the red reference line indicate bike trips are made even PT has shorter trip time. Besides, bike trip could averagely save 5.5 minutes than taking public transit before COVID but only save 4.6 min during the COVID. Both findings upvote the health concern reason, that people actively chose bike share as a safer mobility option than public transit.
 
-![travel time difference in public transit and bike-share](/static/uploads/pt_bss_time_density_diff.svg)
+![travel time difference in public transit and bike-share](/uploads/pt_bss_time_density_diff.svg)
 
 ### Discussion
 To summarize, mode semantics classification and explorative data analysis on various hypotheses help to confirm an increase in the substitution of bike-share over public transit as the reason for longer trip duration in COVID-19. Between the reasons of delay and health concern, this substitution is less possible due to the delay of public transit, as the short period of delay doesn’t overlap the longer substitution period. While it is more possible due to the health concern as 1) the average trip time saving of bike-share decrease and 2) longer bike trip replacing PT still happened after the resume of regular PT service.
