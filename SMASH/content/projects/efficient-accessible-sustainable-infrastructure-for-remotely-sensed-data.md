@@ -1,6 +1,9 @@
 ---
 icon: mdi:satellite-variant
-title: Efficient, Accessible, & Sustainable Infrastructure for Remotely-sensed Data
+title: "Efficient, Accessible, & Sustainable Infrastructure for Extracting
+  Reliable Data for the World’s Location-Based Assets "
 abbreviation: EASIER
 ---
-*Description coming soon*
+Remote sensing plays a crucial role in a wide range of fields such as Earth science, military intelligence, and humanitarian outreach. Given the data-driven nature of many remote sensing applications, access to such data defines an organization’s operational capabilities. Therefore, a lack of efficient, accessible, and sustainable data infrastructure and reliable distribution networks can limit the quantity and quality of potential downstream applications. Numerous satellite imaging missions, such as the joint NASA/USGS Landsat program and the ESA Sentinel missions, observe globally-open data policies. However, these open data access initiatives largely implement commercial storage methods such as Amazon Web Services (AWS) S3 or Google Cloud Storage. These traditional infrastructures store and monetize open-source data in closed-source ecosystems, introducing issues of data integrity, accessibility, and cost. Apart from these data monoliths, there is a lack of alternative infrastructural choices that remote sensing researchers can leverage to distribute sensor data (i.e., satellite images) for internal or external release in a sustainable manner.
+
+This project  develops capacity for efficiently, accessibly, & sustainably onloading, storing, and extracting large amounts of spatial data using Filecoin and IPFS. Spatial data refers to any observation or interaction that can be referenced to a location on the globe and may range from events recorded in a local community to tessellations covering the entire earth. It is often cited as covering 60-80% of global data products. Capacity encapsulates technological protocols, educational materials, and a network of industrial, academic, and governmental partners. Therefore, this project builds and promotes a next-generation platform for a large portion of the world’s most important data assets for research and decision-making.
