@@ -1,0 +1,9 @@
+name: Janna Chapman
+role: "Student; Member "
+priority: 4
+bio: "*Edit me!*"
+socialLinks:
+  - name: Github
+    icon: mdi:github
+    link: https://github.com/jkchap16
+image: /static/uploads/janna_chapman.jpeg
