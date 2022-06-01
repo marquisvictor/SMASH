@@ -1,0 +1,9 @@
+name: Ushashi Podder
+role: PhD Student; Member
+priority: 3
+bio: "*Edit me!*"
+socialLinks:
+  - name: Github
+    icon: mdi:github
+    link: https://github.com/UshashiP
+image: /static/uploads/ushashi.jpeg
