@@ -1,16 +1,13 @@
 name: Janna Chapman
 role: "Student; Member "
 priority: 4
-bio: >-
-  <!--StartFragment-->
-
-
-  Janna is a rising senior double majoring in Environmental Science and Technology and Geographical Sciences at the University of Maryland, College Park. She is interested in using GIS to analyze the spatial patterns of environmental issues such as the urban heat island effect, deforestation, and air pollution to help inform sustainable solutions to those problems. She hopes to pursue a Master’s degree in Geographical Sciences and a career in environmental data science.
-
-
-
-
-  <!--EndFragment-->
+bio: Janna is a rising senior double majoring in Environmental Science and
+  Technology and Geographical Sciences at the University of Maryland, College
+  Park. She is interested in using GIS to analyze the spatial patterns of
+  environmental issues such as the urban heat island effect, deforestation, and
+  air pollution to help inform sustainable solutions to those problems. She
+  hopes to pursue a Master’s degree in Geographical Sciences and a career in
+  environmental data science.
 socialLinks:
   - name: Github
     icon: mdi:github
