@@ -9,7 +9,7 @@ backend:
   open_authoring: true
 
 media_folder: SMASH/static/uploads
-public_folder: /uploads
+public_folder: /static/uploads
 
 collections:
   - name: 'core'
