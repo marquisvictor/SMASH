@@ -1,0 +1,16 @@
+name: Ushashi Podder
+role: PhD Student; Member
+priority: 3
+bio: My interests include geospatial visualization, spatial data science,
+  spatial modeling, and machine learning with applications in urban,
+  transportation and health geography. I aim to expand my skills and apply those
+  to study the mobility patterns, behaviors and activities of humans across
+  space. I also aim to apply my skills to the health sector to study infectious
+  diseases by taking into account human mobility patterns. Bike sharing system
+  and sustainable transportation is also an arena of interest that I want to
+  explore.
+socialLinks:
+  - name: Github
+    icon: mdi:github
+    link: https://github.com/UshashiP
+image: /static/uploads/ushashi.jpeg
