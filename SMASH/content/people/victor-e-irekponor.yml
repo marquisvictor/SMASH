@@ -13,4 +13,7 @@ socialLinks:
   - icon: mdi:github
     name: Github
     link: https://github.com/marquisvictor
+  - name: LinkedIn
+    icon: mdi:linkedin
+    link: https://www.linkedin.com/in/veirekponor/
 image: /static/uploads/profile-picture.jpg
