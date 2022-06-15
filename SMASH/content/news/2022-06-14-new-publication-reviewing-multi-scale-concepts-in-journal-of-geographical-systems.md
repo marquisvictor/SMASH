@@ -9,12 +9,13 @@ date: 2022-06-09T23:20:29.617Z
 ---
 New publication hot off the press!
 
-*A scoping review on the multipicity of scale in spatial analysis*
+[*A scoping review on the multipicity of scale in spatial analysis*](https://link.springer.com/article/10.1007/s10109-022-00384-8)
 
 with Levi Wolf,  Mehak Sachdeva, Sarah Bardin & Stewart Fotheringham
 
 
 in the JGS special issue: "Scale and Spatial Analysis"
+
 
 **tl;dr** there are multiple types of spatial scale concepts and related terminologies, but there are also many ways to combine/decompose multiple spatial scales in order to learn about spatial phenomena and this appears to be an important area for future research.
 
