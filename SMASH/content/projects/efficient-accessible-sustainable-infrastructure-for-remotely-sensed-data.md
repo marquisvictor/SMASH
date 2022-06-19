@@ -10,7 +10,7 @@ This project is generously supported through collaboration with [Textile](https:
 <br>
 <br> 
 <br>
-<p>
+<div style="display:flex">
 <a href="https://textile.notion.site/Our-mission-is-to-accelerate-the-exchange-of-information-across-society-f49e389e12e14473a3475e755a8d9cd6">
 <img src="https://raw.githubusercontent.com/GEOSMASH/SMASH/main/SMASH/static/uploads/2ohwpvqfsugoby4rbgwh_icf3xz4outkss4x7.png" alt="textile" width="100" height="100">
 </a>
@@ -22,4 +22,4 @@ This project is generously supported through collaboration with [Textile](https:
 <a href="https://filecoin.io/">
 <img src="https://raw.githubusercontent.com/GEOSMASH/SMASH/main/SMASH/static/uploads/fc.png" alt="filecoin" width="100" height="100">
 </a>
-</p>
+</div>
