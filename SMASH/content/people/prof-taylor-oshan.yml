@@ -1,16 +1,17 @@
-name: Dr. Taylor Oshan
-role: Assistant Professor; Lead
+name: Dr. Taylor M. Oshan
+role: Lead
 priority: 1
-bio: I am broadly interested in characterizing spatial patterns and processes
-  through the use of quantitative geographic methods, which typically falls
-  under the banners of spatial analysis and spatial statistics, geographic
-  information science, and the emerging discipline of spatial data
-  science. Overall, my research has targeted the development of multivariate
-  spatial statistics and how they can be used to capture how relationships
-  change by spatial and temporal contexts. This includes issues of theory,
-  interpretation, scalability, and integration of traditional geographic models
-  with novel "big" datasets, as well as applications in public health, crime,
-  urban mobility, and transportation systems.
+bio: Taylor is an assistant professor in the department of geographical sciences
+  at the University of Maryland. He broadly interested in characterizing spatial
+  patterns and processes through the use of quantitative geographic methods,
+  which typically falls under the banners of spatial analysis and spatial
+  statistics, geographic information science, and spatial data science. Overall,
+  my research his targeted the development of multivariate spatial statistics
+  and how they can be used to capture how relationships change by spatial and
+  temporal contexts. This includes issues of theory, interpretation,
+  scalability, and integration of traditional geographic models with novel
+  "big" datasets, as well as applications in public health, crime, urban
+  mobility, and transportation systems.
 socialLinks:
   - name: Github
     icon: mdi:github
