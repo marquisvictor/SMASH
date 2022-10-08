@@ -1,17 +1,7 @@
 name: Matthew Tralka
-role: Faculty Specialist; Head Developer
-priority: 4
-bio: Matthew Tralka (he/him) is a faculty specialist in GIScience and Remote
-  Sensing at the University of Maryland. At UMD, Matthew specializes in
-  geospatial software engineering with an overall focus in advancing
-  morphological image processing techniques for performance at scale and
-  creating sustainable and accessible cyberinfrastructure for distributed and
-  decentralized computing initiatives. He has a proven background on projects
-  with NASA, USGS, DOD, IARPA, and the NGA. Explicitly, his latest work on
-  IARPA’s WATCH project involves accelerating novel at-scale cloud detection
-  workflows for heterogeneous datasets. In his free time, Matthew enjoys
-  promoting data-equity initiatives and contributing to the open source
-  community.
+role: Alumni; Planet Labs
+priority: 9
+bio: " "
 socialLinks:
   - icon: mdi:github
     name: Github
