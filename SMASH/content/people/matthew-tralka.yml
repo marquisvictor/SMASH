@@ -1,12 +1,6 @@
 name: Matthew Tralka
 role: Alumni (Planet Labs)
 priority: 9
-bio: " test"
-socialLinks:
-  - icon: mdi:github
-    name: Github
-    link: https://github.com/mtralka
-  - name: Website
-    icon: mdi:information
-    link: https://tralka.xyz/
+bio: " "
+socialLinks: []
 image: /static/uploads/tralka-matthew-profile.jpg
