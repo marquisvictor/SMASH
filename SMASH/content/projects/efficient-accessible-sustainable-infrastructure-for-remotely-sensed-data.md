@@ -14,9 +14,8 @@ This project is generously supported through collaboration with the [Filecoin Fo
 <br>
 
 <div style="display:flex">
-
 <a href="https://ffdweb.org">
-<img src="https://raw.githubusercontent.com/GEOSMASH/SMASH/main/SMASH/static/uploads/ffdw.png" alt="textile" width="100" height="100">
+<img style="padding-right: 5px" src="https://raw.githubusercontent.com/GEOSMASH/SMASH/main/SMASH/static/uploads/ffdw.png" alt="textile" width="100" height="100">
 </a>
 
 <a href="https://textile.notion.site/Our-mission-is-to-accelerate-the-exchange-of-information-across-society-f49e389e12e14473a3475e755a8d9cd6">
