@@ -1,11 +1,11 @@
 name: Matthew Nanas
 role: Developer
 priority: 9
-bio: Matthew is a first-year undergraduate at the University of Maryland
-  studying computer and information science. He has experience in developing
-  client-side apps in both the Ethereum and Solana ecosystem. As a research
-  assistant for the EASIER Data Initiative, he aims to explore decentralized
-  storage and bring Web3 to cold data workflows.
+bio: Matthew is a undergraduate at the University of Maryland studying computer
+  and information science. He has experience in developing client-side apps in
+  both the Ethereum and Solana ecosystem. As a developer for the EASIER Data
+  Initiative, he aims to explore decentralized storage and compute and how they
+  can be used for data-intensive geospatial workflows.
 socialLinks:
   - name: Github
     icon: mdi:github
