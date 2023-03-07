@@ -1,5 +1,12 @@
 name: Jack Rickey
 role: Master of Quantitative Finance Student
-priority: 5
-bio: t﻿est
+priority: 10
+bio: I﻿ am a Master of Quantitative Finance student with a Bachelor's Degree in
+  Mathematics from the University of Maryland. I consult for web3 startups and
+  companies, providing quantitative analysis and modeling for token economics
+  structures and incentives.
+socialLinks:
+  - name: Linkedin
+    icon: logos:linkedin
+    link: https://www.linkedin.com/in/jack-rickey/
 image: /static/uploads/img_0018.jpg
