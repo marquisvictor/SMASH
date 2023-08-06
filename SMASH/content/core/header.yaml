@@ -49,6 +49,9 @@ navMenuItems:
         link: /resources/smaart
         subtitle: Spatial Multiscale Analytics, Applied Research, and Technology Seminar
         icon: ic:round-video-library
+      - title: Conferences & Workshops 
+        link: /resources/confshops
+        icon: guidance:conference-room
     bottomItems: []
 button:
   title: Contact us!
