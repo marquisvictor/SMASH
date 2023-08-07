@@ -1,171 +1,94 @@
 <template>
   <div>
+    <div>
     <basic-page-template
       :title="content.title"
-      :subtitle="content.subtitle"
-      :bodyContent="content.bodyContent"
     >
-      <div
-        class="grid grid-cols-1 gap-6 p-10 mx-auto md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
+    <div
+        class="grid grid-cols-1 gap-6 p-2 mx-auto md:p-10 md:w-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
       >
-        <Card
-          v-for="video in smaartVideos"
-          :key="video.title"
-          :title="video.title"
-          :date="video.date"
-          :video-id="video.videoId"
-          :subtitle="video.presenter"
-          class="max-w-3xl m-3"
-          style="min-height: 14rem"
-        />
+        <article
+          v-for="person in people"
+          :key="person.name"
+          class="flex flex-col items-center justify-start max-w-lg p-2 space-y-5 bg-white "
+        >
+          <div class="overflow-hidden rounded-md shadow-md ">
+            <nuxt-img
+              fit="cover"
+              height="280"
+              width="280"
+              class="object-contain w-full h-full"
+              :src="imageLink(person.image)"
+              :alt="`Photo of ${person.name}`"
+              quality="30"
+            />
+          </div>
+          <div class="w-full space-y-2 text-center">
+            <p class="text-xl font-bold leading-4 tracking-wide">
+              {{ person.name }}
+            </p>
+            <p class="text-lg font-semibold tracking-tighter text-blue-600">
+              {{ person.role }}
+            </p>
+          </div>
+
+          <div
+            class="text-base prose text-justify text-gray-700 md:prose-xl"
+            style="min-height: 9rem"
+            v-html="$md.render(person.bio)"
+          ></div>
+          <div
+            v-if="person.socialLinks"
+            class="flex flex-row items-center justify-start w-full space-x-2"
+          >
+            <a
+              v-for="icon in person.socialLinks"
+              :key="icon.name"
+              :href="icon.link"
+              target="_blank"
+              class="p-1 overflow-hidden rounded-md hover:bg-gray-400"
+            >
+              <Icon :icon="icon.icon" class="w-7 h-7" aria-hidden="true" />
+            </a>
+          </div>
+        </article>
       </div>
     </basic-page-template>
+  </div>
   </div>
 </template>
 
 <script>
 import BasicPageTemplate from '@/components/basicPageTemplate.vue'
-import Card from '~/components/Cards/Card.vue'
+import Icon from '@/components/Icon.vue'
 export default {
+  name: 'Team',
   components: {
     BasicPageTemplate,
-    Card,
+    Icon,
   },
   layout: 'header-footer',
-  async asyncData({ $content }) {
-    const smaartVideos = await $content('sdss23')
-      .only(['title', 'presenter', 'date', 'videoId'])
-      .sortBy('date')
+  data() {
+    return {
+      people: [],
+      content: null,
+    }
+  },
+  async fetch() {
+    const people = await this.$content('people')
+      .sortBy('priority')
+      .sortBy('name')
       .fetch()
 
-    const content = await $content('resources/sdss23').fetch()
+    const content = await this.$content('overview/team').fetch()
 
-    return {
-      smaartVideos,
-      content,
-    }
+    this.people = people
+    this.content = content
+  },
+  methods: {
+    imageLink(imagePath) {
+      return '/uploads/' + imagePath.replace('/static/uploads/', '')
+    },
   },
 }
 </script>
-<style>
-/* TODO
-Nuxt purges when `scoped`, temporary fix */
-.vuetube {
-  position: relative;
-  cursor: pointer;
-}
-
-.vuetube__box {
-  position: relative;
-}
-
-.vuetube__box::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  box-sizing: content-box;
-  width: 100%;
-  height: 60px;
-  padding-bottom: 50px;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);
-  background-repeat: repeat-x;
-  background-position: top;
-  transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
-  content: '';
-  pointer-events: none;
-}
-
-.vuetube__thumbnail {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.vuetube__image {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-  object-position: center;
-  vertical-align: top;
-}
-
-.vuetube__button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  font-size: 100%;
-  font-family: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: none;
-  transform: translate(-50%, -50%);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  cursor: pointer;
-  transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1),
-    visibility 0.25s cubic-bezier(0, 0, 0.2, 1);
-  -webkit-appearance: button;
-}
-
-.vuetube__button::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
-}
-
-.vuetube__button:-moz-focusring {
-  outline: 1px dotted;
-}
-
-.vuetube__icon {
-  display: block;
-  width: 68px;
-  height: 48px;
-}
-
-.vuetube__icon-bg {
-  transition: fill 0.1s cubic-bezier(0.4, 0, 1, 1),
-    fill-opacity 0.1s cubic-bezier(0.4, 0, 1, 1);
-  fill: #212121;
-  fill-opacity: 0.8;
-}
-
-.vuetube:hover .vuetube__icon-bg {
-  transition: fill 0.1s cubic-bezier(0, 0, 0.2, 1),
-    fill-opacity 0.1s cubic-bezier(0, 0, 0.2, 1);
-  fill: #f00;
-  fill-opacity: 1;
-}
-
-.vuetube__icon-triangle {
-  fill: #fff;
-}
-
-.vuetube__iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.vuetube--played .vuetube__box::before {
-  opacity: 0;
-}
-
-.vuetube--played .vuetube__button {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.vuetube__button:focus:not(:focus-visible) {
-  outline: none;
-}
-</style>
