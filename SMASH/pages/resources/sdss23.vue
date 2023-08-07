@@ -80,7 +80,7 @@ export default {
       .sortBy('name')
       .fetch()
 
-    const content = await this.$content('resources/sdss2023').fetch()
+    const content = await this.$content('resources/sdss23').fetch()
 
     this.people = people
     this.content = content
