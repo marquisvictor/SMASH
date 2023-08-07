@@ -1,14 +1,5 @@
-name: Tyler Hoffman
-role: Affiliate
-priority: 8
-bio: "Coming from a background of math and computer science, Tyler is interested
-  in methods development and algorithm design for spatial data science. He's
-  also an advocate for the use of spatial methods in broader research. In his
-  spare time, Tyler loves watching movies, playing video games, and biking. He's
-  currently a Ph.D student at Arizona State University in the Spatial Analysis
-  Research Center (SPARC). "
-socialLinks:
-  - name: Website
-    icon: carbon:information-filled
-    link: https://www.tdhoffman.com/
+name: Ana Petrović (Delft university of Technology)
+role: Segregation in the Netherlands over time, space and scale
+priority: 3
+bio: Spatial segregation of socioeconomic and ethnic groups affects economic and social functioning of cities as integral urban systems as well as individual outcomes of people, such as income, education or health. Both causes and consequences of segregation include many different processes, such as those related to housing or labour markets, which occur at different spatial scales, ranging from small neighbourhoods to urban regions. Segregation at all these spatial scales changes over time, which becomes particularly relevant in the conditions of increasing economic inequalities, international and internal migration, and population aging. However, most of the empirical evidence about segregation in the Netherlands is cross-sectional and uses single spatial scales. Therefore, it is not clear at which spatial extents segregation is increasing or decreasing, and, therefore, also not straightforward what drives segregation trends and how to deal with the segregation in different places. Using individual-level register data from 1999 onwards, geocoded at 100m by 100m grid cells, on the OSSC (ODISSEI Secure Supercomputer), we investigate segregation trends in the Netherlands at multiple spatial scales, taking into account various sociodemographic characteristics of people.
 image: /static/uploads/unnamed.jpg

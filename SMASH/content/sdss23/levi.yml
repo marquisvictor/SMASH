@@ -1,16 +1,5 @@
-name: Levi Wolf
-role: PhD Candidate; Geospatial Developer
+name: Levi John Wolf (University of Bristol)
+role: A Quadtree-based algorithm for clustering regression
 priority: 2
-bio: Zheng Liu is a Ph.D. candidate in the Center for Geographical Information
-  Science, University of Maryland, College Park. His research interest lies in
-  urban analytics and micro-mobility modeling using big data and machine
-  learning techniques. He is working on multi-temporal mobility modeling of
-  micro-mobility as his dissertation topic. He is also interested in the
-  application of GIScience in the self-driving industry. Before joining UMD, he
-  obtained his Bachelor of Science in Geographical Information Science at Peking
-  University.
-socialLinks:
-  - icon: carbon:information-filled
-    name: Website
-    link: https://geog.umd.edu/gradprofile/liu/zheng
-image: /static/uploads/zheng.jpg
+bio: "Recent work on 'local' geographical models has focused on exploring model specifications where covariates are allowed to vary at distinctive spatial scales. In these models, the “spatial scale” that is learned reflects a kind of spatial smooth parameter that is held constant across the map. An alternative collection of techniques, known as “clustering regression,” seek to find latent “clusters” in the data, and use these clusters to improve predictions and construct local parameter estimates. These discrete local regressions have not been systematically compared to other kinds of local regression but offer important practical and theoretical differences for their application. This paper will provide an overview of contemporary theory and model frameworks for clustering regression and outline a novel hierarchical technique for clustering regression and inference relying on quadtrees.  The model will be compared to existing approaches for both discrete and continuous local regression, and recommendations on usage will be provided."
+image: /static/uploads/levi.jpg
