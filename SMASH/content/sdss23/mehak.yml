@@ -1,6 +1,5 @@
-name: Matthew Tralka
-role: Alumni (Planet Labs)
-priority: 10
-bio: " "
-socialLinks: []
-image: /static/uploads/tralka-matthew-profile.jpg
+name: Mehak Sachdeva (New York University)
+role: Exploring the Influence of Profile Similarity in Places on Human Behavior in Spatial Contextual and Behavioral Models
+priority: 5
+bio: "This research talk explores the influence of similarity in place characteristics on human behavior within spatial contextual and behavioral models. While such models traditionally assume that processes are similar for nearby places and employ spatial weighting, they often overlook the impact of similarity in attributes for spatially distant places. Our study aims to investigate whether places sharing comparable measurable factors affecting behavior also influence the values, beliefs, attitudes, and behavior of their inhabitants similarly. Additionally, we examine the significance of this influence in conjunction with spatial proximity and the novel insights it provides about places. By employing advanced statistical techniques, such as multidimensional scaling, we aim to identify commonalities among different places with similar contextual determinants of behavior beyond their geographical locations. Establishing a connection between the intensity of contextual effects and distinct locational profiles enables us to gain a deeper understanding of the interplay between place characteristics and behavioral outcomes. The findings from these inquiries hold transformative potential across numerous fields in the social sciences, providing a deeper understanding of the complex interactions between places and human behavior."
+image: /static/uploads/mehak.jpg

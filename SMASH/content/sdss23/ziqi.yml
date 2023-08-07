@@ -1,14 +1,5 @@
-name: Mengyu Liao
-role: PhD Student
-priority: 3
-bio: Mengyu's interests include spatiotemporal theories and applications, big
-  data, spatial data science, as well as geospatial modeling with machine
-  learning. As a Ph.D student, she eager to use those above to explore how
-  humans perceive, interact with, and change space/environments. Particularly,
-  she has a strong interest in bridging geospatial modeling with criminology,
-  human mobility and health.
-socialLinks:
-  - name: Github
-    icon: mdi:github
-    link: https://github.com/Stella-Liao
-image: /static/uploads/selfie.jpg
+name: Ziqi Li (Florida State university)
+role: Measuring contextual effects through local eXplainable Artificial Intelligence (XAI)
+priority: 4
+bio: "Recent advancements in local eXplainable Artificial Intelligence (XAI) methods open up new avenues to leverage the flexibility and accuracy of machine learning models for studying spatial phenomena. These methods offer model explainability at the individual level, which helps us gain insights into how individuals behave and interact within specific spatial and covariate contexts. This short presentation will introduce methods that can measure contextual effects within machine learning models. The combination of model flexibility, accuracy, and interpretability holds great promise in advancing our understanding of complex spatial processes."
+image: /static/uploads/ziqi.jpg
