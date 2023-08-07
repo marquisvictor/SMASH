@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import BasicPageTemplate from '@/components/basicPageTemplate.vue'
+import BasicPageTemplate from '@/components/basicPageTemplate2.vue'
 import Icon from '@/components/Icon.vue'
 export default {
   name: 'Team',
