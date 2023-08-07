@@ -19,9 +19,7 @@
     </div>
 
     <div class="max-w-6xl mx-auto mt-4">
-      <nuxt-content
-	<p v-if="bodyContent" class="text-2xl font-small">{{ bodyContent }}</p>
-      />
+	<p v-if="bodyContent" class="text-2xl font-small">{{ bodyContent }}</p>      
       <slot></slot>
     </div>
   </section>
