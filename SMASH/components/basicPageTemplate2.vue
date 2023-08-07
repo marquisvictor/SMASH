@@ -20,9 +20,7 @@
 
     <div class="max-w-6xl mx-auto mt-4">
       <nuxt-content
-        v-if="bodyContent"
-        :document="bodyContent"
-        class="mx-auto prose text-justify md:prose-2xl"
+	<p v-if="bodyContent" class="text-2xl font-small">{{ bodyContent }}</p>
       />
       <slot></slot>
     </div>
