@@ -3,6 +3,7 @@
     <basic-page-template
       :title="content.title"
       :subtitle="content.subtitle"
+      :bodyContent="content.bodyContent"
     >
       <div
         class="grid grid-cols-1 gap-6 p-10 mx-auto md:w-9/12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center"
