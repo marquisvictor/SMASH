@@ -37,7 +37,7 @@ export default {
       .sortBy('date')
       .fetch()
 
-    const content = await $content('resources/smaart').fetch()
+    const content = await $content('resources/sdss23').fetch()
 
     return {
       smaartVideos,
