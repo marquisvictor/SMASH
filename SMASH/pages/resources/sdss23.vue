@@ -32,12 +32,12 @@ export default {
   },
   layout: 'header-footer',
   async asyncData({ $content }) {
-    const smaartVideos = await $content('smaart')
+    const smaartVideos = await $content('sdss23')
       .only(['title', 'presenter', 'date', 'videoId'])
       .sortBy('date')
       .fetch()
 
-    const content = await $content('resources/smaart').fetch()
+    const content = await $content('resources/sdss23').fetch()
 
     return {
       smaartVideos,
