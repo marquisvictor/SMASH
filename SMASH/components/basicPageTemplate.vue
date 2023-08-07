@@ -40,9 +40,10 @@ export default {
       default: '',
     },
     bodyContent: {
-      type: Object,
+      type: String,
       required: false,
-      default: () => {},
+      default: '',
+      #default: () => {},
     },
   },
 }
