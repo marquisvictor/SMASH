@@ -75,12 +75,12 @@ export default {
     }
   },
   async fetch() {
-    const people = await this.$content('people')
+    const people = await this.$content('sdss23')
       .sortBy('priority')
       .sortBy('name')
       .fetch()
 
-    const content = await this.$content('overview/team').fetch()
+    const content = await this.$content('resources/sdss2023').fetch()
 
     this.people = people
     this.content = content
