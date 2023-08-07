@@ -13,6 +13,9 @@
       <slot name="subtitle">
         <p v-if="subtitle" class="text-2xl font-medium">{{ subtitle }}</p>
       </slot>
+      <slot name="bodyContent">
+        <p v-if="bodyContent" class="text-2xl font-medium">{{ bodyContent }}</p>
+      </slot>
     </div>
 
     <div class="max-w-6xl mx-auto mt-4">
